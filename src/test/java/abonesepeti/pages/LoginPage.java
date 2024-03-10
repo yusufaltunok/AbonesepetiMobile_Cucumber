@@ -14,11 +14,26 @@ public class LoginPage {
     }
 
 
-    @AndroidFindBy(className="android.widget.EditText")
-    public List<WebElement> textBoxList;
+    @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_email")
+    public WebElement girisYap;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_email")
+    public WebElement e_Posta;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_phone")
+    public WebElement telefon;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login")
     public WebElement girisYapButton;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btn_forget_password")
+    public WebElement sifremiUnuttum;
+
+    @AndroidFindBy(className="android.widget.EditText")
+    public List<WebElement> textBoxList; // e-posta ve şifre
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btndDismissDialog")
+    public WebElement tamam;
 
 
 

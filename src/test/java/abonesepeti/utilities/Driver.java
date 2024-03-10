@@ -46,7 +46,7 @@ public class Driver {
     public static void uygulamayiKapat() {
         if (driver != null) {
             driver.quit();
-            driver = null;
+           driver = null;
         }
     }
 
