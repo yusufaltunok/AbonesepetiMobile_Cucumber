@@ -24,7 +24,7 @@ public class RegisterPage {
     public WebElement yeniHesapOlustur;
 
     @AndroidFindBy(className="android.widget.EditText")
-    public List<WebElement> textBoxList; // ad, soyad, cep telefonu, e-posta, şifre
+    public WebElement textBoxList; // ad, soyad, cep telefonu, e-posta, şifre
 
     @AndroidFindBy(id="com.abonesepeti.app:id/cb_terms")
     public WebElement sozlesmeCheckBox;
