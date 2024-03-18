@@ -54,6 +54,7 @@ public class Register_StepDefs {
         registerPage.textBoxList.sendKeys(ad, Keys.TAB, soyad,Keys.TAB,telefon, Keys.TAB,mail,Keys.TAB,sifre);
     }
 
+
     @And("Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar")
     public void kullaniciSozlesmesiniKabulEtmekIcinCheckboxITiklar() {
         registerPage.sozlesmeCheckBox.click();
