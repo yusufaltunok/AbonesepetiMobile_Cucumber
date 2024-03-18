@@ -1,6 +1,6 @@
 
-Feature: Giris yap
-  Scenario: Kullanici giris yapar
-    When Abonesepeti uygulamasina giris yap
-    And Giris sayfasina ulasmak icin Atla butonuna tikla
-    Then Login sayfasinin goruntulendigini dogrula
+Feature: US01 Onboarding
+  Scenario: TC02 Onboarding "Atla"
+    When Kullanici Abonesepeti uygulamasina giris yapar
+    And Giris sayfasina ulasmak icin Atla butonuna tiklar
+    Then Login sayfasinin goruntulendigini dogrular
