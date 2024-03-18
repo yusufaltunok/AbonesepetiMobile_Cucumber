@@ -32,7 +32,7 @@ public class Hooks {
 
     @AfterAll
     public static void afterAll() {
-        Driver.uygulamayiKapat();
+      //  Driver.uygulamayiKapat();
         Driver.serverKapat();
         raporuAc();
     }
