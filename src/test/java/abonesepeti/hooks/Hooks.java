@@ -34,7 +34,7 @@ public class Hooks {
     public static void afterAll() {
       //  Driver.uygulamayiKapat();
         Driver.serverKapat();
-        raporuAc();
+  //      raporuAc();
     }
 
 }
