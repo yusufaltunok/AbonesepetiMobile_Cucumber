@@ -1,4 +1,4 @@
-
+@tc01
 Feature: US01 Onboarding
   Scenario: TC01 Onboarding "Devam Et"
     When Kullanici Abonesepeti uygulamasina giris yapar
