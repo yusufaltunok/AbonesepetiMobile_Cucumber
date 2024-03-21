@@ -51,7 +51,11 @@ public class Register_StepDefs {
 
     @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
     public void bilgileriniGirer(String ad, String soyad, String telefon, String mail, String sifre) {
-        registerPage.textBoxList.sendKeys(ad, Keys.TAB, soyad,Keys.TAB,telefon, Keys.TAB,mail,Keys.TAB,sifre);
+        registerPage.ad.sendKeys(ad);
+        registerPage.soyad.sendKeys(soyad);
+        registerPage.cepTelefonu.sendKeys(telefon);
+        registerPage.ePosta.sendKeys(mail);
+        registerPage.sifre.sendKeys(sifre);
     }
 
 
