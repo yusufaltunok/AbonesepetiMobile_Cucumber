@@ -13,6 +13,8 @@ public class LoginPage {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()),this);
     }
 
+    @AndroidFindBy(id = ("com.abonesepeti.app:id/btnSkip"))
+    public WebElement atla;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_email")
     public WebElement girisYap;
@@ -22,6 +24,12 @@ public class LoginPage {
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_phone")
     public WebElement telefon;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Cep Telefonu\")")
+    public WebElement cepTelefonu;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifre\")")
+    public WebElement sifre;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login")
     public WebElement girisYapButton;
@@ -34,6 +42,37 @@ public class LoginPage {
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btndDismissDialog")
     public WebElement tamam;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/imgProfile")
+    public WebElement profil;
+
+
+
+    public LoginPage girisYapTelefon (String phone, String password){
+        atla.click();
+        girisYap.click();
+        telefon.click();
+        cepTelefonu.sendKeys(phone);
+        sifre.sendKeys(password);
+        girisYapButton.click();
+        if (tamam.isDisplayed()) {
+            tamam.click();
+        }
+        return this;
+    }
+
+    public LoginPage girisYapEposta (String mail, String password){
+        atla.click();
+        girisYap.click();
+        e_Posta.sendKeys(mail);
+        sifre.sendKeys(password);
+        girisYapButton.click();
+        if (tamam.isDisplayed()) {
+            tamam.click();
+        }
+        return this;
+    }
+
 
 
 
