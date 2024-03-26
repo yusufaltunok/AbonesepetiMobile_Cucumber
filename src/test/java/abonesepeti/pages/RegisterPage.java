@@ -21,6 +21,15 @@ public class RegisterPage {
     @AndroidFindBy(id = ("com.abonesepeti.app:id/btnSkip"))
     public WebElement atla;
 
+    @AndroidFindBy(id = ("com.abonesepeti.app:id/btn_login_with_google"))
+    public WebElement googleIcon;
+
+    @AndroidFindBy(xpath = ("(//android.widget.LinearLayout[@resource-id=\"com.google.android.gms:id/container\"])[1]/android.widget.LinearLayout"))
+    public WebElement googleHesapSec;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_message_custom_dialog") // Girmiş olduğunuz  telefon numarasına ait üyelik bulunmaktadır.
+    public WebElement hataMsg;
+
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_sign_up")
     public WebElement yeniHesapOlustur;
 

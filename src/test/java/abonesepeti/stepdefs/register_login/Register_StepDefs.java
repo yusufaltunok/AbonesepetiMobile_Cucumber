@@ -46,12 +46,10 @@ public class Register_StepDefs {
         registerPage.yeniHesapOlustur.click();
     }
 
-    @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
-    public void bilgileriniGirer(String ad, String soyad, String telefon, String mail, String sifre) {
-        registerPage.ad.sendKeys(ad);
-        registerPage.soyad.sendKeys(soyad);
+    @And("{string}, {string} bilgilerini girer")
+    public void bilgileriniGirer(String telefon, String sifre) {
+
         registerPage.cepTelefonu.sendKeys(telefon);
-        registerPage.ePosta.sendKeys(mail);
         registerPage.sifre.sendKeys(sifre);
     }
 
@@ -80,7 +78,17 @@ public class Register_StepDefs {
     }
 
     @Then("Girmis oldugunuz e-posta adresine ait uyelik bulunmaktadir Uyari yazisini gorur")
-    public void girmisOldugunuzEPostaAdresineAitUyelikBulunmaktadirUyariYazisiniGorur() throws InterruptedException {
-        Thread.sleep(3);
+    public void girmisOldugunuzEPostaAdresineAitUyelikBulunmaktadirUyariYazisiniGorur(){
+      Assert.assertTrue(registerPage.hataMsg.isDisplayed());
+    }
+
+    @And("Google ikonuna tiklar")
+    public void googleIkonunaTiklar() {
+        registerPage.googleIcon.click();
+    }
+
+    @And("Kayitli bir google hesabi sec")
+    public void kayitliBirGoogleHesabiSec() {
+        registerPage.googleHesapSec.click();
     }
 }
