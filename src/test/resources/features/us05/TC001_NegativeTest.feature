@@ -7,7 +7,7 @@ Feature: US05 Onceden kayitli bilgiler ile Yeni Hesap Olusturamamali
     And "<ad>", "<soyad>", "<telefon>", "<mail>", "<sifre>" bilgilerini girer
     And Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar
     And Hesap olustur butonuna tiklar
-    Then Girmis oldugunuz e-posta adresine ait uyelik bulunmaktadir Uyari yazisini gorur
+    Then Girmis oldugunuz e-posta adresine ait uyelik bulunmaktadir Uyari yazisini gorur.
 
     Examples:
       | ad   | soyad | telefon    | mail            | sifre  |
