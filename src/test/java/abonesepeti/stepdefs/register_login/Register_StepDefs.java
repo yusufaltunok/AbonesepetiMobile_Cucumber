@@ -81,4 +81,9 @@ public class Register_StepDefs {
     @Then("Basarili bir sekilde hesap olusturuldugunu dogrular")
     public void basariliBirSekildeHesapOlusturuldugunuDogrular() {
     }
+
+    @Then("Girmis oldugunuz e-posta adresine ait uyelik bulunmaktadir Uyari yazisini gorur")
+    public void girmisOldugunuzEPostaAdresineAitUyelikBulunmaktadirUyariYazisiniGorur() throws InterruptedException {
+        Thread.sleep(3);
+    }
 }
