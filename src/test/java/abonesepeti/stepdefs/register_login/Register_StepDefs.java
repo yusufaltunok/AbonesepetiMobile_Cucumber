@@ -16,9 +16,6 @@ public class Register_StepDefs {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
 
-    @When("Kullanici Abonesepeti uygulamasina giris yapar")
-    public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
-    }
     @And("Giris sayfasi gelene kadar Devam Et butonuna tiklar")
     public void giris_sayfasi_gelene_kadar_devam_et_butonuna_tiklar() {
         visibleWait(Driver.getDriver(), registerPage.devamEt, 15);
