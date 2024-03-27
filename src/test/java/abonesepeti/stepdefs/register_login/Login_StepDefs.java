@@ -19,4 +19,9 @@ public class Login_StepDefs {
     public void kullaniciUygulamadaBasariliBirSekildeOturumAcildiginiDogrular() {
         assertTrue(loginPage.profil.isDisplayed());
     }
+
+    @When("Kullanici eposta ile abonesepeti uygulamasina giris yapar")
+    public void kullaniciEpostaIleAbonesepetiUygulamasinaGirisYapar() {
+        loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
+    }
 }
