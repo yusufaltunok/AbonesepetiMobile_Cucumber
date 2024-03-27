@@ -3,6 +3,7 @@ package abonesepeti.pages;
 import abonesepeti.utilities.Driver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -21,6 +22,9 @@ public class LoginPage {
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_email")
     public WebElement e_Posta;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"E-posta\")")
+    public WebElement e_PostaAdres;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_phone")
     public WebElement telefon;
@@ -64,7 +68,7 @@ public class LoginPage {
     public LoginPage girisYapEposta (String mail, String password){
         atla.click();
         girisYap.click();
-        e_Posta.sendKeys(mail);
+        e_PostaAdres.sendKeys(mail);
         sifre.sendKeys(password);
         girisYapButton.click();
         if (tamam.isDisplayed()) {
