@@ -91,4 +91,9 @@ public class Register_StepDefs {
     public void kayitliBirGoogleHesabiSec() {
         registerPage.googleHesapSec.click();
     }
+
+    @When("Kullanici eposta ile abonesepeti uygulamasina giris yapar")
+    public void kullaniciEpostaIleAbonesepetiUygulamasinaGirisYapar() {
+        loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
+    }
 }
