@@ -8,10 +8,6 @@ Feature: Us06
     Then Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular
 
 
-  Scenario: TC01
-
-    When Kullanici eposta ile abonesepeti uygulamasina giris yapar
-    Then Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular
 
 
  # Open Abonesepeti mobile app
