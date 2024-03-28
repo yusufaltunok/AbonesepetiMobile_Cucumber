@@ -30,6 +30,9 @@ public class RegisterPage {
     @AndroidFindBy(id = "com.abonesepeti.app:id/txt_message_custom_dialog") // Girmiş olduğunuz  telefon numarasına ait üyelik bulunmaktadır.
     public WebElement hataMsg;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_login_with_google")
+    public WebElement googleIkon;
+
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_sign_up")
     public WebElement yeniHesapOlustur;
 
@@ -47,7 +50,6 @@ public class RegisterPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifre\")")
     public WebElement sifre;
-
     @AndroidFindBy(id = "com.abonesepeti.app:id/cb_terms")
     public WebElement sozlesmeCheckBox;
 
