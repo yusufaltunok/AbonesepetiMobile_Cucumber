@@ -1,6 +1,7 @@
 package abonesepeti.pages;
 
 import abonesepeti.utilities.Driver;
+import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.Keys;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class LoginPage {
+public class LoginPage extends ReusableMethods {
     public LoginPage(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()),this);
     }

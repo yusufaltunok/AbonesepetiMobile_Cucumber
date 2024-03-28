@@ -36,8 +36,8 @@ public class RegisterPage {
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_sign_up")
     public WebElement yeniHesapOlustur;
 
-    @AndroidFindBy(className = "android.widget.EditText")
-    public WebElement ad; // ad, soyad, cep telefonu, e-posta, şifre
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Ad\")")
+    public WebElement ad;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Soyad\")")
     public WebElement soyad;

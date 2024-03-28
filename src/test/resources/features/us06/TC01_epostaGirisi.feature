@@ -8,6 +8,8 @@ Feature: Us06
     Then Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular
 
 
+
+
  # Open Abonesepeti mobile app
   #Click on Atla button
   #  Click on Giris Yap
@@ -15,3 +17,4 @@ Feature: Us06
   #  Enter a valid password into Sifre field
   #  Click on Giris Yap button
   #  Verify that you can successfully log into the application
+
