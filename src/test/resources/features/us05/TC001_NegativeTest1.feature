@@ -1,5 +1,5 @@
 @us05
-Feature: US05 Onceden kayitli bilgiler ile Yeni Hesap Olusturamamali
+Feature: US05 Onceden kayitli bilgiler ile Google Hesabi Kullanilarak Yeni Hesap Olusturamamali
   Scenario Outline: TC01 Yeni Hesap Olusturamama - negative Senaryo
    # When Kullanici Abonesepeti uygulamasina giris yapar
     And Giris sayfasina ulasmak icin Atla butonuna tiklar

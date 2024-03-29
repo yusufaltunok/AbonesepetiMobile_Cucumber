@@ -51,6 +51,12 @@ public class LoginPage extends ReusableMethods {
     @AndroidFindBy(id="com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geçerli bir mail adresi giriniz.\")")
+    public WebElement eposta_uyarisi;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifre en az 6 en fazla 16 karakterden oluşmalıdır\")")
+    public WebElement sifre_uyarisi;
+
 
 
     public LoginPage girisYapTelefon (String phone, String password){
