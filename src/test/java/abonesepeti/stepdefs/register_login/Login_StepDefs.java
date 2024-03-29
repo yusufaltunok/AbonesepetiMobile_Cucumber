@@ -72,4 +72,20 @@ public class Login_StepDefs {
     public void kullaniciSifreAlaniAltindaUyariYazisiGorur() {
         assertTrue(loginPage.sifre_uyarisi.isDisplayed());
     }
+
+
+    @And("Kullanici telefon sekmesine tiklar.")
+    public void kullaniciTelefonSekmesineTiklar() {
+        loginPage.telefon.click();
+    }
+
+    @And("Kullanici cep telefonu alanini bos birakir")
+    public void kullaniciCepTelefonuAlaniniBosBirakir() {
+        loginPage.cepTelefonu.sendKeys("");
+    }
+
+    @Then("Kullanici eksik bilgiler ile giris yapamadigini dogrular")
+    public void kullaniciEksikBilgilerIleGirisYapamadiginiDogrular() {
+        assertTrue(loginPage.ceptelefonu_uyarisi.isDisplayed());
+    }
 }

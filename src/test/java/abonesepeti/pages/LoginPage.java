@@ -57,6 +57,8 @@ public class LoginPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifre en az 6 en fazla 16 karakterden oluşmalıdır\")")
     public WebElement sifre_uyarisi;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geçerli bir telefon numarası giriniz.\")")
+    public WebElement ceptelefonu_uyarisi;
 
 
     public LoginPage girisYapTelefon (String phone, String password){
