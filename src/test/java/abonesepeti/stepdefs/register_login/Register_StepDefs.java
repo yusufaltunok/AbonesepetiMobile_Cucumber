@@ -91,4 +91,32 @@ public class Register_StepDefs {
     public void kayitliBirGoogleHesabiSec() {
         registerPage.googleHesapSec.click();
     }
+
+    @When("Kullanici eposta ile abonesepeti uygulamasina giris yapar")
+    public void kullaniciEpostaIleAbonesepetiUygulamasinaGirisYapar() {
+        loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
+    }
+    @When("Kullanici Abonesepeti uygulamasini acar")
+    public void kullaniciAbonesepetiUygulamasiniAcar() {
+    }
+
+    @And("Kullanici hesap olusturma sayfasina ulasmak icin Atla butonuna tiklar")
+    public void kullaniciHesapOlusturmaSayfasinaUlasmakIcinAtlaButonunaTiklar() {
+        registerPage.atla.click();
+    }
+
+    @And("Kullanici Yeni hesap olustur butonuna tiklar")
+    public void kullaniciYeniHesapOlusturButonunaTiklar() {
+        registerPage.yeniHesapOlustur.click();
+    }
+
+    @And("Kullanici onceden kayitli olan {string}, {string}, {string}, {string} ve {string} bilgilerini girer")
+    public void kullaniciOncedenKayitliOlanVeBilgileriniGirer(String ad, String soyad, String telefon, String eposta, String sifre) {
+        registerPage.ad.sendKeys(ad);
+        registerPage.soyad.sendKeys(soyad);
+        registerPage.cepTelefonu.sendKeys(telefon);
+        registerPage.ePosta.sendKeys(eposta);
+        registerPage.sifre.sendKeys(sifre);
+
+    }
 }
