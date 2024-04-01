@@ -9,3 +9,4 @@ Feature: US06 telefon ve sifre girilmeden giris yapilamamali
     And Kullanici sifre alanini bos birakir
     And Kullanici giris yap butonuna tiklar
     Then Kullanici eksik bilgiler ile giris yapamadigini dogrular
+
