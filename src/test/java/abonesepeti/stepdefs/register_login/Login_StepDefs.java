@@ -88,4 +88,14 @@ public class Login_StepDefs {
     public void kullaniciEksikBilgilerIleGirisYapamadiginiDogrular() {
         assertTrue(loginPage.ceptelefonu_uyarisi.isDisplayed());
     }
+
+    @And("Kullanici e-posta butonuna tiklar")
+    public void kullaniciEPostaButonunaTiklar() {
+        loginPage.e_Posta.click();
+    }
+
+    @And("Kullanici gecerli bir telefon numarasi girer")
+    public void kullaniciGecerliBirTelefonNumarasiGirer() {
+        loginPage.cepTelefonu.sendKeys("5056771625");
+    }
 }
