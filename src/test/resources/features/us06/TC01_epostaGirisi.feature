@@ -1,4 +1,4 @@
-@eposta
+@eposta @hepsi
 
 Feature: Us06
 

@@ -1,4 +1,4 @@
-
+@hepsi
 Feature: US01 Onboarding
   Scenario: TC02 Onboarding "Atla"
     When Kullanici Abonesepeti uygulamasina giris yapar

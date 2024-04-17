@@ -1,3 +1,4 @@
+@hepsi
 Feature: US06 sifre girilmeden giris yapilamamali
 
   Scenario: TC003  - negative Senaryo

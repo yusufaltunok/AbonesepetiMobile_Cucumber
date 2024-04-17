@@ -1,3 +1,4 @@
+@hepsi
 Feature: US06 telefon ve sifre girilmeden giris yapilamamali
 
   Scenario: TC003  - negative Senaryo
