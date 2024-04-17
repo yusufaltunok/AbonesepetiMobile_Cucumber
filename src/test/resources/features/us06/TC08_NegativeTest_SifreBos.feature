@@ -8,7 +8,7 @@ Feature: US06 telefon ve sifre girilmeden giris yapilamamali
     And Kullanici gecerli bir telefon numarasi girer
     And Kullanici sifre alanini bos birakir
     And Kullanici giris yap butonuna tiklar
-    Then Kullanici eksik bilgiler ile giris yapamadigini dogrular
+    Then Kullanici sifre alani altinda uyari yazisi gorur.
 
 
 
