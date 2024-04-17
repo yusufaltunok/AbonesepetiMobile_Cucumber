@@ -98,4 +98,37 @@ public class Login_StepDefs {
     public void kullaniciGecerliBirTelefonNumarasiGirer() {
         loginPage.cepTelefonu.sendKeys("5056771625");
     }
+
+    @And("Kullanici sifremi unuttum butonuna tiklar")
+    public void kullaniciSifremiUnuttumButonunaTiklar() {
+    }
+
+    @And("Kullanici Kodu Gonder butonuna tiklar")
+    public void kullaniciKoduGonderButonunaTiklar() {
+    }
+
+    @And("Kullanici cep telefonuna gelen {int} rakamli OTP kodunu girer")
+    public void kullaniciCepTelefonunaGelenRakamliOTPKodunuGirer(int arg0) {
+    }
+
+    @And("Kullanici Dogrula butonuna tiklar")
+    public void kullaniciDogrulaButonunaTiklar() {
+    }
+
+    @And("Kullanici sifreyi tekrar girer")
+    public void kullaniciSifreyiTekrarGirer() {
+    }
+
+    @And("Kullanici sifreyi kaydet butonuna tiklar")
+    public void kullaniciSifreyiKaydetButonunaTiklar() {
+    }
+
+    @Then("Kullanici sifrenin basarili bir sekilde degistirildigini dogrular")
+    public void kullaniciSifreninBasariliBirSekildeDegistirildiginiDogrular() {
+    }
+
+    @Then("Kullanici Kodu Gonder butonunun tiklanabilir olmadigini dogrular")
+    public void kullaniciKoduGonderButonununTiklanabilirOlmadiginiDogrular() {
+
+    }
 }

@@ -60,6 +60,11 @@ public class LoginPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geçerli bir telefon numarası giriniz.\")")
     public WebElement ceptelefonu_uyarisi;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifreyi Onayla\")")
+    public WebElement sifreyiOnayla;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifreyi Kaydet\")")
+    public WebElement sifreyiKaydet;
 
     public LoginPage girisYapTelefon (String phone, String password){
         atla.click();
