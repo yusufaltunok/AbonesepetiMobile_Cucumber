@@ -1,6 +1,6 @@
 Feature: US06 telefon ve sifre girilmeden giris yapilamamali
 
-  Scenario: TC003  - negative Senaryo
+  Scenario: TC006  - negative Senaryo
     When Kullanici Abonesepeti uygulamasini acar
     And Kullanici hesap olusturma sayfasina ulasmak icin Atla butonuna tiklar
     And Kullanici uygulamaya girebilmek icin giris yapa tiklar

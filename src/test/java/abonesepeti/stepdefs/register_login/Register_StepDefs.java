@@ -38,7 +38,7 @@ public class Register_StepDefs {
     @And("Giris sayfasina ulasmak icin Atla butonuna tiklar")
     public void girisSayfasinaUlasmakIcinAtlaButonunaTiklar() {
         bekle(3);
-        registerPage.atla.click();
+        loginPage.atla.click();
     }
 
     @And("Yeni hesap olustur butonuna tiklar")
@@ -102,7 +102,7 @@ public class Register_StepDefs {
 
     @And("Kullanici hesap olusturma sayfasina ulasmak icin Atla butonuna tiklar")
     public void kullaniciHesapOlusturmaSayfasinaUlasmakIcinAtlaButonunaTiklar() {
-        registerPage.atla.click();
+        loginPage.atla.click();
     }
 
     @And("Kullanici Yeni hesap olustur butonuna tiklar")
