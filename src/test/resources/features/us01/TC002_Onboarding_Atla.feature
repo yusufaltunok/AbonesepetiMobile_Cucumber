@@ -1,4 +1,5 @@
 @asd
+
 Feature: US01 Onboarding
   Scenario: TC02 Onboarding "Atla"
     When Kullanici Abonesepeti uygulamasini acar

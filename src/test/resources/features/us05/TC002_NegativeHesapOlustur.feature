@@ -1,4 +1,4 @@
-@us05_TC002
+@us05_TC002 @hepsi
 
 Feature: US05 Onceden kayitli bilgiler ile Yeni Hesap Olusturamamali
 
