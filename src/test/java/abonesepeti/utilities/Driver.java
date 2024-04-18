@@ -18,7 +18,7 @@ public class Driver {
     public static AndroidDriver getDriver(){
         if (driver == null) {
             UiAutomator2Options options = new UiAutomator2Options()
-                    .setUiautomator2ServerInstallTimeout(Duration.ofSeconds(40))
+                    .setUiautomator2ServerInstallTimeout(Duration.ofSeconds(100))
                     .setAppPackage(ConfigReader.getProperty("AppPackage"))
                     .setAppActivity(ConfigReader.getProperty("AppActivity"));
             URL url = null;
@@ -28,7 +28,7 @@ public class Driver {
                 throw new RuntimeException(e);
             }
             driver = new AndroidDriver(service.getUrl(), options);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
         return driver;
     }
