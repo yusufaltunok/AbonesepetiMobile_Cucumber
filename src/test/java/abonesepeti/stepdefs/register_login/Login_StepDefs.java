@@ -1,13 +1,20 @@
 package abonesepeti.stepdefs.register_login;
 
 import abonesepeti.pages.LoginPage;
+
 import abonesepeti.utilities.ReusableMethods;
+
+import io.appium.java_client.AppiumBy;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
+import static abonesepeti.utilities.Driver.driver;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class Login_StepDefs {
@@ -72,5 +79,72 @@ public class Login_StepDefs {
     @Then("Kullanici sifre alani altinda uyari yazisi gorur.")
     public void kullaniciSifreAlaniAltindaUyariYazisiGorur() {
         assertTrue(loginPage.sifre_uyarisi.isDisplayed());
+    }
+
+
+    @And("Kullanici telefon sekmesine tiklar.")
+    public void kullaniciTelefonSekmesineTiklar() {
+        loginPage.telefon.click();
+    }
+
+    @And("Kullanici cep telefonu alanini bos birakir")
+    public void kullaniciCepTelefonuAlaniniBosBirakir() {
+        loginPage.cepTelefonu.sendKeys("");
+    }
+
+    @Then("Kullanici eksik bilgiler ile giris yapamadigini dogrular")
+    public void kullaniciEksikBilgilerIleGirisYapamadiginiDogrular() {
+        assertTrue(loginPage.ceptelefonu_uyarisi.isDisplayed());
+    }
+
+    @And("Kullanici e-posta butonuna tiklar")
+    public void kullaniciEPostaButonunaTiklar() {
+        loginPage.e_Posta.click();
+    }
+
+    @And("Kullanici gecerli bir telefon numarasi girer")
+    public void kullaniciGecerliBirTelefonNumarasiGirer() {
+        loginPage.cepTelefonu.sendKeys("5056771625");
+    }
+
+    @And("Kullanici sifremi unuttum butonuna tiklar")
+    public void kullaniciSifremiUnuttumButonunaTiklar() {
+        loginPage.sifremiUnuttum.click();
+    }
+
+    @And("Kullanici Kodu Gonder butonuna tiklar")
+    public void kullaniciKoduGonderButonunaTiklar() {
+        loginPage.koduGonder.click();
+    }
+
+    @And("Kullanici cep telefonuna gelen {int} rakamli OTP kodunu girer")
+    public void kullaniciCepTelefonunaGelenRakamliOTPKodunuGirer(int arg0) {
+    }
+
+    @And("Kullanici Dogrula butonuna tiklar")
+    public void kullaniciDogrulaButonunaTiklar() {
+    }
+
+    @And("Kullanici sifreyi tekrar girer")
+    public void kullaniciSifreyiTekrarGirer() {
+    }
+
+    @And("Kullanici sifreyi kaydet butonuna tiklar")
+    public void kullaniciSifreyiKaydetButonunaTiklar() {
+    }
+
+    @Then("Kullanici sifrenin basarili bir sekilde degistirildigini dogrular")
+    public void kullaniciSifreninBasariliBirSekildeDegistirildiginiDogrular() {
+    }
+
+    @Then("Kullanici Kodu Gonder butonunun tiklanabilir olmadigini dogrular")
+    public void kullaniciKoduGonderButonununTiklanabilirOlmadiginiDogrular() {
+          By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
+//        System.out.println(driver.findElement(id).getText());
+
+//      System.out.println("getAttribute = " + driver.findElement(id).getAttribute("selected"));
+        String selected = driver.findElement(id).getAttribute("selected");
+        assertEquals("false", selected);
+
     }
 }

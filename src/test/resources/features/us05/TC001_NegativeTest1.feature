@@ -1,4 +1,4 @@
-@us05
+@us05 @hepsi
 Feature: US05 Onceden kayitli bilgiler ile Google Hesabi Kullanilarak Yeni Hesap Olusturamamali
   Scenario Outline: TC01 Yeni Hesap Olusturamama - negative Senaryo
    # When Kullanici Abonesepeti uygulamasina giris yapar

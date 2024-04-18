@@ -18,7 +18,7 @@ public class RegisterPage {
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnNext")
     public WebElement devamEt;
 
-    @AndroidFindBy(id = ("com.abonesepeti.app:id/btnSkip"))
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"ATLA\")")
     public WebElement atla;
 
     @AndroidFindBy(id = ("com.abonesepeti.app:id/btn_login_with_google"))

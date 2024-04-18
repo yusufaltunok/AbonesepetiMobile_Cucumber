@@ -15,7 +15,7 @@ public class LoginPage extends ReusableMethods {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()),this);
     }
 
-    @AndroidFindBy(id = ("com.abonesepeti.app:id/btnSkip"))
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"ATLA\")")
     public WebElement atla;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btn_login_with_email")
@@ -57,12 +57,21 @@ public class LoginPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifre en az 6 en fazla 16 karakterden oluşmalıdır\")")
     public WebElement sifre_uyarisi;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geçerli bir telefon numarası giriniz.\")")
+    public WebElement ceptelefonu_uyarisi;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifreyi Onayla\")")
+    public WebElement sifreyiOnayla;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Şifreyi Kaydet\")")
+    public WebElement sifreyiKaydet;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Kodu Gönder\")")
+    public WebElement koduGonder;
 
     public LoginPage girisYapTelefon (String phone, String password){
         atla.click();
         girisYap.click();
-        telefon.click();
         cepTelefonu.sendKeys(phone);
         sifre.sendKeys(password);
         girisYapButton.click();
@@ -75,6 +84,7 @@ public class LoginPage extends ReusableMethods {
     public LoginPage girisYapEposta (String mail, String password){
         atla.click();
         girisYap.click();
+        e_Posta.click();
         e_PostaAdres.sendKeys(mail);
         sifre.sendKeys(password);
         girisYapButton.click();

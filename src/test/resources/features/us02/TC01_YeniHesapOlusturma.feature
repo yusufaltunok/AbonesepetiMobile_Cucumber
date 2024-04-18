@@ -1,5 +1,5 @@
 
-@us02
+@us02 @hepsi
 Feature: US02 Yeni Hesap Olusturma
   Scenario Outline: TC01 Yeni Hesap Olusturma Pozitif Senaryo
     When Kullanici Abonesepeti uygulamasina giris yapar

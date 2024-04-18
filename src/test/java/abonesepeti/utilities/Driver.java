@@ -27,8 +27,13 @@ public class Driver {
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
+
             driver = new AndroidDriver(service.getUrl(), options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+            driver=new AndroidDriver(service.getUrl(),options);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         }
         return driver;
     }
