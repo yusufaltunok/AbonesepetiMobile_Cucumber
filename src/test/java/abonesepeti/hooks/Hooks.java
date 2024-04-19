@@ -27,7 +27,7 @@ public class Hooks {
             scenario.attach(screenshotAs, "image/png", "Hata_Resmi");
         }
         Driver.getDriver().terminateApp(ConfigReader.getProperty("AppPackage"));
-        bekle(5);
+        bekle(10);
     }
 
     @AfterAll
