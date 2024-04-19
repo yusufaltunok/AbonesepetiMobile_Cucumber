@@ -15,13 +15,6 @@ public class ProfilPage extends ReusableMethods {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
-
-
-
-
-
-}
-
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
 
