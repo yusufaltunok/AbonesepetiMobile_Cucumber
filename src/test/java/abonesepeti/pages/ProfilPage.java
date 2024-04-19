@@ -13,6 +13,12 @@ public class ProfilPage extends ReusableMethods {
     }
 
 
+
+
+
+
+}
+
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
 
@@ -80,3 +86,4 @@ public class ProfilPage extends ReusableMethods {
 
 
 }
+
