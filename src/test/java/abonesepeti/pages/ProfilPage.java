@@ -8,4 +8,9 @@ public class ProfilPage {
     public ProfilPage (){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()),this);
     }
+
+
+
+
+
 }
