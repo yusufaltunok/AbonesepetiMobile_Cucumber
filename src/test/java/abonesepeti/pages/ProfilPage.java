@@ -5,6 +5,7 @@ import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,13 +16,6 @@ public class ProfilPage extends ReusableMethods {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
-
-
-
-
-
-}
-
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
 
@@ -31,8 +25,8 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnNotifications")
     public WebElement hane1;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Abonelik Ekle\")")
-    public WebElement abonelikEkle ;
+    @AndroidFindBy(id="com.abonesepeti.app:id/btnHomes_1")
+    public List <WebElement> abonelikEkle ;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
     public WebElement yeniAbonelik;
@@ -43,7 +37,7 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Fatura Ödeme\")")
     public WebElement faturaOdeme;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Tüm İşlemler\")")
+    @AndroidFindBy(id="com.abonesepeti.app:id/expandHeaderButtons")
     public WebElement tumIslemler;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Cebe TL (Yakında)\")")
@@ -58,26 +52,27 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Geleceğim\")")
     public WebElement gelecegim;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kapat\")")
+    @AndroidFindBy(id="com.abonesepeti.app:id/expandHeaderButtons")
     public WebElement kapat;
 
-    @AndroidFindBy(accessibility = "Abonesepeti")
+    @AndroidFindBy(id = "com.abonesepeti.app:id/manage_fragment_container")
     public WebElement abonesepetiButton;
 
-    @AndroidFindBy(accessibility = "Abonelikler")
+    @AndroidFindBy(id = "com.abonesepeti.app:id/home_fragment_container")
     public WebElement aboneliklerButton;
 
-    @AndroidFindBy(accessibility = "İşlemler")
-    public WebElement IslemlerButton;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/transactions_fragment_container")
+    public WebElement islemlerButton;
 
-    @AndroidFindBy(accessibility = "Kampanyalar")
-    public WebElement KampanyalarButton;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/campaigns_fragment_container")
+    public WebElement kampanyalarButton;
 
-    @AndroidFindBy(accessibility = "Yönet")
-    public WebElement YonetButton;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/profile_fragment_container")
+    public WebElement yonetButton;
 
     @AndroidFindBy(className = "android.widget.LinearLayout")
-    public List<WebElement> ilkHane;
+    public List <WebElement> haneler;
+
 
 
 

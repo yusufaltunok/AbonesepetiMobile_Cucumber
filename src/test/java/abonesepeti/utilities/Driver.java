@@ -28,9 +28,6 @@ public class Driver {
                 throw new RuntimeException(e);
             }
 
-            driver = new AndroidDriver(service.getUrl(), options);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
             driver=new AndroidDriver(service.getUrl(),options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 

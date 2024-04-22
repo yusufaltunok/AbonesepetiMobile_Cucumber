@@ -1,15 +1,15 @@
-
+@US07
 Feature: US07 Abone Sepeti Anasayfasındaki ikonlar ve butonlar tiklanabilir ve erisilebilir olmalı
   Scenario: TC001
     When Kullanici Abonesepeti uygulamasina giris yapar
     Then Kullanici Profil butonunun tiklanabilir oldugunu dogrular
     And Kullanici Bildirimler butonunun tiklanabilir oldugunu dogrular
-    And Kullanici Hane1 butonunun tiklanabilir oldugunu dogrular
-    And Kullanici Hane2 butonunun tiklanabilir oldugunu dogrular
+    And Kullanici Hane bir butonunun tiklanabilir oldugunu dogrular
+    And Kullanici Hane iki butonunun tiklanabilir oldugunu dogrular
     And Kullanici Tumunu Goster butonunun tiklanabilir oldugunu dogrular
     And Kullanici Guncel Ay butonunun tiklanabilir oldugunu dogrular
-    And Kullanici Son 6 Ay butonunun tiklanabilir oldugunu dogrular
-    And Kullanici Son 1 Yil butonunun tiklanabilir oldugunu dogrular
+    And Kullanici Son alti Ay butonunun tiklanabilir oldugunu dogrular
+    And Kullanici Son bir Yil butonunun tiklanabilir oldugunu dogrular
     And Kullanici Toplam butonunun tiklanabilir oldugunu dogrular
     And Kullanici Tumunu Goster butonunun tiklanabilir oldugunu dogrular
     And Kullanici Kurum butonunun gorulebilir oldugunu dogrular
@@ -20,7 +20,7 @@ Feature: US07 Abone Sepeti Anasayfasındaki ikonlar ve butonlar tiklanabilir ve 
     And Kullanici Yeni Abonelik butonunun tiklanabilir oldugunu dogrular
     And Kullanici Kolay Iptal butonunun tiklanabilir oldugunu dogrular
     And Kullanici Fatura Odeme butonunun tiklanabilir oldugunu dogrular
-    And Kullanici Tum Islemler butonunun tiklanabilir oldugunu dogrular
+    And Kullanici Tum Islemler butonunun tiklanabilir oldugunu dogrular ve tiklar
     And Kullanici Cebe TL butonunun tiklanabilir oldugunu dogrular
     And Kullanici Arac Kirala butonunun tiklanabilir oldugunu dogrular
     And Kullanici Sigorta Teklifi Al butonunun tiklanabilir oldugunu dogrular
