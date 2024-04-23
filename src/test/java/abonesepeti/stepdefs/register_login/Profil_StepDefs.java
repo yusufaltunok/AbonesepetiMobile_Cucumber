@@ -40,7 +40,7 @@ public class Profil_StepDefs {
 
     @And("Kullanici cep telefonu textbox'inda on haneli cep telefonu bilgisinin oldugunu dogrular")
     public void kullaniciCepTelefonuTextboxIndaOnHaneliCepTelefonuBilgisininOldugunuDogrular() {
-        Assert.assertTrue(profilPage.tlfn_dogrula.isDisplayed());
+        Assert.assertTrue(profilPage.email_dogrula.isDisplayed());
     }
 
     @And("Kullanici dogum tarihi bilgisinin oldugunu dogrular")

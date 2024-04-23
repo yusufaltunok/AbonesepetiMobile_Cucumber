@@ -14,12 +14,6 @@ public class ProfilPage extends ReusableMethods {
     public ProfilPage() {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
 
-
-
-
-
-
-
 }
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
@@ -32,7 +26,7 @@ public class ProfilPage extends ReusableMethods {
     public WebElement hane1;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Abonelik Ekle\")")
-    public WebElement abonelikEkle ;
+    public List <WebElement> abonelikEkle ;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
     public WebElement yeniAbonelik;
@@ -68,17 +62,37 @@ public class ProfilPage extends ReusableMethods {
     public WebElement aboneliklerButton;
 
     @AndroidFindBy(accessibility = "İşlemler")
-    public WebElement IslemlerButton;
+    public WebElement islemlerButton;
 
     @AndroidFindBy(accessibility = "Kampanyalar")
-    public WebElement KampanyalarButton;
+    public WebElement kampanyalarButton;
 
     @AndroidFindBy(accessibility = "Yönet")
-    public WebElement YonetButton;
+    public WebElement yonetButton;
 
+    @AndroidFindBy(className = "android.widget.LinearLayout")
+    public List <WebElement> haneler;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"55510591258\")")
     public WebElement tc_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"tester yusuf \")")
+    public WebElement ad_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"altunok\")")
+    public WebElement soyad_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"salvatore@12345.hkh\")")
+    public WebElement email_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Kişisel bilgiler\")")
+    public WebElement kisisel_bilgiler;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/edt_birthdate\")")
+    public WebElement dogumtarihi_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Kişisel bilgiler\")")
+    public WebElement kisisel_bilgiler_title;
 
 
 

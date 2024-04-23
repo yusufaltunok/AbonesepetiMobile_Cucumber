@@ -77,7 +77,7 @@ public class ProfilStepDefs {
 
     @And("Kullanici Abonelik Ekle butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciAbonelikEkleButonununTiklanabilirOldugunuDogrular() {
-         assertEquals("true", profilPage.abonelikEkle.get(0).getAttribute("clickable"));
+        assertEquals("true", profilPage.abonelikEkle.get(0).getAttribute("clickable"));
     }
 
     @And("Kullanici Yeni Abonelik butonunun tiklanabilir oldugunu dogrular")
