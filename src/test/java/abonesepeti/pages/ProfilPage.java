@@ -14,7 +14,12 @@ import java.util.List;
 public class ProfilPage extends ReusableMethods {
     public ProfilPage() {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
+
+
+}
+
     }
+
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
@@ -25,7 +30,11 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnNotifications")
     public WebElement hane1;
 
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Abonelik Ekle\")")
+
     @AndroidFindBy(id="com.abonesepeti.app:id/btnHomes_1")
+
     public List <WebElement> abonelikEkle ;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
@@ -61,6 +70,34 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/home_fragment_container")
     public WebElement aboneliklerButton;
 
+
+    @AndroidFindBy(accessibility = "İşlemler")
+    public WebElement islemlerButton;
+
+    @AndroidFindBy(accessibility = "Kampanyalar")
+    public WebElement kampanyalarButton;
+
+    @AndroidFindBy(accessibility = "Yönet")
+    public WebElement yonetButton;
+
+    @AndroidFindBy(className = "android.widget.LinearLayout")
+    public List <WebElement> haneler;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"55510591258\")")
+    public WebElement tc_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"tester yusuf \")")
+    public WebElement ad_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"altunok\")")
+    public WebElement soyad_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"salvatore@12345.hkh\")")
+    public WebElement email_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Kişisel bilgiler\")")
+    public WebElement kisisel_bilgiler;
+
     @AndroidFindBy(id = "com.abonesepeti.app:id/transactions_fragment_container")
     public WebElement islemlerButton;
 
@@ -77,6 +114,11 @@ public class ProfilPage extends ReusableMethods {
     public WebElement kampanyalarResim;
 
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/edt_birthdate\")")
+    public WebElement dogumtarihi_dogrula;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Kişisel bilgiler\")")
+    public WebElement kisisel_bilgiler_title;
 
 
 
