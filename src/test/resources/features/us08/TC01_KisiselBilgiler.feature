@@ -1,17 +1,17 @@
 
-
+@rabia
 Feature: Us08
 
   Scenario: TC01 Kayıtlı Kisisel Bilgiler Goruntulenebilir Olmali
 
     When Kullanici Abonesepeti uygulamasina giris yapar
     Then Kullanici Profil butonununa tiklar
-    And Kullanici Bildirimler butonununa tiklar
-    And Kullanici Bildirimler butonunun tiklanabilir oldugunu dogrular
+    Then Kullanici Kişisel Bilgiler butonuna tiklar
+    And Kullanici Kişisel Bilgiler sayfasinda oldugunu dogrular
     And Kullanici ad textbox'inda ad bilgisinin oldugunu dogrular
     And Kullanici soyad textbox'inda soyad bilgisinin oldugunu dogrular
-    And Kullanici TC kimlik numarasi textbox'inda 11 haneli kimlik bilgisinin oldugunu dogrular
-    And Kullanici cep telefonu textbox'inda 10 haneli cep telefonu bilgisinin oldugunu dogrular
+    And Kullanici TC kimlik numarasi textbox'inda onbir haneli kimlik bilgisinin oldugunu dogrular
+    And Kullanici cep telefonu textbox'inda on haneli cep telefonu bilgisinin oldugunu dogrular
     And Kullanici e-mail textbox'inda e-mail bilgisinin oldugunu dogrular
     And Kullanici dogum tarihi bilgisinin oldugunu dogrular
 
