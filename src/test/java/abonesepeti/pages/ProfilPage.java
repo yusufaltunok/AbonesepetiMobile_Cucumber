@@ -2,10 +2,13 @@ package abonesepeti.pages;
 
 import abonesepeti.utilities.Driver;
 import abonesepeti.utilities.ReusableMethods;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class ProfilPage extends ReusableMethods {
     public ProfilPage() {
