@@ -144,12 +144,12 @@ public class Login_StepDefs {
 
     @Then("Kullanici Kodu Gonder butonunun tiklanabilir olmadigini dogrular")
     public void kullaniciKoduGonderButonununTiklanabilirOlmadiginiDogrular() {
-          By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
+    //      By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
 //        System.out.println(driver.findElement(id).getText());
 
 //      System.out.println("getAttribute = " + driver.findElement(id).getAttribute("selected"));
-        String selected = driver.findElement(id).getAttribute("selected");
-        assertEquals("false", selected);
+      //  String selected = driver.findElement(id).getAttribute("selected");
+        assertEquals("false", loginPage.koduGonder.getAttribute("selected"));
 
     }
 }
