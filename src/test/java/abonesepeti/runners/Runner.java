@@ -9,7 +9,11 @@ import org.junit.runner.RunWith;
             plugin = "html:raporlar/CucumberRapor.html",
             features = "src/test/resources/features",
             glue = {"abonesepeti/stepdefs","abonesepeti/hooks"},
-            tags = "@rabia   ",
+
+            
+
+            tags = "@US07    ",
+
             dryRun = false,
             monochrome = true
     )
