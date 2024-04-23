@@ -29,7 +29,7 @@ public class Driver {
             }
 
             driver=new AndroidDriver(service.getUrl(),options);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         }
         return driver;
