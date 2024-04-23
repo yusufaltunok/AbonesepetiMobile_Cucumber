@@ -73,6 +73,9 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.LinearLayout")
     public List <WebElement> haneler;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/imgPhoto")
+    public WebElement kampanyalarResim;
+
 
 
 
