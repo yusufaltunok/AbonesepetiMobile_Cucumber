@@ -8,6 +8,7 @@ import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
@@ -199,5 +200,20 @@ public class ProfilStepDefs extends ReusableMethods {
     @And("Kullanici Yonet butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciYonetButonununTiklanabilirOldugunuDogrular() {
         assertEquals("true", profilPage.yonetButton.getAttribute("clickable"));
+    }
+
+    @And("Kullanici Profil butonunu tiklar")
+    public void kullaniciProfilButonunuTiklar() {
+       profilPage.profil.click();
+    }
+
+    @And("kullanici Odeme islem gecmisi yazisina tiklar")
+    public void kullaniciOdemeIslemGecmisiYazisinaTiklar() {
+       profilPage.odemeGecmisi.click();
+    }
+
+    @Then("Kullanici odeme gecmisini dogrular")
+    public void kullaniciOdemeGecmisiniDogrular() {
+        Assert.assertTrue(profilPage.odemeGecmisiDogrula.isDisplayed());
     }
 }
