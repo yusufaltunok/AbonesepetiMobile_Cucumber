@@ -3,7 +3,7 @@ Feature: Us09
 
   Scenario: TC01 Kullanici Kisisel Bilgileri Guncelleyebildigini dogrular
 
-    When Kullanici Abonesepeti uygulamasina giris yapar
+    When Kullanici Abonesepeti uy gulamasina giris yapar
     Then Kullanici Profil butonununa tiklar
     Then Kullanici Kisisel Bilgiler butonuna tiklar ve sayfaya geçis yapar
     Then Kullanici Ad kutusunu temizler
