@@ -74,7 +74,6 @@ public class Profil_StepDefs {
     @Then("Kullanici Ad kutusunu temizler")
     public void kullaniciAdKutusunuTemizler() {
         registerPage.ad.clear();
-
     }
 
     @Then("Kullanici Ad kutusuna valid bir deger girer")
@@ -94,11 +93,12 @@ public class Profil_StepDefs {
 
     @Then("Kullanici TC kutusunu temizler")
     public void kullaniciTCKutusunuTemizler() {
-
+        registerPage.tc_textbox.clear();
     }
 
     @Then("Kullanici TC kutusuna valid bir deger girer")
     public void kullaniciTCKutusunaValidBirDegerGirer() {
+        registerPage.tc_textbox.sendKeys("55510591258"); //aynı tc kullandım
     }
 
     @Then("Kullanici cep telefonu kutusunu temizler")
@@ -111,25 +111,52 @@ public class Profil_StepDefs {
         registerPage.cepTelefonu.sendKeys("5056771625"); //aynı cep teli kullandım
     }
 
+    @Then("Kullanici email kutusunu temizler")
+    public void kullaniciEmailKutusunuTemizler() {
+        registerPage.ePosta.clear();
+    }
+
+    @Then("Kullanici email kutusuna valid bir deger girer")
+    public void kullaniciEmailKutusunaValidBirDegerGirer() {
+        registerPage.ePosta.sendKeys("salvatore@12345.hkh"); //aynı eposta
+    }
+
 
     @Then("Kullanici dogum tarihi kutusunu temizler")
     public void kullaniciDogumTarihiKutusunuTemizler() {
+        registerPage.dogumTarihi.clear();
     }
 
     @Then("Kullanici dogum tarihi kutusuna valid bir deger girer")
     public void kullaniciDogumTarihiKutusunaValidBirDegerGirer() {
+        registerPage.dogumTarihi.click();
+        registerPage.header_year_click.click();
+        registerPage.dogum_yili.click();
+        registerPage.next_month.click();
+        registerPage.select_day.click();
+        registerPage.click_ok.click();
     }
 
     @Then("Kullanici kaydet butonuna tiklar")
     public void kullaniciKaydetButonunaTiklar() {
+        registerPage.kaydet_degisiklikler.click();
 
     }
 
     @Then("Kullanici geri tuşu ile profil sayfasina geciş yapar")
     public void kullaniciGeriTuşuIleProfilSayfasinaGecişYapar() {
+        profilPage.back_button.click();
     }
 
     @And("Kullanici Kisisel Bilgiler' in basarili bir sekilde guncellendigini gorur")
     public void kullaniciKisiselBilgilerInBasariliBirSekildeGuncellendiginiGorur() {
+        profilPage.kisisel_bilgiler.click();
+        Assert.assertEquals("new name",registerPage.ad.getText());
+        Assert.assertEquals("new surname",registerPage.soyad.getText());
+        Assert.assertEquals("salvatore@12345.hkh",registerPage.ePosta.getText());
+        Assert.assertEquals("5056771625",registerPage.tc_textbox.getText());
+
+
+
     }
 }

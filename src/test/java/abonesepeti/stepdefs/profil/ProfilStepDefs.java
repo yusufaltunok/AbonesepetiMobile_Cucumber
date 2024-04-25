@@ -13,12 +13,8 @@ import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 
 
-public class ProfilStepDefs {
 
-import static org.junit.Assert.assertTrue;
-
-public class ProfilStepDefs extends ReusableMethods {
-
+   public class ProfilStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
 
     @Then("Kullanici Profil butonunun tiklanabilir oldugunu dogrular")
