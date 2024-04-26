@@ -132,4 +132,18 @@ public class Profil_StepDefs {
     @And("Kullanici Kisisel Bilgiler' in basarili bir sekilde guncellendigini gorur")
     public void kullaniciKisiselBilgilerInBasariliBirSekildeGuncellendiginiGorur() {
     }
+    @And("Kullanici Profil butonunu tiklar")
+    public void kullaniciProfilButonunuTiklar() {
+        profilPage.profil.click();
+    }
+
+    @And("kullanici Odeme islem gecmisi yazisina tiklar")
+    public void kullaniciOdemeIslemGecmisiYazisinaTiklar() {
+        profilPage.odemeGecmisi.click();
+    }
+
+    @Then("Kullanici odeme gecmisini dogrular")
+    public void kullaniciOdemeGecmisiniDogrular() {
+        Assert.assertTrue(profilPage.odemeGecmisiDogrula.isDisplayed());
+}
 }
