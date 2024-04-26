@@ -59,5 +59,31 @@ public class RegisterPage {
     @AndroidFindBy(id = "com.google.android.gms:id/continue_button")
     public WebElement gmailOlarakDevamEt;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/edt_birthdate")
+    public WebElement dogumTarihi;
+
+    @AndroidFindBy(id = "android:id/date_picker_header_year")
+    public WebElement header_year_click;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"1988\")")
+    public WebElement dogum_yili;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/next\")")
+    public WebElement next_month;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"24\")")
+    public WebElement select_day;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/button1\")")
+    public WebElement click_ok;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/btnContinue\")")
+    public WebElement kaydet_degisiklikler;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/cv_tc_number_container\")")
+    public WebElement tc_textbox;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"55510591258\")")
+    public WebElement tc_dogrula;
 
 }

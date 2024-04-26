@@ -14,6 +14,8 @@ Feature: Us09
     Then Kullanici TC kutusuna valid bir deger girer
     Then Kullanici cep telefonu kutusunu temizler
     Then Kullanici cep telefonu kutusuna valid bir deger girer
+    Then Kullanici email kutusunu temizler
+    Then Kullanici email kutusuna valid bir deger girer
     Then Kullanici dogum tarihi kutusunu temizler
     Then Kullanici dogum tarihi kutusuna valid bir deger girer
     Then Kullanici kaydet butonuna tiklar

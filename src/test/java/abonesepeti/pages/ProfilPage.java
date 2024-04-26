@@ -82,28 +82,11 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme - İşlem Geçmişi\")")
     public WebElement odemeGecmisi;
 
-    @AndroidFindBy(uiAutomator="")
-    public WebElement ad_dogrula;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_back")
+    public WebElement back_button;
 
-    @AndroidFindBy(uiAutomator="")
-    public WebElement soyad_dogrula;
-
-    @AndroidFindBy(uiAutomator="")
-    public WebElement email_dogrula;
-
-    @AndroidFindBy(uiAutomator="")
-    public WebElement tc_dogrula;
-
-    @AndroidFindBy(uiAutomator="")
-    public WebElement dogumtarihi_dogrula;
-
-    @AndroidFindBy(uiAutomator="")
-    public WebElement kisisel_bilgiler;
-
-    @AndroidFindBy(uiAutomator="")
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kişisel bilgiler\")")
     public WebElement kisisel_bilgiler_title;
-
-
 
     @AndroidFindBy(className = "android.widget.EditText")
     public List <WebElement> kisiselBilgiler;
