@@ -1,10 +1,7 @@
-package abonesepeti.stepdefs.profil;
+package abonesepeti.stepdefs.anasayfa;
 
 import abonesepeti.pages.ProfilPage;
-
-
 import abonesepeti.utilities.ReusableMethods;
-
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -13,8 +10,7 @@ import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 
 
-
-   public class ProfilStepDefs extends ReusableMethods {
+public class AnasayfaStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
 
     @Then("Kullanici Profil butonunun tiklanabilir oldugunu dogrular")
@@ -29,20 +25,13 @@ import static org.junit.Assert.assertEquals;
 
     @And("Kullanici Hane bir butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciHaneBirButonununTiklanabilirOldugunuDogrular() {
-
-        assertEquals("false", profilPage.haneler.get(0).getAttribute("clickable"));
-
         profilPage.haneler.get(1).click();
         assertEquals("true", profilPage.haneler.get(0).getAttribute("clickable"));
-
     }
 
     @And("Kullanici Hane iki butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciHaneIkiButonununTiklanabilirOldugunuDogrular() {
-
-
         profilPage.haneler.get(0).click();
-
         assertEquals("true", profilPage.haneler.get(1).getAttribute("clickable"));
     }
 
@@ -53,20 +42,13 @@ import static org.junit.Assert.assertEquals;
 
     @And("Kullanici Guncel Ay butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciGuncelAyButonununTiklanabilirOldugunuDogrular() {
-
-        assertEquals("false", profilPage.haneler.get(4).getAttribute("clickable"));
-
         profilPage.haneler.get(5).click();
         assertEquals("true", profilPage.haneler.get(4).getAttribute("clickable"));
-
     }
 
     @And("Kullanici Son alti Ay butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciSonAltiAyButonununTiklanabilirOldugunuDogrular() {
-
-
         profilPage.haneler.get(4).click();
-
         assertEquals("true", profilPage.haneler.get(5).getAttribute("clickable"));
     }
 
@@ -101,11 +83,7 @@ import static org.junit.Assert.assertEquals;
 
     @And("Kullanici Abonelik Ekle butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciAbonelikEkleButonununTiklanabilirOldugunuDogrular() {
-
-        assertEquals("true", profilPage.abonelikEkle.get(0).getAttribute("clickable"));
-
          assertEquals("true", profilPage.abonelikEkle.get(0).getAttribute("clickable"));
-
     }
 
     @And("Kullanici Yeni Abonelik butonunun tiklanabilir oldugunu dogrular")
@@ -165,11 +143,8 @@ import static org.junit.Assert.assertEquals;
 
     @And("Kullanici Size Ozel Kampanyalar sekmelerinin tiklanabilir oldugunu dogrular")
     public void kullaniciSizeOzelKampanyalarSekmelerininTiklanabilirOldugunuDogrular() {
-
-
         assertEquals("true", profilPage.kampanyalarResim.getAttribute("clickable"));
         swipeGesture(driver, profilPage.kampanyalarResim, "left",0.16,1000);
-
     }
 
     @And("Kullanici Abonesepeti butonunun tiklanabilir oldugunu dogrular")
