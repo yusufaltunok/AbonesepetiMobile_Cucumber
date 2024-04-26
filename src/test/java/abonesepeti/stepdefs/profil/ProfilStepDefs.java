@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+
 
 public class ProfilStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();

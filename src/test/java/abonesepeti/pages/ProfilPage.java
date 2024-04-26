@@ -26,7 +26,7 @@ public class ProfilPage extends ReusableMethods {
     public WebElement hane1;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btnHomes_1")
-    public List <WebElement> abonelikEkle ;
+    public List <WebElement> abonelikEkle;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
     public WebElement yeniAbonelik;
