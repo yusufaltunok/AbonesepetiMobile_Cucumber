@@ -76,7 +76,11 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgPhoto")
     public WebElement kampanyalarResim;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme geçmişi bulunmamaktadır.\")")
+    public WebElement odemeGecmisiDogrula;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme - İşlem Geçmişi\")")
+    public WebElement odemeGecmisi;
 
 
 
