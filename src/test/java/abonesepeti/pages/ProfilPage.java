@@ -26,7 +26,7 @@ public class ProfilPage extends ReusableMethods {
     public WebElement hane1;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btnHomes_1")
-    public List <WebElement> abonelikEkle;
+    public List <WebElement> abonelikEkle ;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
     public WebElement yeniAbonelik;
@@ -76,29 +76,26 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgPhoto")
     public WebElement kampanyalarResim;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme geçmişi bulunmamaktadır.\")")
+    public WebElement odemeGecmisiDogrula;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme - İşlem Geçmişi\")")
+    public WebElement odemeGecmisi;
+
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_back")
     public WebElement back_button;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"tester yusuf \")")
-    public WebElement ad_dogrula;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"altunok\")")
-    public WebElement soyad_dogrula;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"salvatore@12345.hkh\")")
-    public WebElement email_dogrula;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"55510591258\")")
-    public WebElement tc_dogrula;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"16/04/1978\")")
-    public WebElement dogumtarihi_dogrula;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.ImageView\").instance(4)")
-    public WebElement kisisel_bilgiler;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kişisel bilgiler\")")
     public WebElement kisisel_bilgiler_title;
+
+    @AndroidFindBy(className = "android.widget.EditText")
+    public List <WebElement> kisiselBilgiler;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_personal_information\")")
+    public WebElement kisisel_bilgiler_button;
+
+
 
 
 
