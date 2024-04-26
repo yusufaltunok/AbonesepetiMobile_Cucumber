@@ -1,4 +1,4 @@
-package abonesepeti.stepdefs.profil;
+package abonesepeti.stepdefs.anasayfa;
 
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.utilities.ReusableMethods;
@@ -10,7 +10,7 @@ import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 
 
-public class ProfilStepDefs extends ReusableMethods {
+public class AnasayfaStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
 
     @Then("Kullanici Profil butonunun tiklanabilir oldugunu dogrular")
