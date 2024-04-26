@@ -1,4 +1,4 @@
-package abonesepeti.stepdefs.register_login;
+package abonesepeti.stepdefs.profil;
 
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
@@ -79,7 +79,7 @@ public class Profil_StepDefs {
 
     @Then("Kullanici Ad kutusuna valid bir deger girer")
     public void kullaniciAdKutusunaValidBirDegerGirer() {
-        registerPage.ad.sendKeys("new name");
+        profilPage.kisiselBilgiler.get(0).sendKeys("new name");
     }
 
     @Then("Kullanici Soyad kutusunu temizler")
