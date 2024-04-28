@@ -26,7 +26,7 @@ public class ProfilPage extends ReusableMethods {
     public WebElement hane1;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/btnHomes_1")
-    public List <WebElement> abonelikEkle ;
+    public List <WebElement> abonelikEkle;
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
     public WebElement yeniAbonelik;
@@ -82,11 +82,28 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme - İşlem Geçmişi\")")
     public WebElement odemeGecmisi;
 
-    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_back")
-    public WebElement back_button;
+    @AndroidFindBy(uiAutomator="")
+    public WebElement ad_dogrula;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kişisel bilgiler\")")
+    @AndroidFindBy(uiAutomator="")
+    public WebElement soyad_dogrula;
+
+    @AndroidFindBy(uiAutomator="")
+    public WebElement email_dogrula;
+
+    @AndroidFindBy(uiAutomator="")
+    public WebElement tc_dogrula;
+
+    @AndroidFindBy(uiAutomator="")
+    public WebElement dogumtarihi_dogrula;
+
+    @AndroidFindBy(uiAutomator="")
+    public WebElement kisisel_bilgiler;
+
+    @AndroidFindBy(uiAutomator="")
     public WebElement kisisel_bilgiler_title;
+
+
 
     @AndroidFindBy(className = "android.widget.EditText")
     public List <WebElement> kisiselBilgiler;
