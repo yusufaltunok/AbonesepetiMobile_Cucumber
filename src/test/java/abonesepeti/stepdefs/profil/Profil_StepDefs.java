@@ -88,7 +88,8 @@ public class Profil_StepDefs {
 
     @Then("Kullanici Soyad kutusuna valid bir deger girer")
     public void kullaniciSoyadKutusunaValidBirDegerGirer() {
-        registerPage.soyad.sendKeys("new surname");
+        profilPage.kisiselBilgiler.get(1).sendKeys("new name");
+
     }
 
     @Then("Kullanici TC kutusunu temizler")
