@@ -96,9 +96,7 @@ public class Register_StepDefs {
     public void kullaniciEpostaIleAbonesepetiUygulamasinaGirisYapar() {
         loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
     }
-    @When("Kullanici Abonesepeti uygulamasini acar")
-    public void kullaniciAbonesepetiUygulamasiniAcar() {
-    }
+
 
     @And("Kullanici hesap olusturma sayfasina ulasmak icin Atla butonuna tiklar")
     public void kullaniciHesapOlusturmaSayfasinaUlasmakIcinAtlaButonunaTiklar() {
@@ -119,4 +117,10 @@ public class Register_StepDefs {
         registerPage.sifre.sendKeys(sifre);
 
     }
+
+    @When("Kullanici Abonesepeti uygulamasini acar")
+    public void kullaniciAbonesepetiUygulamasiniAcar() {
+    }
+
+
 }

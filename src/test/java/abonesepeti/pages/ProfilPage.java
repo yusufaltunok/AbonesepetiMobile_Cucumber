@@ -5,6 +5,7 @@ import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,63 +16,77 @@ public class ProfilPage extends ReusableMethods {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
-    @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
-    public WebElement profil;
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
+//    public WebElement profil;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/btnNotifications")
+//    public WebElement bildirim;
+//
+//    @AndroidFindBy(id="com.abonesepeti.app:id/btnHomes_1")
+//    public List <WebElement> abonelikEkle ;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
+//    public WebElement yeniAbonelik;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kolay İptal\")")
+//    public WebElement kolayIptal;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Fatura Ödeme\")")
+//    public WebElement faturaOdeme;
+//
+//    @AndroidFindBy(id="com.abonesepeti.app:id/expandHeaderButtons")
+//    public WebElement tumIslemler;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Cebe TL (Yakında)\")")
+//    public WebElement cebeTLYakinda;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Araç Kirala\")")
+//    public WebElement aracKirala;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Sigorta Teklifi Al \")")
+//    public WebElement sigortaTeklifiAl;
+//
+//    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Geleceğim\")")
+//    public WebElement gelecegim;
+//
+//    @AndroidFindBy(id="com.abonesepeti.app:id/expandHeaderButtons")
+//    public WebElement kapat;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/manage_fragment_container")
+//    public WebElement abonesepetiButton;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/home_fragment_container")
+//    public WebElement aboneliklerButton;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/transactions_fragment_container")
+//    public WebElement islemlerButton;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/campaigns_fragment_container")
+//    public WebElement kampanyalarButton;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/profile_fragment_container")
+//    public WebElement yonetButton;
+//
+//    @AndroidFindBy(className = "android.widget.LinearLayout")
+//    public List <WebElement> haneler;
+//
+//    @AndroidFindBy(id = "com.abonesepeti.app:id/imgPhoto")
+//    public WebElement kampanyalarResim;
 
-    @AndroidFindBy(id = "com.abonesepeti.app:id/btnNotifications")
-    public WebElement bildirim;
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme geçmişi bulunmamaktadır.\")")
+    public WebElement odemeGecmisiDogrula;
 
-    @AndroidFindBy(id = "com.abonesepeti.app:id/btnNotifications")
-    public WebElement hane1;
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme - İşlem Geçmişi\")")
+    public WebElement odemeGecmisi;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Abonelik Ekle\")")
-    public WebElement abonelikEkle ;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_back")
+    public WebElement back_button;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeni Abonelik\")")
-    public WebElement yeniAbonelik;
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kişisel bilgiler\")")
+    public WebElement kisisel_bilgiler_title;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kolay İptal\")")
-    public WebElement kolayIptal;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Fatura Ödeme\")")
-    public WebElement faturaOdeme;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Tüm İşlemler\")")
-    public WebElement tumIslemler;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Cebe TL (Yakında)\")")
-    public WebElement cebeTLYakinda;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Araç Kirala\")")
-    public WebElement aracKirala;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Sigorta Teklifi Al \")")
-    public WebElement sigortaTeklifiAl;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Geleceğim\")")
-    public WebElement gelecegim;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Kapat\")")
-    public WebElement kapat;
-
-    @AndroidFindBy(accessibility = "Abonesepeti")
-    public WebElement abonesepetiButton;
-
-    @AndroidFindBy(accessibility = "Abonelikler")
-    public WebElement aboneliklerButton;
-
-    @AndroidFindBy(accessibility = "İşlemler")
-    public WebElement IslemlerButton;
-
-    @AndroidFindBy(accessibility = "Kampanyalar")
-    public WebElement KampanyalarButton;
-
-    @AndroidFindBy(accessibility = "Yönet")
-    public WebElement YonetButton;
-
-    @AndroidFindBy(className = "android.widget.LinearLayout")
-    public List<WebElement> ilkHane;
-
+    @AndroidFindBy(className = "android.widget.EditText")
+    public List <WebElement> kisiselBilgiler;
 
 
 

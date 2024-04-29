@@ -12,13 +12,13 @@ public class Hooks {
 
     @BeforeAll
     public static void beforeAll() {
-        Driver.serverBaslat(ConfigReader.getProperty("localIPAdres"), Integer.parseInt(ConfigReader.getProperty("localPort")));
+        Driver.serverBaslat(ConfigReader.getProperty("localIpAdres"), Integer.parseInt(ConfigReader.getProperty("localPort")));
     }
 
-    @Before
-    public void setUp() {
-        Driver.getDriver().activateApp(ConfigReader.getProperty("AppPackage"));
-    }
+//    @Before
+//    public void setUp() {
+//        Driver.getDriver().activateApp(ConfigReader.getProperty("AppPackage"));
+//    }
 
     @After
     public void tearDown(Scenario scenario) {
