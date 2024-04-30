@@ -1,8 +1,10 @@
 package abonesepeti.stepdefs.profil;
 
+import abonesepeti.pages.AnasayfaPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
+import abonesepeti.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -10,18 +12,19 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import static abonesepeti.utilities.Driver.driver;
 
-public class Profil_StepDefs {
+public class Profil_StepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
     RegisterPage registerPage = new RegisterPage();
 
     LoginPage loginPage = new LoginPage();
 
+    AnasayfaPage anasayfaPage = new AnasayfaPage();
 
 
 
     @Then("Kullanici Profil butonununa tiklar")
     public void kullaniciProfilButonununaTiklar() {
-        profilPage.profil.click();
+        anasayfaPage.profil.click();
     }
 
 
@@ -60,6 +63,7 @@ public class Profil_StepDefs {
 
     @Then("Kullanici Kişisel Bilgiler butonuna tiklar")
     public void kullaniciKişiselBilgilerButonunaTiklar() {
+        bekle(2);
         profilPage.kisisel_bilgiler_button.click();
     }
 
@@ -134,18 +138,15 @@ public class Profil_StepDefs {
 
     @Then("Kullanici dogum tarihi kutusuna valid bir deger girer")
     public void kullaniciDogumTarihiKutusunaValidBirDegerGirer() {
-        registerPage.dogumTarihi.click();
+        //profilPage.kisiselBilgiler.get(5).sendKeys("12/12/2000");
+        profilPage.kisiselBilgiler.get(5).click();
         registerPage.header_year_click.click();
-      //  JavascriptExecutor js = (JavascriptExecutor) driver;
-      //  js.executeScript("arguments[0].scrollIntoView(true);",registerPage.dogum_yili );
-        //js.executeScript("window.scrollTo(2,3");
-        registerPage.dogum_yili.click();
-        registerPage.click_ok.click();
-        registerPage.next_month.click();
-        registerPage.click_ok.click();
-        registerPage.select_day.click();
-        registerPage.click_ok.click();
 
+    }
+
+    @Then("Kullanici geri tusu ile profil sayfasina gecis yapar")
+    public void kullaniciGeriTusuIleProfilSayfasinaGecisYapar() {
+        profilPage.back_button.click();
     }
 
     @Then("Kullanici kaydet butonuna tiklar")
@@ -154,25 +155,21 @@ public class Profil_StepDefs {
 
     }
 
-    @Then("Kullanici geri tuşu ile profil sayfasina geciş yapar")
-    public void kullaniciGeriTuşuIleProfilSayfasinaGecişYapar() {
-        profilPage.back_button.click();
-    }
 
     @And("Kullanici Kisisel Bilgiler' in basarili bir sekilde guncellendigini gorur")
     public void kullaniciKisiselBilgilerInBasariliBirSekildeGuncellendiginiGorur() {
-        profilPage.kisisel_bilgiler_button.click();
-        Assert.assertEquals("new name",registerPage.ad.getText());
-        Assert.assertEquals("new surname",registerPage.soyad.getText());
-        Assert.assertEquals("salvatore@12345.hkh",registerPage.ePosta.getText());
-        Assert.assertEquals("5056771625",registerPage.tc_textbox.getText());
-
+        Assert.assertEquals("new name",profilPage.kisiselBilgiler.get(0).getText());
+        Assert.assertEquals("new surname",profilPage.kisiselBilgiler.get(1).getText());
+        Assert.assertEquals("salvatore@12345.hkh",profilPage.kisiselBilgiler.get(2).getText());
+        Assert.assertEquals("55510591258",profilPage.kisiselBilgiler.get(3).getText());
+        Assert.assertEquals("(505) 677 16 25",profilPage.kisiselBilgiler.get(4).getText());
+       // Assert.assertEquals("12/12/2000",profilPage.kisiselBilgiler.get(5).getText());
 
 
     }
     @And("Kullanici Profil butonunu tiklar")
     public void kullaniciProfilButonunuTiklar() {
-        profilPage.profil.click();
+        anasayfaPage.profil.click();
     }
 
     @And("kullanici Odeme islem gecmisi yazisina tiklar")
@@ -184,4 +181,6 @@ public class Profil_StepDefs {
     public void kullaniciOdemeGecmisiniDogrular() {
         Assert.assertTrue(profilPage.odemeGecmisiDogrula.isDisplayed());
 }
+
+
 }
