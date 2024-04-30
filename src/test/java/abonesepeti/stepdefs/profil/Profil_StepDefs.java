@@ -175,4 +175,16 @@ public class Profil_StepDefs {
     public void kullaniciOdemeGecmisiniDogrular() {
         Assert.assertTrue(profilPage.odemeGecmisiDogrula.isDisplayed());
 }
+
+
+    @And("Kullanici Çıkis Yap'a tıklar")
+    public void kullaniciCıkisYapATıklar() {
+        profilPage.cikisyap.click();
+        
+    }
+
+    @Then("Kullanici Evet'e tıklar")
+    public void kullaniciEvetETıklar() {
+        profilPage.evet.click();
+    }
 }
