@@ -183,4 +183,65 @@ public class Profil_StepDefs extends ReusableMethods {
 }
 
 
+    @Then("Kullanici Hesabimi Sil butonuna tiklar")
+    public void kullaniciHesabimiSilButonunaTiklar() {
+        profilPage.hesabimiSil_button.click();
+    }
+
+    @Then("Kullanici Yinede Sil ve Iptal butonlarını goruntuler")
+    public void kullaniciYinedeSilVeIptalButonlarınıGoruntuler() {
+        Assert.assertTrue(profilPage.yinedeSil_button.isDisplayed());
+        Assert.assertTrue(profilPage.iptal_silmeIslemi.isDisplayed());
+    }
+
+    @Then("Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular")
+    public void kullaniciIptalButonunaTiklarVeProfilSayfasındaKaldıgınıDogrular() {
+        profilPage.iptal_silmeIslemi.click();
+        Assert.assertTrue(profilPage.profilSAyfasi_text.isDisplayed());
+    }
+
+
+    @Then("Kullanici Yinede Sil butonunu tiklar")
+    public void kullaniciYinedeSilButonunuTiklar() {
+        profilPage.yinedeSil_button.click();
+    }
+
+    @Then("Kullanici mevcut sifre textboxina sifresini girer")
+    public void kullaniciMevcutSifreTextboxinaSifresiniGirer() {
+        profilPage.mevcutSifre_textbox.click();
+        profilPage.mevcutSifre_textbox.sendKeys("123456");
+    }
+
+    @Then("Kullanici sifrenin yanindaki goz simgesine tiklar")
+    public void kullaniciSifreninYanindakiGozSimgesineTiklar() {
+        profilPage.sifreGoruntule.click();
+    }
+
+    @Then("Kullanici gecerli sifresini girdigini dogrular")
+    public void kullaniciGecerliSifresiniGirdiginiDogrular() {
+        Assert.assertEquals("123456",profilPage.sifreText.getText());
+
+    }
+
+    @Then("Kullanici sil butonunu tiklar")
+    public void kullaniciSilButonunuTiklar() {
+        profilPage.delete_account.click();
+    }
+
+    @Then("Kullanici musteri uyari mesajini goruntuler")
+    public void kullaniciMusteriUyariMesajiniGoruntuler() {
+        Assert.assertTrue(profilPage.hesabimiSil_uyariMessaji.isDisplayed());
+    }
+
+    @Then("Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular")
+    public void kullaniciSilVeDevamEtButonlarininTiklanabilirOldugunuDogrular() {
+        Assert.assertTrue(profilPage.devamEt_text.isDisplayed());
+        Assert.assertTrue(profilPage.sil.isDisplayed());
+    }
+
+    @And("Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar")
+    public void kullaniciSilinenHesapBilgileriIleGirisYapamadiginiDogrularVeTamamButonunaTiklar() {
+        Assert.assertTrue(profilPage.eslesenHesapBulunamadi_messaji.isDisplayed());
+        profilPage.tamam_müsteri_messaji.click();
+    }
 }

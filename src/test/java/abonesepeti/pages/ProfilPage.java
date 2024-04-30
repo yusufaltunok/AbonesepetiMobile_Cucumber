@@ -91,15 +91,49 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_personal_information\")")
     public WebElement kisisel_bilgiler_button;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_delete_account\")")
+    public WebElement hesabimiSil_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yinede Sil\")")
+    public WebElement yinedeSil_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Mevcut Şifre\")")
+    public WebElement mevcutSifre_textbox;
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_continue_to_delete_account\")")
+    public WebElement Sil_button_soru;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
+    public WebElement Sil_button_bilgiMesaji;
 
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
+    public WebElement eslesenHesapBulunamadi_messaji;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
+    public WebElement tamam_müsteri_messaji;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"İptal\")")
+    public WebElement iptal_silmeIslemi;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Profil\")")
+    public WebElement profilSAyfasi_text;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/text_input_end_icon\")")
+    public WebElement sifreGoruntule;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/edt_current_password\")")
+    public WebElement sifreText;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_continue_to_delete_account\")")
+    public WebElement delete_account;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_description_custom_dialog\")")
+    public WebElement hesabimiSil_uyariMessaji;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Devam Et\")")
+    public WebElement devamEt_text;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
+    public WebElement sil;
 }
 

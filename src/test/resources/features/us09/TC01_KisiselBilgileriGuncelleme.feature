@@ -24,7 +24,7 @@ Feature: Us09
     And Kullanici Kisisel Bilgiler' in basarili bir sekilde guncellendigini gorur
 
 
-git
+
 
 
 
