@@ -93,6 +93,9 @@ public class ProfilPage extends ReusableMethods {
     public WebElement evet;
 
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_personal_information\")")
+    public WebElement kisisel_bilgiler_button;
+
 
 
 
