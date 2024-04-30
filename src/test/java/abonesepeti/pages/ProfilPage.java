@@ -88,6 +88,9 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.EditText")
     public List <WebElement> kisiselBilgiler;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_personal_information\")")
+    public WebElement kisisel_bilgiler_button;
+
 
 
 
