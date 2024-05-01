@@ -96,6 +96,23 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_personal_information\")")
     public WebElement kisisel_bilgiler_button;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Bize Ulaşın\")")
+    public WebElement bizeUlasin_button;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/edtExplanation_text")
+    public WebElement açıklama_textbox;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
+    public WebElement button_Gonder_Bize_Ulasin;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_message_custom_dialog")
+    public WebElement GeribildirimMesaji_text;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_positive_custom_dialog")
+    public WebElement geriBildirimMesaji_Tamam_Button;
+
+
+
+
 
 
 
