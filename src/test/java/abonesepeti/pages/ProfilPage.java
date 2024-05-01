@@ -88,6 +88,10 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.EditText")
     public List <WebElement> kisiselBilgiler;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.ScrollView\")")
+    public WebElement profilPanel;
+
+
 
 
 
