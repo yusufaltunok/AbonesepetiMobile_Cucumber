@@ -1,4 +1,4 @@
-@tarik @US12_TC01
+@tarik
 Feature: US12 pro yillik odeme yapilabildigini dogrula
   Scenario: Genel Senaryo
     When Kullanici Abonesepeti uygulamasina giris yapar

@@ -5,7 +5,7 @@ Feature: Us09
 
     When Kullanici Abonesepeti uygulamasina giris yapar
     Then Kullanici Profil butonununa tiklar
-    Then Kullanici Kisisel Bilgiler butonuna tiklar ve sayfaya gecis yapar
+    Then Kullanici Kisisel Bilgiler butonuna tiklar ve sayfaya geçis yapar
     Then Kullanici Ad kutusunu temizler
     Then Kullanici Ad kutusuna valid bir deger girer
     Then Kullanici Soyad kutusunu temizler

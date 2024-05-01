@@ -1,5 +1,6 @@
 package abonesepeti.stepdefs.register_login;
 
+import abonesepeti.pages.AnasayfaPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.Driver;
@@ -15,6 +16,7 @@ import static abonesepeti.utilities.ReusableMethods.visibleWait;
 public class Register_StepDefs {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
+
 
     @And("Giris sayfasi gelene kadar Devam Et butonuna tiklar")
     public void giris_sayfasi_gelene_kadar_devam_et_butonuna_tiklar() {
@@ -121,6 +123,7 @@ public class Register_StepDefs {
     @When("Kullanici Abonesepeti uygulamasini acar")
     public void kullaniciAbonesepetiUygulamasiniAcar() {
     }
+
 
 
 }
