@@ -35,7 +35,7 @@ public class Register_StepDefs {
         Assert.assertTrue(loginPage.girisYap.isDisplayed());
     }
 
-    @And("Giris sayfasina ulasmak icin Atla butonuna tiklar")
+    @When("Giris sayfasina ulasmak icin Atla butonuna tiklar")
     public void girisSayfasinaUlasmakIcinAtlaButonunaTiklar() {
         bekle(3);
         loginPage.atla.click();
@@ -123,4 +123,7 @@ public class Register_StepDefs {
     }
 
 
+    @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
+    public void bilgileriniGirer(String arg0, String arg1, String arg2, String arg3, String arg4) {
+    }
 }

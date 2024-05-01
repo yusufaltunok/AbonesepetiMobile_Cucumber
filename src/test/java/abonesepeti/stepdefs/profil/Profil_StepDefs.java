@@ -55,8 +55,8 @@ public class Profil_StepDefs {
 
     }
 
-    @Then("Kullanici Kişisel Bilgiler butonuna tiklar")
-    public void kullaniciKişiselBilgilerButonunaTiklar() {
+    @Then("Kullanici Kisisel Bilgiler butonuna tiklar")
+    public void kullaniciKisiselBilgilerButonunaTiklar() {
         //profilPage.kisisel_bilgiler.click();
     }
 
