@@ -22,3 +22,4 @@ Feature: US06 telefon ve sifre girilmeden giris yapilamamali
   #Click on Sifremi Unuttum button
   #Click on Kodu Gonder button
   #Verify that you can not click on Kodu Gonder button
+  #

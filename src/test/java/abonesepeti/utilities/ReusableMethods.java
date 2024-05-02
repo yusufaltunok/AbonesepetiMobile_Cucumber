@@ -119,7 +119,7 @@ public class ReusableMethods {
         ));
     }
 
-    public void swipeGesture(AndroidDriver driver, WebElement element, String direction, double percent, int speed) {
+                 public void swipeGesture(AndroidDriver driver, WebElement element, String direction, double percent, int speed) {
         driver.executeScript("mobile: swipeGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "direction", direction,

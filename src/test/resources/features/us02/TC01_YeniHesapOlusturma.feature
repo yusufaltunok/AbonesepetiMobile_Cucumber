@@ -2,8 +2,7 @@
 @us02 @hepsi
 Feature: US02 Yeni Hesap Olusturma
   Scenario Outline: TC01 Yeni Hesap Olusturma Pozitif Senaryo
-    When Kullanici Abonesepeti uygulamasina giris yapar
-    And Giris sayfasina ulasmak icin Atla butonuna tiklar
+    When Giris sayfasina ulasmak icin Atla butonuna tiklar
     And Yeni hesap olustur butonuna tiklar
     And "<ad>", "<soyad>", "<telefon>", "<mail>", "<sifre>" bilgilerini girer
     And Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar

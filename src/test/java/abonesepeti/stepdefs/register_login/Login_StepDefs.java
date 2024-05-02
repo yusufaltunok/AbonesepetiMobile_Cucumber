@@ -1,23 +1,10 @@
 package abonesepeti.stepdefs.register_login;
 
 import abonesepeti.pages.LoginPage;
-
-import io.appium.java_client.AppiumBy;
-
-
-import abonesepeti.utilities.ReusableMethods;
-
-import io.appium.java_client.AppiumBy;
-
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-
-import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,7 +14,8 @@ public class Login_StepDefs {
 
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
-        loginPage.girisYapTelefon("5056771625","qqqqq1");
+
+        loginPage.girisYapTelefon("5056771625","aaaaaa");
     }
 
     @Then("Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular")
@@ -143,12 +131,13 @@ public class Login_StepDefs {
 
     @Then("Kullanici Kodu Gonder butonunun tiklanabilir olmadigini dogrular")
     public void kullaniciKoduGonderButonununTiklanabilirOlmadiginiDogrular() {
-          By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
+    //      By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
 //        System.out.println(driver.findElement(id).getText());
 
 //      System.out.println("getAttribute = " + driver.findElement(id).getAttribute("selected"));
-        String selected = driver.findElement(id).getAttribute("selected");
-        assertEquals("false", selected);
+      //  String selected = driver.findElement(id).getAttribute("selected");
+        assertEquals("false", loginPage.koduGonder.getAttribute("selected"));
+
 
     }
 
