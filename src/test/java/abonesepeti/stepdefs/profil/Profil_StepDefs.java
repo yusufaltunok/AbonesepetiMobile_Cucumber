@@ -5,10 +5,14 @@ import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.ReusableMethods;
+import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
@@ -195,4 +199,30 @@ public class Profil_StepDefs extends ReusableMethods {
         profilPage.evet.click();
     }
 
+    @And("Bize ulasin menusune tiklar")
+    public void bizeUlasinMenusuneTiklar() {
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Bize Ulaşın\"))"));
+        profilPage.bizeUlasin_button.click();
+    }
+
+
+    @And("Aciklama alanina aciklama girilir")
+    public void aciklamaAlaninaAciklamaGirilir() {
+    profilPage.açıklama_textbox.click();
+    profilPage.açıklama_textbox.sendKeys("Bu Test Mesajidir");
+
+
+    }
+
+    @And("Gönder butonuna tiklanir")
+    public void gönderButonunaTiklanir() {
+        profilPage.button_Gonder_Bize_Ulasin.click();
+    }
+
+    @And("Geri bildirim mesaji dogrulanir")
+    public void geriBildirimMesajiDogrulanir() {
+        String expectedMessage = "Geri bildiriminiz tarafımıza ulaşmıştır. En kısa sürede dönüş yapılacaktır.";
+
+        Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
+    }
 }
