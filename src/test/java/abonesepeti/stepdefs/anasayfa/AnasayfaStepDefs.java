@@ -131,23 +131,29 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @And("Kullanici Kapat butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciKapatButonununTiklanabilirOldugunuDogrular() {
-        //driver. findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Kapat\"))"));
+        driver. findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Kapat\"))"));
         assertEquals("true", anasayfaPage.kapat.getAttribute("clickable"));
     }
 
     @And("Kullanici Kampanyalar ikonlarinin tiklanabilir oldugunu dogrular")
     public void kullaniciKampanyalarIkonlarininTiklanabilirOldugunuDogrular() {
+        assertEquals("true", anasayfaPage.kampanyalarButton.getAttribute("clickable"));
 
     }
 
     @And("Kullanici Aboneliklerin tiklanabilir oldugunu dogrular")
     public void kullaniciAboneliklerinTiklanabilirOldugunuDogrular() {
+        assertEquals("true", anasayfaPage.aboneliklerButton.getAttribute("clickable"));
     }
 
     @And("Kullanici Size Ozel Kampanyalar sekmelerinin tiklanabilir oldugunu dogrular")
     public void kullaniciSizeOzelKampanyalarSekmelerininTiklanabilirOldugunuDogrular() {
+        scrollGesture(driver,anasayfaPage.kapat,"down",3.0,750);
         assertEquals("true", anasayfaPage.kampanyalarResim.getAttribute("clickable"));
-        swipeGesture(driver, anasayfaPage.kampanyalarResim, "left",0.16,1000);
+        for (int i = 0; i < 6 ; i++) {
+            swipeGesture(driver, anasayfaPage.kampanyalarResim, "left", 0.16, 1000);
+            assertEquals("true", anasayfaPage.kampanyalarResim.getAttribute("clickable"));
+        }
     }
 
     @And("Kullanici Abonesepeti butonunun tiklanabilir oldugunu dogrular")
