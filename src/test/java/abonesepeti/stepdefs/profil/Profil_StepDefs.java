@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
+import static org.junit.Assert.assertEquals;
 
 public class Profil_StepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
@@ -188,8 +189,9 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Kullanici Çıkis Yap'a tıklar")
     public void kullaniciCıkisYapATıklar() {
+
+      scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",15.0,1000);
         profilPage.cikisyap.click();
-        
     }
 
     @Then("Kullanici Evet'e tıklar")
