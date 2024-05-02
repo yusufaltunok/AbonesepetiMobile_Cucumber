@@ -96,6 +96,10 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_personal_information\")")
     public WebElement kisisel_bilgiler_button;
 
+
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.ScrollView\")")
+    public WebElement profilPanel;
+
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Bize Ulaşın\")")
     public WebElement bizeUlasin_button;
 
@@ -109,6 +113,7 @@ public class ProfilPage extends ReusableMethods {
     public WebElement GeribildirimMesaji_text;
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_positive_custom_dialog")
     public WebElement geriBildirimMesaji_Tamam_Button;
+
 
 
 
