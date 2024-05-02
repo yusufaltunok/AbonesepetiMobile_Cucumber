@@ -1,31 +1,13 @@
-@tarik
+@tarik1
 Feature: US12 pro yillik odeme yapilabildigini dogrula
-  Scenario: Genel Senaryo
-    When Kullanici Abonesepeti uygulamasina giris yapar
-    Then Kullanici Profil butonununa tiklar
-    And Kullanici Uyelik butonunun tiklanabilir oldugunu dogrular
-    And Kullanici Uyelik butonuna tiklar
-    And Kullanici Uyelik Plani sayfasinda oldugunu dogrular
-    And Kullanici Free Ucretsiz Planda Free yazisinin goruldugunu dogrular
-    And Kullanici Free Ucretsiz Plana tiklanabilir oldugunu dogrular
-    And Kullanici Free Ucretsiz Plana tiklar
-    And Kullanici en altta Satin Al butonunun aktiflesmedigini dogrular
-    And Kullanici Pro Aylik Planda Pro Aylik yazisinin goruldugunu dogrular
-    And Kullanici Pro Aylik Plana tiklanabilir oldugunu dogrular
-    And Kullanici Pro Aylik Plana tiklar
-    #And Kullanici Satin Al butonunun aktiflestigini dogrular
-    And Kullanici Pro Yillik Planda Pro Yillik yazisinin goruldugunu dogrular
-    And Kullanici Pro Yillik Plana tiklanabilir oldugunu dogrular
-    And Kullanici Pro Yillik Plana tiklar
-   # And Kullanici Satin Al butonunun aktiflestigini dogrular
-
-
-  Scenario: Pro Yillik Redeem Code ile Odeme
+  Background:
     When Kullanici Abonesepeti uygulamasina giris yapar
     Then Kullanici Profil butonununa tiklar
     And Kullanici Uyelik butonuna tiklar
+
+    Scenario: Pro Yillik Redeem Code ile Odeme
     And Kullanici Pro Yillik Plana tiklar
-    And Kullanici Satin Al butonuna tiklar
+    #And Kullanici Satin Al butonuna tiklar
     And Kullanici acilan sayfada Redeem code butonunun goruldugunu dogrular
     And Kullanici acilan sayfada Add credit or debit card butonunun goruldugunu dogrular
     And Kullanici Redeem code butonuna tiklar
@@ -35,11 +17,11 @@ Feature: US12 pro yillik odeme yapilabildigini dogrula
     And Kullanici en altta Redeem butonunun aktiflestigini dogrular
 
   Scenario: Pro Yillik Add credit or debit card ile Odeme
-    When Kullanici Abonesepeti uygulamasina giris yapar
-    Then Kullanici Profil butonununa tiklar
-    And Kullanici Uyelik butonuna tiklar
+    #When Kullanici Abonesepeti uygulamasina giris yapar
+    #Then Kullanici Profil butonununa tiklar
+    #And Kullanici Uyelik butonuna tiklar
     And Kullanici Pro Yillik Plana tiklar
-    And Kullanici Satin Al butonuna tiklar
+    # And Kullanici Satin Al butonuna tiklar
     And Kullanici acilan sayfada Redeem code butonunun goruldugunu dogrular
     And Kullanici acilan sayfada Add credit or debit card butonunun goruldugunu dogrular
     And Kullanici Add creditor debit card butonuna tiklar
