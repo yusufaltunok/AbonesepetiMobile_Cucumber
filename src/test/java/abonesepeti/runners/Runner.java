@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
             
 
-            tags = "@rabia",
+            tags = "@tarik",
 
             dryRun = false,
             monochrome = true
