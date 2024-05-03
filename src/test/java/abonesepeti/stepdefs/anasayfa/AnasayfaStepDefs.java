@@ -1,6 +1,7 @@
 package abonesepeti.stepdefs.anasayfa;
 
 import abonesepeti.pages.AnasayfaPage;
+import abonesepeti.pages.ProfilPage;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;

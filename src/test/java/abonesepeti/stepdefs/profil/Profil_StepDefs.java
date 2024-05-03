@@ -204,8 +204,8 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Aciklama alanina aciklama girilir")
     public void aciklamaAlaninaAciklamaGirilir() {
-    profilPage.açıklama_textbox.click();
-    profilPage.açıklama_textbox.sendKeys("Bu Test Mesajidir");
+    profilPage.aciklama_textbox.click();
+    profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
 
 
     }

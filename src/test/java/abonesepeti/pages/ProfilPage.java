@@ -59,7 +59,7 @@ public class ProfilPage extends ReusableMethods {
     public WebElement bizeUlasin_button;
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/edtExplanation_text")
-    public WebElement açıklama_textbox;
+    public WebElement aciklama_textbox;
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
     public WebElement button_Gonder_Bize_Ulasin;
