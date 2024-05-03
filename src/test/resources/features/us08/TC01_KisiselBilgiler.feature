@@ -6,8 +6,8 @@ Feature: Us08
 
     When Kullanici Abonesepeti uygulamasina giris yapar
     Then Kullanici Profil butonununa tiklar
-    Then Kullanici Kişisel Bilgiler butonuna tiklar
-    And Kullanici Kişisel Bilgiler sayfasinda oldugunu dogrular
+    Then Kullanici Kisisel Bilgiler butonuna tiklar
+    And Kullanici Kisisel Bilgiler sayfasinda oldugunu dogrular
     And Kullanici ad textbox'inda ad bilgisinin oldugunu dogrular
     And Kullanici soyad textbox'inda soyad bilgisinin oldugunu dogrular
     And Kullanici TC kimlik numarasi textbox'inda onbir haneli kimlik bilgisinin oldugunu dogrular
