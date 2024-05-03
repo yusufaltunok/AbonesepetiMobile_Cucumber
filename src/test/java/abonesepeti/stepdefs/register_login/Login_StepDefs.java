@@ -141,6 +141,10 @@ public class Login_StepDefs {
 
     }
 
+    @When("Kullanici silmek istedigi hesaba giris yapar")
+    public void kullaniciSilmekIstedigiHesabaGirisYapar() {
+        loginPage.girisYapTelefon("5336954588","Rabia3545");
+    }
 }
 
 

@@ -86,4 +86,5 @@ public class RegisterPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"55510591258\")")
     public WebElement tc_dogrula;
 
+
 }
