@@ -1,11 +1,11 @@
 package abonesepeti.stepdefs.profil;
 
-import abonesepeti.pages.ProfilPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ProfilStepDefs {
     ProfilPage profilPage = new ProfilPage();
+
 
     @When("Kullanici anasayfada Profil linkine tiklar")
     public void kullanici_anasayfada_profil_linkine_tiklar() {
