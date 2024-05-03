@@ -9,12 +9,20 @@ import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 
 public class Profil_StepDefs extends ReusableMethods {
+
     ProfilPage profilPage=new ProfilPage();
+
     RegisterPage registerPage = new RegisterPage();
 
     LoginPage loginPage = new LoginPage();
@@ -204,9 +212,12 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Aciklama alanina aciklama girilir")
     public void aciklamaAlaninaAciklamaGirilir() {
+
     profilPage.aciklama_textbox.click();
     profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
 
+    profilPage.açıklama_textbox.click();
+    profilPage.açıklama_textbox.sendKeys("Bu Test Mesajidir");
 
     }
 
