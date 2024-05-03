@@ -19,7 +19,6 @@ public class Register_StepDefs {
     LoginPage loginPage = new LoginPage();
 
 
-
     @And("Giris sayfasi gelene kadar Devam Et butonuna tiklar")
     public void giris_sayfasi_gelene_kadar_devam_et_butonuna_tiklar() {
         visibleWait(Driver.getDriver(), registerPage.devamEt, 15);
@@ -82,8 +81,8 @@ public class Register_StepDefs {
     }
 
     @Then("Girmis oldugunuz e-posta adresine ait uyelik bulunmaktadir Uyari yazisini gorur")
-    public void girmisOldugunuzEPostaAdresineAitUyelikBulunmaktadirUyariYazisiniGorur(){
-      Assert.assertTrue(registerPage.hataMsg.isDisplayed());
+    public void girmisOldugunuzEPostaAdresineAitUyelikBulunmaktadirUyariYazisiniGorur() {
+        Assert.assertTrue(registerPage.hataMsg.isDisplayed());
     }
 
     @And("Google ikonuna tiklar")
@@ -98,7 +97,7 @@ public class Register_StepDefs {
 
     @When("Kullanici eposta ile abonesepeti uygulamasina giris yapar")
     public void kullaniciEpostaIleAbonesepetiUygulamasinaGirisYapar() {
-        loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
+        loginPage.girisYapEposta("testermehmetemin@gmail.com", "1234tester");
     }
 
 
@@ -138,4 +137,8 @@ public class Register_StepDefs {
 
     }
 
+    @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
+    public void bilgileriniGirer(String arg0, String arg1, String arg2, String arg3, String arg4) {
+
+    }
 }

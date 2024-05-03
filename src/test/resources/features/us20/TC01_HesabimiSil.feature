@@ -34,5 +34,6 @@ Feature: Us20
     Then Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular
     And Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar
 
+
 #hesaba girip profil sayfayasona geliyor. sayfann en altına imnmediği için hesabımı sil butonunu göremiyor
   #Ayrıca manuel olarak da silmeye çalışınca "beklenmeyen bir hata oluştu" uyarısı çıkıyor.
