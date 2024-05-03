@@ -6,8 +6,3 @@ Feature: US19 Cikis
     And Kullanici Çıkis Yap'a tıklar
     Then Kullanici Evet'e tıklar
     
-#Profil sayfasına gidin
-#Çıkis Yap'a tıklayın
-#İptal'e tıklayın
-#Çıkis Yap'a tıklayın
-#Evet'e tıklayın
