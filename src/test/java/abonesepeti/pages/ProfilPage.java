@@ -104,9 +104,25 @@ public class ProfilPage extends ReusableMethods {
     public WebElement kisisel_bilgiler_title;
 
 
-
     @AndroidFindBy(className = "android.widget.EditText")
     public List <WebElement> kisiselBilgiler;
+
+    @AndroidFindBy(uiAutomator= ("new UiSelector().text(\"Şifremi Değiştir\")"))
+    public WebElement Sifremi_Degistir;
+
+
+    @AndroidFindBy(xpath = ("//*[@text=\"Mevcut Şifre\"]"))
+    public WebElement Mevcut_Sifre;
+
+    @AndroidFindBy(xpath = ("//*[@text=\"Yeni Şifre\"]"))
+    public WebElement Yeni_Sifre;
+
+    @AndroidFindBy(xpath = ("//*[@text=\"Yeni Şifre Doğrulama\"]"))
+    public WebElement YeniSifre_Dogrulama;
+
+    @AndroidFindBy(className = ("android.widget.Button"))
+    public WebElement Kaydet_SifreDegistir;
+
 
 
 
