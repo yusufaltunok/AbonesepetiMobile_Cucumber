@@ -60,7 +60,8 @@ public class ProfilPage extends ReusableMethods {
     public WebElement bizeUlasin_button;
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/edtExplanation_text")
-    public WebElement açıklama_textbox;
+
+   public WebElement açıklama_textbox;
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
     public WebElement button_Gonder_Bize_Ulasin;
@@ -79,6 +80,7 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/edtExplanation_text")
     public WebElement açıklama_textbox;
 
+
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
     public WebElement button_Gonder_Bize_Ulasin;
 
@@ -86,13 +88,6 @@ public class ProfilPage extends ReusableMethods {
     public WebElement GeribildirimMesaji_text;
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_positive_custom_dialog")
     public WebElement geriBildirimMesaji_Tamam_Button;
-
-
-
-
-
-
-
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
@@ -151,6 +146,24 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.LinearLayout")
     public List<WebElement> ilkHane;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/tv_membership_status")
+    public WebElement uyelik_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Pro Aylık\")")
+    public WebElement pro_aylik_text;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
+    public WebElement satin_al_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
+    public WebElement eslesenHesapBulunamadi_messaji;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
+    public WebElement tamam_müsteri_messaji;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"İptal\")")
+    public WebElement iptal_silmeIslemi;
+
     @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.ScrollView\")")
     public WebElement profilPanel;
 
@@ -167,12 +180,6 @@ public class ProfilPage extends ReusableMethods {
     public WebElement GeribildirimMesaji_text;
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_positive_custom_dialog")
     public WebElement geriBildirimMesaji_Tamam_Button;
-
-
-
-
-
-
 
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
@@ -241,23 +248,6 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
     public WebElement satin_al_button;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
 
@@ -315,21 +305,9 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.LinearLayout")
     public List<WebElement> ilkHane;
 
-
-
-
-
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
-    public WebElement eslesenHesapBulunamadi_messaji;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
-    public WebElement tamam_müsteri_messaji;
-
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"İptal\")")
-    public WebElement iptal_silmeIslemi;
-
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Profil\")")
     public WebElement profilSAyfasi_text;
+
 
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/text_input_end_icon\")")
     public WebElement sifreGoruntule;
@@ -349,4 +327,34 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
     public WebElement sil;
 }
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
+    public WebElement eslesenHesapBulunamadi_messaji;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
+    public WebElement tamam_müsteri_messaji;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"İptal\")")
+    public WebElement iptal_silmeIslemi;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Profil\")")
+    public WebElement profilSAyfasi_text;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/text_input_end_icon\")")
+    public WebElement sifreGoruntule;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/edt_current_password\")")
+    public WebElement sifreText;
+
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_continue_to_delete_account\")")
+    public WebElement delete_account;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_description_custom_dialog\")")
+    public WebElement hesabimiSil_uyariMessaji;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Devam Et\")")
+    public WebElement devamEt_text;
+
+
 
