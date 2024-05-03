@@ -46,6 +46,7 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Mevcut Şifre\")")
     public WebElement mevcutSifre_textbox;
+  
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_continue_to_delete_account\")")
     public WebElement Sil_button_soru;
 
@@ -69,7 +70,7 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_positive_custom_dialog")
     public WebElement geriBildirimMesaji_Tamam_Button;
-
+ 
     @AndroidFindBy(id = "com.abonesepeti.app:id/imgProfile")
     public WebElement profil;
 
@@ -135,7 +136,7 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
     public WebElement satin_al_button;
-
+  
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_message_custom_dialog\")")
     public WebElement eslesenHesapBulunamadi_messaji;
 
@@ -165,5 +166,5 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
     public WebElement sil;
-}
-
+  
+  
