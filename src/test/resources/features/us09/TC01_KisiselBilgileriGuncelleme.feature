@@ -19,7 +19,7 @@ Feature: Us09
     Then Kullanici dogum tarihi kutusunu temizler
     Then Kullanici dogum tarihi kutusuna valid bir deger girer
     Then Kullanici kaydet butonuna tiklar
-    Then Kullanici geri tuşu ile profil sayfasina geciş yapar
+    Then Kullanici geri tusu ile profil sayfasina gecis yapar
     Then Kullanici Kişisel Bilgiler butonuna tiklar
     And Kullanici Kisisel Bilgiler' in basarili bir sekilde guncellendigini gorur
 

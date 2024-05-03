@@ -45,7 +45,7 @@ public class LoginPage extends ReusableMethods {
     @AndroidFindBy(className="android.widget.EditText")
     public List<WebElement> textBoxList; // e-posta ve şifre
 
-    @AndroidFindBy(id="com.abonesepeti.app:id/btndDismissDialog")
+    @AndroidFindBy(id="com.abonesepeti.app:id/btndDismissDİalog")
     public WebElement tamam;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/imgProfile")
@@ -75,8 +75,14 @@ public class LoginPage extends ReusableMethods {
         cepTelefonu.sendKeys(phone);
         sifre.sendKeys(password);
         girisYapButton.click();
-        if (tamam.isDisplayed()) {
-            tamam.click();
+        try {
+            if (tamam.isDisplayed()) {
+                tamam.click();
+            }
+        }catch (Exception e) {
+            if (tamam2.isDisplayed()) {
+                tamam2.click();
+            }
         }
         return this;
     }
@@ -93,6 +99,9 @@ public class LoginPage extends ReusableMethods {
         }
         return this;
     }
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btn_positive_custom_dialog")
+    public WebElement tamam2;
 
 
 
