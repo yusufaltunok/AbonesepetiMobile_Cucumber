@@ -5,12 +5,17 @@ import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.ReusableMethods;
+import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
+import static org.junit.Assert.assertEquals;
 
 public class Profil_StepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
@@ -182,66 +187,42 @@ public class Profil_StepDefs extends ReusableMethods {
         Assert.assertTrue(profilPage.odemeGecmisiDogrula.isDisplayed());
 }
 
+    @And("Kullanici Çıkis Yap'a tıklar")
+    public void kullaniciCıkisYapATıklar() {
 
-    @Then("Kullanici Hesabimi Sil butonuna tiklar")
-    public void kullaniciHesabimiSilButonunaTiklar() {
-        profilPage.hesabimiSil_button.click();
+      scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",15.0,1000);
+        profilPage.cikisyap.click();
     }
 
-    @Then("Kullanici Yinede Sil ve Iptal butonlarını goruntuler")
-    public void kullaniciYinedeSilVeIptalButonlarınıGoruntuler() {
-        Assert.assertTrue(profilPage.yinedeSil_button.isDisplayed());
-        Assert.assertTrue(profilPage.iptal_silmeIslemi.isDisplayed());
+    @Then("Kullanici Evet'e tıklar")
+    public void kullaniciEvetETıklar() {
+        profilPage.evet.click();
     }
 
-    @Then("Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular")
-    public void kullaniciIptalButonunaTiklarVeProfilSayfasındaKaldıgınıDogrular() {
-        profilPage.iptal_silmeIslemi.click();
-        Assert.assertTrue(profilPage.profilSAyfasi_text.isDisplayed());
+    @And("Bize ulasin menusune tiklar")
+    public void bizeUlasinMenusuneTiklar() {
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Bize Ulaşın\"))"));
+        profilPage.bizeUlasin_button.click();
     }
 
 
-    @Then("Kullanici Yinede Sil butonunu tiklar")
-    public void kullaniciYinedeSilButonunuTiklar() {
-        profilPage.yinedeSil_button.click();
-    }
+    @And("Aciklama alanina aciklama girilir")
+    public void aciklamaAlaninaAciklamaGirilir() {
+    profilPage.açıklama_textbox.click();
+    profilPage.açıklama_textbox.sendKeys("Bu Test Mesajidir");
 
-    @Then("Kullanici mevcut sifre textboxina sifresini girer")
-    public void kullaniciMevcutSifreTextboxinaSifresiniGirer() {
-        profilPage.mevcutSifre_textbox.click();
-        profilPage.mevcutSifre_textbox.sendKeys("123456");
-    }
-
-    @Then("Kullanici sifrenin yanindaki goz simgesine tiklar")
-    public void kullaniciSifreninYanindakiGozSimgesineTiklar() {
-        profilPage.sifreGoruntule.click();
-    }
-
-    @Then("Kullanici gecerli sifresini girdigini dogrular")
-    public void kullaniciGecerliSifresiniGirdiginiDogrular() {
-        Assert.assertEquals("123456",profilPage.sifreText.getText());
 
     }
 
-    @Then("Kullanici sil butonunu tiklar")
-    public void kullaniciSilButonunuTiklar() {
-        profilPage.delete_account.click();
+    @And("Gönder butonuna tiklanir")
+    public void gönderButonunaTiklanir() {
+        profilPage.button_Gonder_Bize_Ulasin.click();
     }
 
-    @Then("Kullanici musteri uyari mesajini goruntuler")
-    public void kullaniciMusteriUyariMesajiniGoruntuler() {
-        Assert.assertTrue(profilPage.hesabimiSil_uyariMessaji.isDisplayed());
-    }
+    @And("Geri bildirim mesaji dogrulanir")
+    public void geriBildirimMesajiDogrulanir() {
+        String expectedMessage = "Geri bildiriminiz tarafımıza ulaşmıştır. En kısa sürede dönüş yapılacaktır.";
 
-    @Then("Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular")
-    public void kullaniciSilVeDevamEtButonlarininTiklanabilirOldugunuDogrular() {
-        Assert.assertTrue(profilPage.devamEt_text.isDisplayed());
-        Assert.assertTrue(profilPage.sil.isDisplayed());
-    }
-
-    @And("Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar")
-    public void kullaniciSilinenHesapBilgileriIleGirisYapamadiginiDogrularVeTamamButonunaTiklar() {
-        Assert.assertTrue(profilPage.eslesenHesapBulunamadi_messaji.isDisplayed());
-        profilPage.tamam_müsteri_messaji.click();
+        Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
     }
 }
