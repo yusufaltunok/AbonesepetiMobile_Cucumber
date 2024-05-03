@@ -11,11 +11,13 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+
 import java.util.HashMap;
 import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
+
 
 public class Profil_StepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
@@ -206,8 +208,6 @@ public class Profil_StepDefs extends ReusableMethods {
     public void aciklamaAlaninaAciklamaGirilir() {
     profilPage.aciklama_textbox.click();
     profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
-
-
     }
 
     @And("Gonder butonuna tiklanir")

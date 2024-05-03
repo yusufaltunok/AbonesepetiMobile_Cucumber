@@ -46,6 +46,7 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Mevcut Şifre\")")
     public WebElement mevcutSifre_textbox;
+
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_continue_to_delete_account\")")
     public WebElement Sil_button_soru;
 
