@@ -232,6 +232,19 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.LinearLayout")
     public List<WebElement> ilkHane;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/tv_membership_status")
+    public WebElement uyelik_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Pro Aylık\")")
+    public WebElement pro_aylik_text;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
+    public WebElement satin_al_button;
+
+
+
+
+
 
 
 
