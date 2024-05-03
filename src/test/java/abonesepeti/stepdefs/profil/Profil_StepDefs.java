@@ -7,6 +7,7 @@ import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -191,6 +192,42 @@ public class Profil_StepDefs extends ReusableMethods {
     @Then("Kullanici Evet'e tıklar")
     public void kullaniciEvetETıklar() {
         profilPage.evet.click();
+    }
+
+
+    @When("Kullanici Uyelik sekmesine tiklar")
+    public void kullanici_uyelik_sekmesine_tiklar() {
+        profilPage.uyelik_button.click();
+    }
+
+    @When("Kullanici Pro Aylik seceneginin oldugunu dogrular")
+    public void kullanici_pro_aylik_seceneginin_oldugunu_dogrular() {
+        Assert.assertTrue(profilPage.pro_aylik_text.isDisplayed());
+    }
+
+    @When("Kullanici Pro Aylik secenegine tiklar")
+    public void kullanici_pro_aylik_secenegine_tiklar() {
+        profilPage.pro_aylik_text.click();
+    }
+
+    @When("Kullanici Satin Al butonun tiknalabilir oldugunu dogrular")
+    public void kullanici_satin_al_butonun_tiknalabilir_oldugunu_dogrular() {
+
+    }
+
+    @When("Kullanici Satin Al butonuna tiklar")
+    public void kullanici_satin_al_butonuna_tiklar() {
+        profilPage.satin_al_button.click();
+    }
+
+    @When("Kullanici Abone Ol butonun aktif oldugunu dogrular")
+    public void kullanici_abone_ol_butonun_aktif_oldugunu_dogrular() {
+
+    }
+
+    @Then("Kullanici Abone Ol butonuna tiklar")
+    public void kullanici_abone_ol_butonuna_tiklar() {
+
     }
 
 }

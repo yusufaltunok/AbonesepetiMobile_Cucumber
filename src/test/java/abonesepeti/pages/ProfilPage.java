@@ -97,6 +97,19 @@ public class ProfilPage extends ReusableMethods {
     public WebElement kisisel_bilgiler_button;
 
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/tv_membership_status")
+    public WebElement uyelik_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Pro Aylık\")")
+    public WebElement pro_aylik_text;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
+    public WebElement satin_al_button;
+
+
+
+
+
 
 
 

@@ -16,6 +16,7 @@ public class Login_StepDefs {
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
 
         loginPage.girisYapTelefon("5056771625","qqqqq1");
+
     }
 
     @Then("Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular")
