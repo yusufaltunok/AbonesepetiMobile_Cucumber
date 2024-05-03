@@ -190,7 +190,7 @@ public class Profil_StepDefs extends ReusableMethods {
     @And("Kullanici Çıkis Yap'a tıklar")
     public void kullaniciCıkisYapATıklar() {
 
-      scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",15.0,1000);
+      scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",20.0,1000);
         profilPage.cikisyap.click();
     }
 
