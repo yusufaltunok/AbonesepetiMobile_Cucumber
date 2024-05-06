@@ -1,11 +1,13 @@
 package abonesepeti.stepdefs.anasayfa;
 
 import abonesepeti.pages.AnasayfaPage;
+import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
@@ -14,6 +16,8 @@ import static org.junit.Assert.assertEquals;
 public class AnasayfaStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();
+
+    LoginPage loginPage=new LoginPage();
 
     @Then("Kullanici Profil butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciProfilButonununTiklanabilirOldugunuDogrular() {
@@ -180,4 +184,19 @@ public class AnasayfaStepDefs extends ReusableMethods {
     public void kullaniciYonetButonununTiklanabilirOldugunuDogrular() {
         assertEquals("true", anasayfaPage.yonetButton.getAttribute("clickable"));
     }
-}
+
+    @When("Kullanici email ve yeni sifre ile login olur")
+    public void kullaniciEmailVeYeniSifreIleLoginOlur() {
+
+    }
+
+    @When("Kullanici E_posta ile abonesepeti uygulamasina giris yapar")
+    public void kullaniciE_postaIleAbonesepetiUygulamasinaGirisYapar() {
+        loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
+    }
+
+    @When("Kullanici E_postaileAboneSepeti uygulamasina giris yapar")
+    public void kullaniciE_postaileAboneSepetiUygulamasinaGirisYapar() {
+        loginPage.girisYapEposta("alsonbahar@gmail.com", "111116");
+    }
+    }

@@ -8,6 +8,7 @@ import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import static abonesepeti.utilities.Driver.driver;
@@ -20,7 +21,6 @@ public class Profil_StepDefs extends ReusableMethods {
     LoginPage loginPage = new LoginPage();
 
     AnasayfaPage anasayfaPage = new AnasayfaPage();
-
 
 
     @Then("Kullanici Profil butonununa tiklar")
@@ -185,7 +185,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Kullanici Çıkis Yap'a tıklar")
     public void kullaniciCıkisYapATıklar() {
-
       scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",20.0,1000);
         profilPage.cikisyap.click();
     }
@@ -220,5 +219,32 @@ public class Profil_StepDefs extends ReusableMethods {
         String expectedMessage = "Geri bildiriminiz tarafımıza ulaşmıştır. En kısa sürede dönüş yapılacaktır.";
 
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
+    }
+
+    @When("Kullanici Sifremi Degistir butonuna tiklar")
+    public void kullaniciSifremiDegistirButonunaTiklar() {
+        profilPage.Sifremi_Degistir.click();
+    }
+
+    @When("Mevcut Sifre alanina eski sifre girilir")
+    public void mevcutSifreAlaninaEskiSifreGirilir() {
+        profilPage.Mevcut_Sifre.sendKeys("111115");
+    }
+
+    @When("Yeni Sifre alanina valid eski sifreden farkli sifre girilir")
+    public void yeniSifreAlaninaValidEskiSifredenFarkliSifreGirilir() {
+        profilPage.Yeni_Sifre.sendKeys("111116");
+    }
+
+    @When("Yeni Sifre Dogrulama alanina bir onceki stepte girilen sifre girilir")
+    public void yeniSifreDogrulamaAlaninaBirOncekiStepteGirilenSifreGirilir() {
+        profilPage.YeniSifre_Dogrulama.sendKeys("111116");
+    }
+
+
+    @When("Kullanici Kaydete tiklar")
+    public void kullaniciKaydeteTiklar() {
+        profilPage.Kaydet_SifreDegistir.click();
+        bekle(2);
     }
 }
