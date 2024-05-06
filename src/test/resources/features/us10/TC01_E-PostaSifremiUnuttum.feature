@@ -18,6 +18,8 @@ Feature:US10
 
 
 
+
+
  # When Kullanici eposta ile abonesepeti uygulamasina giris yapar
  #  Navigate to Profil Page
  #  Click on Sifremi Degistir
