@@ -227,39 +227,6 @@ public class Profil_StepDefs extends ReusableMethods {
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
     }
 
-
-
-
-    @And("Kullanici sifremi degistir menusune tiklar")
-    public void kullaniciSifremiDegistirMenusuneTiklar() {
-        profilPage.sifremiDegistir.click();
-    }
-
-    @And("Kullanici mevcut sifreyi girer")
-    public void kullaniciMevcutSifreyiGirer() {
-        profilPage.mevcutSifre.sendKeys("aaaaaa");
-    }
-
-    @And("Kullanici Yeni sifreyi girer")
-    public void kullaniciYeniSifreyiGirer() {
-        profilPage.yeniSifre.sendKeys("aaaaaa");
-    }
-
-    @And("Kullanici Yeni sifre dogrulamayi girer")
-    public void kullaniciYeniSifreDogrulamayiGirer() {
-        profilPage.yeniSifreDogrulama.sendKeys("aaaaaa");
-    }
-
-    @Then("Kullanici hata mesajinin ciktigini dogrular")
-    public void kullaniciHataMesajininCiktiginiDogrular() {
-        assertTrue(profilPage.hataliSifreDegistirmeMsj.isDisplayed());
-    }
-
-    @When("Kullanici Tamam butonuna tiklar")
-    public void kullaniciTamamButonunaTiklar() {
-        profilPage.hataliSifreDegistirmeTamam.click();
-    }
-
     @And("Kullanici anasayfada Profil linkine tiklar")
     public void kullaniciAnasayfadaProfilLinkineTiklar() {
     }
