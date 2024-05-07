@@ -17,12 +17,12 @@ import static org.junit.Assert.assertTrue;
 public class Login_StepDefs {
 
     LoginPage loginPage = new LoginPage();
-    ProfilPage profilPage=new ProfilPage();
+    ProfilPage profilPage = new ProfilPage();
 
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
 
-        loginPage.girisYapTelefon("5056771625","aaaaaa");
+        loginPage.girisYapTelefon("5056771625", "aaaaaa");
     }
 
     @Then("Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular")
@@ -35,7 +35,6 @@ public class Login_StepDefs {
     public void kullaniciUygulamayaGirebilmekIcinGirisYapaTiklar() {
         loginPage.girisYap.click();
     }
-
 
 
     @And("Kullanici giris yap butonuna tiklar")
@@ -139,11 +138,11 @@ public class Login_StepDefs {
 
     @Then("Kullanici Kodu Gonder butonunun tiklanabilir olmadigini dogrular")
     public void kullaniciKoduGonderButonununTiklanabilirOlmadiginiDogrular() {
-    //      By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
+        //      By id = AppiumBy.id("com.abonesepeti.app:id/btn_get_code");
 //        System.out.println(driver.findElement(id).getText());
 
 //      System.out.println("getAttribute = " + driver.findElement(id).getAttribute("selected"));
-      //  String selected = driver.findElement(id).getAttribute("selected");
+        //  String selected = driver.findElement(id).getAttribute("selected");
         assertEquals("false", loginPage.koduGonder.getAttribute("selected"));
 
 
@@ -152,14 +151,15 @@ public class Login_StepDefs {
 
     @When("Kullanici AboneSepeti uygulamasina giris yapar")
     public void kullaniciAboneSepetiUygulamasinaGirisYapar() {
-        loginPage.girisYapTelefon("5050199785","111115");
-
+        loginPage.girisYapTelefon("5050199785", "111115");
+    }
     @When("Kullanici silmek istedigi hesaba giris yapar")
     public void kullaniciSilmekIstedigiHesabaGirisYapar() {
-        loginPage.girisYapTelefon("5336954588","Rabia3545");
+        loginPage.girisYapTelefon("5336954588", "Rabia3545");
 
+        }
     }
-}
+
 
 
 
