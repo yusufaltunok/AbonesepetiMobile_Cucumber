@@ -25,9 +25,7 @@ public class Profil_StepDefs extends ReusableMethods {
     ProfilPage profilPage=new ProfilPage();
 
     RegisterPage registerPage = new RegisterPage();
-
     LoginPage loginPage = new LoginPage();
-
     AnasayfaPage anasayfaPage = new AnasayfaPage();
 
 
@@ -67,25 +65,23 @@ public class Profil_StepDefs extends ReusableMethods {
     @And("Kullanici dogum tarihi bilgisinin oldugunu dogrular")
     public void kullaniciDogumTarihiBilgisininOldugunuDogrular() {
         Assert.assertTrue(profilPage.kisiselBilgiler.get(5).isDisplayed());
-
     }
 
     @Then("Kullanici Kişisel Bilgiler butonuna tiklar")
-    public void kullaniciKişiselBilgilerButonunaTiklar() {
+    public void kullaniciKisiselBilgilerButonunaTiklar() {
         bekle(2);
         profilPage.kisisel_bilgiler_button.click();
     }
 
     @And("Kullanici Kişisel Bilgiler sayfasinda oldugunu dogrular")
-    public void kullaniciKişiselBilgilerSayfasindaOldugunuDogrular() {
+    public void kullaniciKisiselBilgilerSayfasindaOldugunuDogrular() {
         Assert.assertTrue(profilPage.kisisel_bilgiler_title.isDisplayed());
     }
 
     @Then("Kullanici Kisisel Bilgiler butonuna tiklar ve sayfaya geçis yapar")
-    public void kullaniciKisiselBilgilerButonunaTiklarVeSayfayaGeçisYapar() {
+    public void kullaniciKisiselBilgilerButonunaTiklarVeSayfayaGecisYapar() {
         profilPage.kisisel_bilgiler_button.click();
         Assert.assertTrue(profilPage.kisisel_bilgiler_title.isDisplayed()); //gecis yaptıgını dogrular
-
     }
 
     @Then("Kullanici Ad kutusunu temizler")
@@ -193,12 +189,13 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Kullanici Çıkis Yap'a tıklar")
     public void kullaniciCıkisYapATıklar() {
+
       scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",20.0,1000);
         profilPage.cikisyap.click();
     }
 
     @Then("Kullanici Evet'e tıklar")
-    public void kullaniciEvetETıklar() {
+    public void kullaniciEvetETiklar() {
         profilPage.evet.click();
     }
 
@@ -211,17 +208,12 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Aciklama alanina aciklama girilir")
     public void aciklamaAlaninaAciklamaGirilir() {
-
     profilPage.aciklama_textbox.click();
     profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
-
-    profilPage.açıklama_textbox.click();
-    profilPage.açıklama_textbox.sendKeys("Bu Test Mesajidir");
-
     }
 
-    @And("Gönder butonuna tiklanir")
-    public void gönderButonunaTiklanir() {
+    @And("Gonder butonuna tiklanir")
+    public void gonderButonunaTiklanir() {
         profilPage.button_Gonder_Bize_Ulasin.click();
     }
 
