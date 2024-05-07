@@ -8,6 +8,7 @@ import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
@@ -24,11 +25,8 @@ public class Profil_StepDefs extends ReusableMethods {
     ProfilPage profilPage=new ProfilPage();
 
     RegisterPage registerPage = new RegisterPage();
-
     LoginPage loginPage = new LoginPage();
-
     AnasayfaPage anasayfaPage = new AnasayfaPage();
-
 
 
     @Then("Kullanici Profil butonununa tiklar")
@@ -67,25 +65,23 @@ public class Profil_StepDefs extends ReusableMethods {
     @And("Kullanici dogum tarihi bilgisinin oldugunu dogrular")
     public void kullaniciDogumTarihiBilgisininOldugunuDogrular() {
         Assert.assertTrue(profilPage.kisiselBilgiler.get(5).isDisplayed());
-
     }
 
     @Then("Kullanici Kişisel Bilgiler butonuna tiklar")
-    public void kullaniciKişiselBilgilerButonunaTiklar() {
+    public void kullaniciKisiselBilgilerButonunaTiklar() {
         bekle(2);
         profilPage.kisisel_bilgiler_button.click();
     }
 
     @And("Kullanici Kişisel Bilgiler sayfasinda oldugunu dogrular")
-    public void kullaniciKişiselBilgilerSayfasindaOldugunuDogrular() {
+    public void kullaniciKisiselBilgilerSayfasindaOldugunuDogrular() {
         Assert.assertTrue(profilPage.kisisel_bilgiler_title.isDisplayed());
     }
 
     @Then("Kullanici Kisisel Bilgiler butonuna tiklar ve sayfaya geçis yapar")
-    public void kullaniciKisiselBilgilerButonunaTiklarVeSayfayaGeçisYapar() {
+    public void kullaniciKisiselBilgilerButonunaTiklarVeSayfayaGecisYapar() {
         profilPage.kisisel_bilgiler_button.click();
         Assert.assertTrue(profilPage.kisisel_bilgiler_title.isDisplayed()); //gecis yaptıgını dogrular
-
     }
 
     @Then("Kullanici Ad kutusunu temizler")
@@ -199,7 +195,7 @@ public class Profil_StepDefs extends ReusableMethods {
     }
 
     @Then("Kullanici Evet'e tıklar")
-    public void kullaniciEvetETıklar() {
+    public void kullaniciEvetETiklar() {
         profilPage.evet.click();
     }
 
@@ -212,17 +208,12 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Aciklama alanina aciklama girilir")
     public void aciklamaAlaninaAciklamaGirilir() {
-
     profilPage.aciklama_textbox.click();
     profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
-
-    profilPage.açıklama_textbox.click();
-    profilPage.açıklama_textbox.sendKeys("Bu Test Mesajidir");
-
     }
 
-    @And("Gönder butonuna tiklanir")
-    public void gönderButonunaTiklanir() {
+    @And("Gonder butonuna tiklanir")
+    public void gonderButonunaTiklanir() {
         profilPage.button_Gonder_Bize_Ulasin.click();
     }
 
@@ -231,5 +222,32 @@ public class Profil_StepDefs extends ReusableMethods {
         String expectedMessage = "Geri bildiriminiz tarafımıza ulaşmıştır. En kısa sürede dönüş yapılacaktır.";
 
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
+    }
+
+    @When("Kullanici Sifremi Degistir butonuna tiklar")
+    public void kullaniciSifremiDegistirButonunaTiklar() {
+        profilPage.Sifremi_Degistir.click();
+    }
+
+    @When("Mevcut Sifre alanina eski sifre girilir")
+    public void mevcutSifreAlaninaEskiSifreGirilir() {
+        profilPage.Mevcut_Sifre.sendKeys("111115");
+    }
+
+    @When("Yeni Sifre alanina valid eski sifreden farkli sifre girilir")
+    public void yeniSifreAlaninaValidEskiSifredenFarkliSifreGirilir() {
+        profilPage.Yeni_Sifre.sendKeys("111116");
+    }
+
+    @When("Yeni Sifre Dogrulama alanina bir onceki stepte girilen sifre girilir")
+    public void yeniSifreDogrulamaAlaninaBirOncekiStepteGirilenSifreGirilir() {
+        profilPage.YeniSifre_Dogrulama.sendKeys("111116");
+    }
+
+
+    @When("Kullanici Kaydete tiklar")
+    public void kullaniciKaydeteTiklar() {
+        profilPage.Kaydet_SifreDegistir.click();
+        bekle(2);
     }
 }
