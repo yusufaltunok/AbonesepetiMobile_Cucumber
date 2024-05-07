@@ -256,4 +256,76 @@ public class Profil_StepDefs extends ReusableMethods {
     public void kullaniciTamamButonunaTiklar() {
         profilPage.hataliSifreDegistirmeTamam.click();
     }
+
+    @And("Kullanici anasayfada Profil linkine tiklar")
+    public void kullaniciAnasayfadaProfilLinkineTiklar() {
+    }
+
+    @And("Kullanici profil sayfasinda bildirimler linkine tiklar")
+    public void kullaniciProfilSayfasindaBildirimlerLinkineTiklar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniAcar() {
+    }
+
+    @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
+    }
 }
