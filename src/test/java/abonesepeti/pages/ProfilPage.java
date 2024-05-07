@@ -158,5 +158,23 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
     public WebElement sil;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.EditText\")")
+    public WebElement dogrulamaKoduGir;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_verify_phone_number\")")
+    public WebElement dogrula_button;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yeniden gönder\")")
+    public WebElement yenidenGonder;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/txtTitle\")")
+    public WebElement hosgeldin_txt;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btnContinue\")")
+    public WebElement devamEt_hosgeldinSayfasi;
+
+
+
 }
 

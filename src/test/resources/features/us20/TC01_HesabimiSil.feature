@@ -1,5 +1,5 @@
 
-Feature: Us20
+Feature: Us20 - Hesap Silme İslemi
   @us20_01
   Scenario Outline: TC01 Silme Islemi Icın Yeni Hesap Olusturma
 
@@ -17,7 +17,7 @@ Feature: Us20
       | bu bir | deneme | 5464302177 | deneme@abc.com | 123456 |
 
   @us20_02
-  Scenario: TC02 Kullanici "Hesabimi Sil" islemini gerceklestirebildigini dogrular
+  Scenario: TC02-Pozitive Scenario- Kullanici "Hesabimi Sil" islemini gerceklestirebildigini dogrular
 
     When Kullanici silmek istedigi hesaba giris yapar
     Then Kullanici Profil butonununa tiklar
@@ -32,8 +32,28 @@ Feature: Us20
     Then Kullanici sil butonunu tiklar
     Then Kullanici musteri uyari mesajini goruntuler
     Then Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular
+    Then Kullanici sil butonunu tiklar
     And Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar
 
 
 #hesaba girip profil sayfayasona geliyor. sayfann en altına imnmediği için hesabımı sil butonunu göremiyor
   #Ayrıca manuel olarak da silmeye çalışınca "beklenmeyen bir hata oluştu" uyarısı çıkıyor.
+
+  @us20_03
+  Scenario: TC03 -Negative Scenario - Kullanici sistemde kayitli cep telefonu ve gecersiz sifre bilgisiyle
+  "Hesabimi Sil" islemini gerceklestirememeli"
+
+
+    When Kullanici silmek istedigi hesaba giris yapar
+    Then Kullanici Profil butonununa tiklar
+    Then Kullanici Hesabimi Sil butonuna tiklar
+    Then Kullanici Yinede Sil ve Iptal butonlarını goruntuler
+    Then Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular
+    Then Kullanici Hesabimi Sil butonuna tiklar
+    Then Kullanici Yinede Sil butonunu tiklar
+    Then Kullanici mevcut sifre textboxina gecersiz sifre girer
+    Then Kullanici sil butonunu tiklar
+    Then Kullanici musteri uyari mesajini goruntuler
+    Then Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular
+    Then Kullanici sil butonunu tiklar
+    And Kullanici girmiş oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.

@@ -1,6 +1,7 @@
 package abonesepeti.stepdefs.register_login;
 
 import abonesepeti.pages.LoginPage;
+import abonesepeti.pages.ProfilPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,6 +12,7 @@ import static org.junit.Assert.assertTrue;
 public class Login_StepDefs {
 
     LoginPage loginPage = new LoginPage();
+    ProfilPage profilPage = new ProfilPage();
 
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
@@ -143,7 +145,9 @@ public class Login_StepDefs {
 
     @When("Kullanici silmek istedigi hesaba giris yapar")
     public void kullaniciSilmekIstedigiHesabaGirisYapar() {
-        loginPage.girisYapTelefon("5336954588","Rabia3545");
+        loginPage.girisYapTelefon("5336954588","123456");
+       // profilPage.devamEt_hosgeldinSayfasi.click();
+
     }
 }
 

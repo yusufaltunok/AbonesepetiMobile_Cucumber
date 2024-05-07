@@ -29,6 +29,7 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @Then("Kullanici Profil butonununa tiklar")
     public void kullaniciProfilButonununaTiklar() {
+       // scrollGesture(driver,profilPage.hesabimiSil_button.);
         anasayfaPage.profil.click();
     }
 
@@ -225,4 +226,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
     }
+
+
 }
