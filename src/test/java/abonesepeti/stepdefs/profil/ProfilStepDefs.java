@@ -1,15 +1,17 @@
 package abonesepeti.stepdefs.profil;
 
+import abonesepeti.pages.AnasayfaPage;
 import abonesepeti.pages.ProfilPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ProfilStepDefs {
     ProfilPage profilPage = new ProfilPage();
+    AnasayfaPage anasayfaPage= new AnasayfaPage();
 
     @When("Kullanici anasayfada Profil linkine tiklar")
     public void kullanici_anasayfada_profil_linkine_tiklar() {
-        profilPage.profil.click();
+        anasayfaPage.profil.click();
     }
     @When("Kullanici profil sayfasinda bildirimler linkine tiklar")
     public void kullanici_profil_sayfasinda_bildirimler_linkine_tiklar() {
@@ -20,7 +22,7 @@ public class ProfilStepDefs {
 
     }
     @When("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildiğini dogrula")
-    public void kullanici_bildirimler_sayfasindaki_web_bildirim_linkinin_kapatilabildiğini_dogrula() {
+    public void kullanici_bildirimler_sayfasindaki_web_bildirim_linkinin_kapatilabildigini_dogrula() {
 
     }
     @When("Kullanici Bildirimler sayfasindaki WEB bildirim linkini acar")

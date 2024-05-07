@@ -128,21 +128,5 @@ public class Register_StepDefs {
     public void bilgileriniGirer(String arg0, String arg1, String arg2, String arg3, String arg4) {
 
 
-
-    @And("Kullanici {string}, {string}, {string}, {string}, {string} bilgilerini girer")
-    public void kullaniciBilgileriniGirer(String ad, String soyad, String telefon, String mail, String sifre) {
-        registerPage.ad.sendKeys(ad);
-        registerPage.soyad.sendKeys(soyad);
-        registerPage.cepTelefonu.sendKeys(telefon);
-        registerPage.ePosta.sendKeys(mail);
-        registerPage.sifre.sendKeys(sifre);
-
-
-    }
-
-    @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
-    public void bilgileriniGirer(String arg0, String arg1, String arg2, String arg3, String arg4) {
-
-
     }
 }
