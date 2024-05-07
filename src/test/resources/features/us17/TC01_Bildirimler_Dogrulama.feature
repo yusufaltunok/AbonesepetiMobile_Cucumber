@@ -18,7 +18,7 @@
       And Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini acar
       And Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin acilabildiğini dogrula
       And Kullanici Bildirimler sayfasindaki SMS bildirim linkini kapatir
-      And Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildiğini dogrula
+      And Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildigini dogrula
       And Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar
       Then Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildiğini dogrula
 

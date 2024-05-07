@@ -225,4 +225,5 @@ public class Profil_StepDefs extends ReusableMethods {
 
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
     }
+
 }
