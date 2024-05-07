@@ -1,6 +1,5 @@
 package abonesepeti.stepdefs.register_login;
 
-import abonesepeti.pages.AnasayfaPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
@@ -18,7 +17,9 @@ public class Register_StepDefs {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
 
+
     ProfilPage profilPage = new ProfilPage();
+
 
 
     @And("Giris sayfasi gelene kadar Devam Et butonuna tiklar")
@@ -40,7 +41,7 @@ public class Register_StepDefs {
         Assert.assertTrue(loginPage.girisYap.isDisplayed());
     }
 
-    @And("Giris sayfasina ulasmak icin Atla butonuna tiklar")
+    @When("Giris sayfasina ulasmak icin Atla butonuna tiklar")
     public void girisSayfasinaUlasmakIcinAtlaButonunaTiklar() {
         bekle(3);
         loginPage.atla.click();
@@ -132,96 +133,85 @@ public class Register_StepDefs {
     }
 
 
-    @And("Kullanici {string}, {string}, {string}, {string}, {string} bilgilerini girer")
-    public void kullaniciBilgileriniGirer(String ad, String soyad, String telefon, String mail, String sifre) {
-        registerPage.ad.sendKeys(ad);
-        registerPage.soyad.sendKeys(soyad);
-        registerPage.cepTelefonu.sendKeys(telefon);
-        registerPage.ePosta.sendKeys(mail);
-        registerPage.sifre.sendKeys(sifre);
 
+        @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
+        public void bilgileriniGirer (String arg0, String arg1, String arg2, String arg3, String arg4){
+
+        }
+
+        @Then("Kullanici Hesabimi Sil butonuna tiklar")
+        public void kullaniciHesabimiSilButonunaTiklar () {
+            profilPage.hesabimiSil_button.click();
+
+        }
+
+        @Then("Kullanici Yinede Sil ve Iptal butonlarını goruntuler")
+        public void kullaniciYinedeSilVeIptalButonlarınıGoruntuler () {
+            profilPage.yinedeSil_button.isDisplayed();
+            profilPage.iptal_silmeIslemi.isDisplayed();
+        }
+
+        @Then("Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular")
+        public void kullaniciIptalButonunaTiklarVeProfilSayfasındaKaldıgınıDogrular () {
+            profilPage.iptal_silmeIslemi.click();
+            Assert.assertTrue(profilPage.profilSAyfasi_text.isDisplayed());
+        }
+
+        @Then("Kullanici Yinede Sil butonunu tiklar")
+        public void kullaniciYinedeSilButonunuTiklar () {
+            profilPage.yinedeSil_button.click();
+        }
+
+        @Then("Kullanici mevcut sifre textboxina sifresini girer")
+        public void kullaniciMevcutSifreTextboxinaSifresiniGirer () {
+            profilPage.mevcutSifre_textbox.sendKeys("123456");
+        }
+
+        @Then("Kullanici sifrenin yanindaki goz simgesine tiklar")
+        public void kullaniciSifreninYanindakiGozSimgesineTiklar () {
+            profilPage.sifreGoruntule.click();
+        }
+
+        @Then("Kullanici gecerli sifresini girdigini dogrular")
+        public void kullaniciGecerliSifresiniGirdiginiDogrular () {
+            Assert.assertEquals("123456", profilPage.mevcutSifre_textbox.getText());
+        }
+
+        @Then("Kullanici sil butonunu tiklar")
+        public void kullaniciSilButonunuTiklar () {
+            profilPage.sil.click();
+        }
+
+        @Then("Kullanici musteri uyari mesajini goruntuler")
+        public void kullaniciMusteriUyariMesajiniGoruntuler () {
+            profilPage.hesabimiSil_uyariMessaji.isDisplayed();
+        }
+
+        @Then("Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular")
+        public void kullaniciSilVeDevamEtButonlarininTiklanabilirOldugunuDogrular () {
+            profilPage.sil.isEnabled();
+            profilPage.devamEt_text.isEnabled();
+        }
+
+        @And("Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar")
+        public void kullaniciSilinenHesapBilgileriIleGirisYapamadiginiDogrularVeTamamButonunaTiklar () {
+            loginPage.girisYap.click();
+            loginPage.cepTelefonu.sendKeys("5336954588");
+            loginPage.sifre.sendKeys("Rabia3545");
+            loginPage.girisYapButton.click();
+            loginPage.girisYapTelefon("5336954588", "Rabia3545");
+            profilPage.eslesenHesapBulunamadi_messaji.isDisplayed();
+
+        }
+
+        @Then("Kullanici mevcut sifre textboxina gecersiz sifre girer")
+        public void kullaniciMevcutSifreTextboxinaGecersizSifreGirer () {
+            profilPage.sifreText.sendKeys("gnnghmfgm");
+        }
+
+        @And("Kullanici girmiş oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.")
+        public void kullaniciGirmişOldugunuzBilgilerleEslesenHesapBulunamadiYazisiniGorur () {
+            profilPage.eslesenHesapBulunamadi_messaji.isDisplayed();
+        }
 
     }
-
-    @And("{string}, {string}, {string}, {string}, {string} bilgilerini girer")
-    public void bilgileriniGirer(String arg0, String arg1, String arg2, String arg3, String arg4) {
-
-    }
-
-    @Then("Kullanici Hesabimi Sil butonuna tiklar")
-    public void kullaniciHesabimiSilButonunaTiklar() {
-        profilPage.hesabimiSil_button.click();
-
-    }
-
-    @Then("Kullanici Yinede Sil ve Iptal butonlarını goruntuler")
-    public void kullaniciYinedeSilVeIptalButonlarınıGoruntuler() {
-        profilPage.yinedeSil_button.isDisplayed();
-        profilPage.iptal_silmeIslemi.isDisplayed();
-    }
-
-    @Then("Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular")
-    public void kullaniciIptalButonunaTiklarVeProfilSayfasındaKaldıgınıDogrular() {
-        profilPage.iptal_silmeIslemi.click();
-        Assert.assertTrue(profilPage.profilSAyfasi_text.isDisplayed());
-    }
-
-    @Then("Kullanici Yinede Sil butonunu tiklar")
-    public void kullaniciYinedeSilButonunuTiklar() {
-        profilPage.yinedeSil_button.click();
-    }
-
-    @Then("Kullanici mevcut sifre textboxina sifresini girer")
-    public void kullaniciMevcutSifreTextboxinaSifresiniGirer() {
-        profilPage.mevcutSifre_textbox.sendKeys("123456");
-    }
-
-    @Then("Kullanici sifrenin yanindaki goz simgesine tiklar")
-    public void kullaniciSifreninYanindakiGozSimgesineTiklar() {
-        profilPage.sifreGoruntule.click();
-    }
-
-    @Then("Kullanici gecerli sifresini girdigini dogrular")
-    public void kullaniciGecerliSifresiniGirdiginiDogrular() {
-        Assert.assertEquals("123456",profilPage.mevcutSifre_textbox.getText());
-    }
-
-    @Then("Kullanici sil butonunu tiklar")
-    public void kullaniciSilButonunuTiklar() {
-        profilPage.sil.click();
-    }
-
-    @Then("Kullanici musteri uyari mesajini goruntuler")
-    public void kullaniciMusteriUyariMesajiniGoruntuler() {
-        profilPage.hesabimiSil_uyariMessaji.isDisplayed();
-    }
-
-    @Then("Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular")
-    public void kullaniciSilVeDevamEtButonlarininTiklanabilirOldugunuDogrular() {
-        profilPage.sil.isEnabled();
-        profilPage.devamEt_text.isEnabled();
-    }
-
-    @And("Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar")
-    public void kullaniciSilinenHesapBilgileriIleGirisYapamadiginiDogrularVeTamamButonunaTiklar() {
-        loginPage.girisYap.click();
-        loginPage.cepTelefonu.sendKeys("5336954588");
-        loginPage.sifre.sendKeys("Rabia3545");
-        loginPage.girisYapButton.click();
-        loginPage.girisYapTelefon("5336954588","Rabia3545");
-        profilPage.eslesenHesapBulunamadi_messaji.isDisplayed();
-
-    }
-
-    @Then("Kullanici mevcut sifre textboxina gecersiz sifre girer")
-    public void kullaniciMevcutSifreTextboxinaGecersizSifreGirer() {
-        profilPage.sifreText.sendKeys("gnnghmfgm");
-    }
-
-    @And("Kullanici girmiş oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.")
-    public void kullaniciGirmişOldugunuzBilgilerleEslesenHesapBulunamadiYazisiniGorur() {
-        profilPage.eslesenHesapBulunamadi_messaji.isDisplayed();
-    }
-
-
-}

@@ -19,7 +19,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_web_bildirim_linkini_kapatir() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_web_bildirim_linkinin_kapatilabildiğini_dogrula() {
 
     }
@@ -27,7 +27,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_web_bildirim_linkini_acar() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_web_bildirim_linkinin_acilabildiğini_dogrula() {
 
     }
@@ -35,7 +35,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_mobil_bildirim_linkini_kapatir() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin kapatilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin kapatilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_mobil_bildirim_linkinin_kapatilabildiğini_dogrula() {
 
     }
@@ -43,7 +43,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_mobil_bildirim_linkini_acar() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin acilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin acilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_mobil_bildirim_linkinin_acilabildiğini_dogrula() {
 
     }
@@ -51,7 +51,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_e_posta_bildirim_linkini_kapatir() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin kapatilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin kapatilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_e_posta_bildirim_linkinin_kapatilabildiğini_dogrula() {
 
     }
@@ -59,7 +59,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_e_posta_bildirim_linkini_acar() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin acilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin acilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_e_posta_bildirim_linkinin_acilabildiğini_dogrula() {
 
     }
@@ -67,7 +67,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_sms_bildirim_linkini_kapatir() {
 
     }
-    @When("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildiğini dogrula")
+    @When("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_sms_bildirim_linkinin_kapatilabildiğini_dogrula() {
 
     }
@@ -75,7 +75,7 @@ public class ProfilStepDefs {
     public void kullanici_bildirimler_sayfasindaki_sms_bildirim_linkini_acar() {
 
     }
-    @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildiğini dogrula")
+    @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
     public void kullanici_bildirimler_sayfasindaki_sms_bildirim_linkinin_acilabildiğini_dogrula() {
 
     }
