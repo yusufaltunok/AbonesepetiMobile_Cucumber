@@ -8,6 +8,7 @@ import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
@@ -17,6 +18,7 @@ import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class Profil_StepDefs extends ReusableMethods {
@@ -220,5 +222,38 @@ public class Profil_StepDefs extends ReusableMethods {
         String expectedMessage = "Geri bildiriminiz tarafımıza ulaşmıştır. En kısa sürede dönüş yapılacaktır.";
 
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
+    }
+
+
+
+
+    @And("Kullanici sifremi degistir menusune tiklar")
+    public void kullaniciSifremiDegistirMenusuneTiklar() {
+        profilPage.sifremiDegistir.click();
+    }
+
+    @And("Kullanici mevcut sifreyi girer")
+    public void kullaniciMevcutSifreyiGirer() {
+        profilPage.mevcutSifre.sendKeys("aaaaaa");
+    }
+
+    @And("Kullanici Yeni sifreyi girer")
+    public void kullaniciYeniSifreyiGirer() {
+        profilPage.yeniSifre.sendKeys("aaaaaa");
+    }
+
+    @And("Kullanici Yeni sifre dogrulamayi girer")
+    public void kullaniciYeniSifreDogrulamayiGirer() {
+        profilPage.yeniSifreDogrulama.sendKeys("aaaaaa");
+    }
+
+    @Then("Kullanici hata mesajinin ciktigini dogrular")
+    public void kullaniciHataMesajininCiktiginiDogrular() {
+        assertTrue(profilPage.hataliSifreDegistirmeMsj.isDisplayed());
+    }
+
+    @When("Kullanici Tamam butonuna tiklar")
+    public void kullaniciTamamButonunaTiklar() {
+        profilPage.hataliSifreDegistirmeTamam.click();
     }
 }
