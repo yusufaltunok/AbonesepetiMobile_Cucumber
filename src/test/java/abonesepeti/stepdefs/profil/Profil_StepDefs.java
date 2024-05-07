@@ -16,13 +16,16 @@ import org.openqa.selenium.WebElement;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
 public class Profil_StepDefs extends ReusableMethods {
-    ProfilPage profilPage = new ProfilPage();
+
+    ProfilPage profilPage=new ProfilPage();
+
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();

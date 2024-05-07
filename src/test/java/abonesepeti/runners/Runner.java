@@ -1,6 +1,6 @@
 package abonesepeti.runners;
 
-import io.cucumber.junit.Cucumber;
+import   io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
@@ -9,15 +9,13 @@ import org.junit.runner.RunWith;
             plugin = "html:raporlar/CucumberRapor.html",
             features = "src/test/resources/features",
             glue = {"abonesepeti/stepdefs","abonesepeti/hooks"},
-            tags = "@us10",
-            dryRun = false,
+            tags = "@US07",
+           dryRun = false,
             monochrome = true
     )
 
 
     public class Runner {
-
-
     }
 
 
