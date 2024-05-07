@@ -67,5 +67,7 @@ public class ProfilPageUyelik extends ReusableMethods {
 
 
 
+
+
 }
 
