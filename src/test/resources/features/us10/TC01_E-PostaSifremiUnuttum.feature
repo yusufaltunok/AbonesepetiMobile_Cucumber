@@ -2,13 +2,22 @@
 Feature:US10
   Scenario:TC01_Kullanicinin valid sifre ile sifre guncelleme islemini gerceklestirebildigini dogrula {Valid Password}
     When Kullanici AboneSepeti uygulamasina giris yapar
-    When Kullanici ProfilButonununa tiklar
-    When Kullanici sifremi Degistir butonuna tiklar
+    When Kullanici Profil butonununa tiklar
+    When Kullanici Sifremi Degistir butonuna tiklar
     When Mevcut Sifre alanina eski sifre girilir
     When Yeni Sifre alanina valid eski sifreden farkli sifre girilir
     When Yeni Sifre Dogrulama alanina bir onceki stepte girilen sifre girilir
-    When Kullanici kaydet butonuna tiklar
+    When Kullanici Kaydete tiklar
     When Kullanici sifrenin basarili bir sekilde degistirildigini dogrular
+    When Kullanici Çıkis Yap'a tıklar
+    When Kullanici Evet'e tıklar
+    # When Kullanici E_postaileAboneSepeti uygulamasina giris yapar
+
+
+
+
+
+
 
 
  # When Kullanici eposta ile abonesepeti uygulamasina giris yapar

@@ -166,5 +166,32 @@ public class ProfilPage extends ReusableMethods {
 
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
     public WebElement sil;
-  
-  
+
+
+    @AndroidFindBy(uiAutomator= ("new UiSelector().text(\"Şifremi Değiştir\")"))
+    public WebElement Sifremi_Degistir;
+
+    @AndroidFindBy(xpath = ("//*[@text=\"Mevcut Şifre\"]"))
+    public WebElement Mevcut_Sifre;
+
+    @AndroidFindBy(xpath = ("//*[@text=\"Yeni Şifre\"]"))
+    public WebElement Yeni_Sifre;
+
+    @AndroidFindBy(xpath = ("//*[@text=\"Yeni Şifre Doğrulama\"]"))
+    public WebElement YeniSifre_Dogrulama;
+
+    @AndroidFindBy(className = ("android.widget.Button"))
+    public WebElement Kaydet_SifreDegistir;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    public WebElement SifreDegistirildiMesaj;
+
+    @AndroidFindBy(id = ("com.abonesepeti.app:id/txt_message_custom_dialog"))
+    public WebElement YeniSifrenizMevcutSifreIleAyniOlamaz;
+
+    @AndroidFindBy(id = ("com.abonesepeti.app:id/txt_message_custom_dialog"))
+    public WebElement MevcutParolaniziHataliGirdiniz;
+
+}
+
+
