@@ -8,7 +8,7 @@
       And Kullanici Bildirimler sayfasindaki WEB bildirim linkini kapatir
       And Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildigini dogrula
       And Kullanici Bildirimler sayfasindaki WEB bildirim linkini acar
-      And Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildiğini dogrula
+      And Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildigini dogrula
       And Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini kapatir
       And Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin kapatilabildigini dogrula
       And Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini acar
