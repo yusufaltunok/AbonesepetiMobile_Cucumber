@@ -110,7 +110,6 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
     public WebElement sil;
 
-
     @AndroidFindBy(uiAutomator= ("new UiSelector().text(\"Şifremi Değiştir\")"))
     public WebElement Sifremi_Degistir;
 
