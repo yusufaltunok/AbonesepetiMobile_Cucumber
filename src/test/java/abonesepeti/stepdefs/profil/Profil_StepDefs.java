@@ -19,6 +19,8 @@ import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 
 public class Profil_StepDefs extends ReusableMethods {
 
@@ -27,6 +29,7 @@ public class Profil_StepDefs extends ReusableMethods {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();
+
 
 
     @Then("Kullanici Profil butonununa tiklar")
@@ -188,7 +191,7 @@ public class Profil_StepDefs extends ReusableMethods {
 }
 
     @And("Kullanici Çıkis Yap'a tıklar")
-    public void kullaniciCıkisYapATıklar() {
+    public void kullaniciCikisYapATiklar() {
 
       scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",20.0,1000);
         profilPage.cikisyap.click();
@@ -224,30 +227,75 @@ public class Profil_StepDefs extends ReusableMethods {
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
     }
 
-    @When("Kullanici Sifremi Degistir butonuna tiklar")
-    public void kullaniciSifremiDegistirButonunaTiklar() {
-        profilPage.Sifremi_Degistir.click();
+    @And("Kullanici anasayfada Profil linkine tiklar")
+    public void kullaniciAnasayfadaProfilLinkineTiklar() {
     }
 
-    @When("Mevcut Sifre alanina eski sifre girilir")
-    public void mevcutSifreAlaninaEskiSifreGirilir() {
-        profilPage.Mevcut_Sifre.sendKeys("111115");
+    @And("Kullanici profil sayfasinda bildirimler linkine tiklar")
+    public void kullaniciProfilSayfasindaBildirimlerLinkineTiklar() {
     }
 
-    @When("Yeni Sifre alanina valid eski sifreden farkli sifre girilir")
-    public void yeniSifreAlaninaValidEskiSifredenFarkliSifreGirilir() {
-        profilPage.Yeni_Sifre.sendKeys("111116");
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkiniKapatir() {
     }
 
-    @When("Yeni Sifre Dogrulama alanina bir onceki stepte girilen sifre girilir")
-    public void yeniSifreDogrulamaAlaninaBirOncekiStepteGirilenSifreGirilir() {
-        profilPage.YeniSifre_Dogrulama.sendKeys("111116");
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkininKapatilabildiginiDogrula() {
     }
 
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkiniAcar() {
+    }
 
-    @When("Kullanici Kaydete tiklar")
-    public void kullaniciKaydeteTiklar() {
-        profilPage.Kaydet_SifreDegistir.click();
-        bekle(2);
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniAcar() {
+    }
+
+    @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
     }
 }
