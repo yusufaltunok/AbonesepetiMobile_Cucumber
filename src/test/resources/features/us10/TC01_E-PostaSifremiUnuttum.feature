@@ -11,7 +11,7 @@ Feature:US10
     When Kullanici sifrenin basarili bir sekilde degistirildigini dogrular
     When Kullanici Çıkis Yap'a tıklar
     When Kullanici Evet'e tıklar
-    # When Kullanici E_postaileAboneSepeti uygulamasina giris yapar
+    When Kullanici E_postaileAboneSepeti uygulamasina giris yapar
 
 
 
