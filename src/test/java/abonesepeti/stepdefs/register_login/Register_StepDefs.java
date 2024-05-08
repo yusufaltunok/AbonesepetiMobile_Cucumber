@@ -12,6 +12,7 @@ import org.openqa.selenium.Keys;
 
 import static abonesepeti.utilities.ReusableMethods.bekle;
 import static abonesepeti.utilities.ReusableMethods.visibleWait;
+import static org.junit.Assert.assertTrue;
 
 public class Register_StepDefs {
     RegisterPage registerPage = new RegisterPage();
@@ -38,12 +39,12 @@ public class Register_StepDefs {
 
     @Then("Login sayfasinin goruntulendigini dogrular")
     public void login_sayfasinin_goruntulendigini_dogrular() {
-        Assert.assertTrue(loginPage.girisYap.isDisplayed());
+        assertTrue(loginPage.girisYap.isDisplayed());
     }
 
     @When("Giris sayfasina ulasmak icin Atla butonuna tiklar")
     public void girisSayfasinaUlasmakIcinAtlaButonunaTiklar() {
-        bekle(3);
+        bekle(2);
         loginPage.atla.click();
     }
 
@@ -89,7 +90,7 @@ public class Register_StepDefs {
 
     @Then("Girmis oldugunuz e-posta adresine ait uyelik bulunmaktadir Uyari yazisini gorur")
     public void girmisOldugunuzEPostaAdresineAitUyelikBulunmaktadirUyariYazisiniGorur() {
-        Assert.assertTrue(registerPage.hataMsg.isDisplayed());
+        assertTrue(registerPage.hataMsg.isDisplayed());
     }
 
     @And("Google ikonuna tiklar")
@@ -154,7 +155,7 @@ public class Register_StepDefs {
         @Then("Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular")
         public void kullaniciIptalButonunaTiklarVeProfilSayfasındaKaldıgınıDogrular () {
             profilPage.iptal_silmeIslemi.click();
-            Assert.assertTrue(profilPage.profilSAyfasi_text.isDisplayed());
+            assertTrue(profilPage.profilSAyfasi_text.isDisplayed());
         }
 
         @Then("Kullanici Yinede Sil butonunu tiklar")
@@ -209,9 +210,22 @@ public class Register_StepDefs {
             profilPage.sifreText.sendKeys("gnnghmfgm");
         }
 
-        @And("Kullanici girmiş oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.")
-        public void kullaniciGirmişOldugunuzBilgilerleEslesenHesapBulunamadiYazisiniGorur () {
+        @And("Kullanici girmis oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.")
+        public void kullaniciGirmisOldugunuzBilgilerleEslesenHesapBulunamadiYazisiniGorur () {
             profilPage.eslesenHesapBulunamadi_messaji.isDisplayed();
         }
 
+    @And("Kullanici {string}, {string}, {string}, {string}, {string} bilgilerini girer")
+    public void kullaniciBilgileriniGirer(String ad, String soyad, String telefon, String mail, String sifre) {
+        registerPage.ad.sendKeys(ad);
+        registerPage.soyad.sendKeys(soyad);
+        registerPage.cepTelefonu.sendKeys(telefon);
+        registerPage.ePosta.sendKeys(mail);
+        registerPage.sifre.sendKeys(sifre);
     }
+
+    @Then("Basarili bir sekilde hesap olusturulamadigini dogrular")
+    public void basariliBirSekildeHesapOlusturulamadiginiDogrular() {
+        assertTrue(registerPage.gecersizMailMesaji.isDisplayed());
+    }
+}

@@ -86,5 +86,14 @@ public class RegisterPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"55510591258\")")
     public WebElement tc_dogrula;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_message_custom_dialog")
+    public WebElement hataMesaji;    // Eksik veya hatalı bilgi gönderdiniz.
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Tamam\")")
+    public WebElement tamam;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Geçerli bir mail adresi giriniz.\")")
+    public WebElement gecersizMailMesaji;
+
 
 }
