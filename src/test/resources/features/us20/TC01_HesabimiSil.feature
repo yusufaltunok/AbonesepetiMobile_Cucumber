@@ -56,4 +56,4 @@ Feature: Us20 - Hesap Silme İslemi
     Then Kullanici musteri uyari mesajini goruntuler
     Then Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular
     Then Kullanici sil butonunu tiklar
-    And Kullanici girmiş oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.
+    And Kullanici girmis oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.
