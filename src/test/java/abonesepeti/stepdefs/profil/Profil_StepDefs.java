@@ -299,4 +299,29 @@ public class Profil_StepDefs extends ReusableMethods {
     @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
     }
+
+    @When("Kullanici Sifremi Degistir butonuna tiklar")
+    public void kullaniciSifremiDegistirButonunaTiklar() {
+        profilPage.Sifremi_Degistir.click();
+    }
+
+    @When("Mevcut Sifre alanina eski sifre girilir")
+    public void mevcutSifreAlaninaEskiSifreGirilir() {
+        profilPage.Mevcut_Sifre.sendKeys("111115");
+    }
+
+    @When("Yeni Sifre alanina valid eski sifreden farkli sifre girilir")
+    public void yeniSifreAlaninaValidEskiSifredenFarkliSifreGirilir() {
+        profilPage.Yeni_Sifre.sendKeys("111116");
+    }
+
+    @When("Yeni Sifre Dogrulama alanina bir onceki stepte girilen sifre girilir")
+    public void yeniSifreDogrulamaAlaninaBirOncekiStepteGirilenSifreGirilir() {
+        profilPage.YeniSifre_Dogrulama.sendKeys("111116");
+    }
+
+    @When("Kullanici Kaydete tiklar")
+    public void kullaniciKaydeteTiklar() {
+        profilPage.Kaydet_SifreDegistir.click();
+    }
 }
