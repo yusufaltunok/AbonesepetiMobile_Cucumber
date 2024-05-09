@@ -12,8 +12,26 @@ public class HizmetAlPage {
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Tüm İşlemler\")")
+    public WebElement tumIslemler;
+
+    @AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget." +
+            "LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android." +
+            "view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget." +
+            "LinearLayout[1]/androidx.recyclerview.widget.RecyclerView[2]/android.widget.LinearLayout[4]/android.widget.ImageView")
+    public WebElement gelecegimbutton;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_fragment_title")
+    public WebElement gelecegimdogrulama;
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android." +
+            "widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android" +
+            ".view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView[1]/android.widget." +
+            "LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.TextView")
+    public WebElement ustaEmeklilikPlani;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/profile_fragment_container\")")
     public WebElement hizmetAl;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
+    public WebElement satinAldogrulama;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/my_future\")")
     public WebElement anadoluHayatGelecegim;
