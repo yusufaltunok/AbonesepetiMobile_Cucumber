@@ -1,9 +1,6 @@
 package abonesepeti.stepdefs.profil;
 
-import abonesepeti.pages.AnasayfaPage;
-import abonesepeti.pages.LoginPage;
-import abonesepeti.pages.ProfilPage;
-import abonesepeti.pages.RegisterPage;
+import abonesepeti.pages.*;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
@@ -29,6 +26,8 @@ public class Profil_StepDefs extends ReusableMethods {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();
+
+   HizmetAlPage hizmetAlPage = new HizmetAlPage();
 
 
 
@@ -175,6 +174,8 @@ public class Profil_StepDefs extends ReusableMethods {
 
 
     }
+
+
     @And("Kullanici Profil butonunu tiklar")
     public void kullaniciProfilButonunuTiklar() {
         anasayfaPage.profil.click();
