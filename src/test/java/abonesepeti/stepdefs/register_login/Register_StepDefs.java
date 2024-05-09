@@ -226,6 +226,36 @@ public class Register_StepDefs {
 
     @Then("Basarili bir sekilde hesap olusturulamadigini dogrular")
     public void basariliBirSekildeHesapOlusturulamadiginiDogrular() {
+        assertTrue(registerPage.hataMesaji.isDisplayed());
+    }
+
+    @Then("Gecerli bir mail adresi giriniz hata mesajinin ciktigini dogrular")
+    public void gecerliBirMailAdresiGirinizHataMesajininCiktiginiDogrular() {
         assertTrue(registerPage.gecersizMailMesaji.isDisplayed());
+    }
+
+    @Then("Gecerli bir sifre giriniz hata mesajinin ciktigini dogrular")
+    public void gecerliBirSifreGirinizHataMesajininCiktiginiDogrular() {
+        assertTrue(registerPage.gecersizSifreMesaji.isDisplayed());
+    }
+
+    @Then("Hesap olusturulamadigini dogrular")
+    public void hesapOlusturulamadiginiDogrular() {
+        assertTrue(registerPage.yeniHesapOlustur.isDisplayed());
+    }
+
+    @And("Kullanici Google ikonuna tiklar")
+    public void kullaniciGoogleIkonunaTiklar() {
+        registerPage.googleIcon.click();
+    }
+
+    @And("Kullanici acilan sayfada bir Google hesabi secer")
+    public void kullaniciAcilanSayfadaBirGoogleHesabiSecer() {
+        registerPage.googleHesapSec.click();
+    }
+
+    @And("Kullanici kayitli olmayan bir telefon numarasi girer")
+    public void kullaniciKayitliOlmayanBirTelefonNumarasiGirer() {
+        registerPage.cepTelefonu.sendKeys("5356901971");
     }
 }
