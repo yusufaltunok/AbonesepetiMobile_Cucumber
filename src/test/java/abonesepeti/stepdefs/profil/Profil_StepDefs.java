@@ -255,5 +255,8 @@ public class Profil_StepDefs extends ReusableMethods {
         bekle(2);
     }
 
+    @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
+    }
 
 }
