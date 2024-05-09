@@ -225,9 +225,9 @@ public class Profil_StepDefs extends ReusableMethods {
         Assert.assertEquals(expectedMessage,profilPage.GeribildirimMesaji_text.getText());
     }
 
-<<<<<<< HEAD
 
-=======
+
+
     @When("Kullanici Sifremi Degistir butonuna tiklar")
     public void kullaniciSifremiDegistirButonunaTiklar() {
         profilPage.Sifremi_Degistir.click();
@@ -254,5 +254,5 @@ public class Profil_StepDefs extends ReusableMethods {
         profilPage.Kaydet_SifreDegistir.click();
         bekle(2);
     }
->>>>>>> master
+
 }

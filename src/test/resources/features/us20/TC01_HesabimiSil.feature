@@ -5,7 +5,7 @@ Feature: Us20 - Hesap Silme İslemi
 
     When Giris sayfasina ulasmak icin Atla butonuna tiklar
     And Yeni hesap olustur butonuna tiklar
-    And Kullanici "<ad>", "<soyad>", "<telefon>", "<mail>", "<sifre>" bilgilerini girer
+    And "<ad>", "<soyad>", "<telefon>", "<mail>", "<sifre>" bilgilerini girer
     And Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar
     And Hesap olustur butonuna tiklar
     And Telefona SMS ile gelen 4 haneli dogrulama kodunu girer
