@@ -29,4 +29,20 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"ahe-logo\")")
     public WebElement anadoluHayatEmeklilik;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğim\")")
+    public WebElement gelecegim;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Genç Emeklilik Planı\")")
+    public WebElement gencEmeklilikPlani;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+    public WebElement gencEmeklilikPlaniDogrula;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    public WebElement satinAlGencEmeklilik;
+
+
+
+
 }
