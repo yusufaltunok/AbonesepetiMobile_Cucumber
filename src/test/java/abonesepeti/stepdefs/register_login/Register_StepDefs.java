@@ -226,6 +226,21 @@ public class Register_StepDefs {
 
     @Then("Basarili bir sekilde hesap olusturulamadigini dogrular")
     public void basariliBirSekildeHesapOlusturulamadiginiDogrular() {
+        assertTrue(registerPage.hataMesaji.isDisplayed());
+    }
+
+    @Then("Gecerli bir mail adresi giriniz hata mesajinin ciktigini dogrular")
+    public void gecerliBirMailAdresiGirinizHataMesajininCiktiginiDogrular() {
         assertTrue(registerPage.gecersizMailMesaji.isDisplayed());
+    }
+
+    @Then("Gecerli bir sifre giriniz hata mesajinin ciktigini dogrular")
+    public void gecerliBirSifreGirinizHataMesajininCiktiginiDogrular() {
+        assertTrue(registerPage.gecersizSifreMesaji.isDisplayed());
+    }
+
+    @Then("Hesap olusturulamadigini dogrular")
+    public void hesapOlusturulamadiginiDogrular() {
+        assertTrue(registerPage.yeniHesapOlustur.isDisplayed());
     }
 }

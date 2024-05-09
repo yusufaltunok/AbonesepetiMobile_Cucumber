@@ -95,5 +95,6 @@ public class RegisterPage {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Geçerli bir mail adresi giriniz.\")")
     public WebElement gecersizMailMesaji;
 
-
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Şifre en az 6 en fazla 16 karakterden oluşmalıdır\")")
+    public WebElement gecersizSifreMesaji;
 }
