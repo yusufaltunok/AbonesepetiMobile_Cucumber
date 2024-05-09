@@ -97,4 +97,8 @@ public class RegisterPage {
 
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Şifre en az 6 en fazla 16 karakterden oluşmalıdır\")")
     public WebElement gecersizSifreMesaji;
+
+    @AndroidFindBy(className = "com.abonesepeti.app:id/txt_message_custom_dialog")
+    public WebElement googleHesap;
+
 }

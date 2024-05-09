@@ -243,4 +243,19 @@ public class Register_StepDefs {
     public void hesapOlusturulamadiginiDogrular() {
         assertTrue(registerPage.yeniHesapOlustur.isDisplayed());
     }
+
+    @And("Kullanici Google ikonuna tiklar")
+    public void kullaniciGoogleIkonunaTiklar() {
+        registerPage.googleIcon.click();
+    }
+
+    @And("Kullanici acilan sayfada bir Google hesabi secer")
+    public void kullaniciAcilanSayfadaBirGoogleHesabiSecer() {
+        registerPage.googleHesapSec.click();
+    }
+
+    @And("Kullanici kayitli olmayan bir telefon numarasi girer")
+    public void kullaniciKayitliOlmayanBirTelefonNumarasiGirer() {
+        registerPage.cepTelefonu.sendKeys("5356901971");
+    }
 }
