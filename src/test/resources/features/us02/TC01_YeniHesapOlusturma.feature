@@ -4,6 +4,7 @@ Feature: US02 Yeni Hesap Olusturma
   Scenario Outline: TC01 Yeni Hesap Olusturma Pozitif Senaryo
     Given Kullanici Abonesepeti uygulamasini acar
     When Giris sayfasina ulasmak icin Atla butonuna tiklar
+    And Kullanici Basla butonuna tiklar
     And Yeni hesap olustur butonuna tiklar
     And Kullanici "<ad>", "<soyad>", "<telefon>", "<mail>", "<sifre>" bilgilerini girer
     And Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar

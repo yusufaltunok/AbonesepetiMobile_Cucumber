@@ -227,6 +227,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
         bekle(2);
     }
 
+
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
         hizmetAlPage.ustaEmeklilikPlani.click();
