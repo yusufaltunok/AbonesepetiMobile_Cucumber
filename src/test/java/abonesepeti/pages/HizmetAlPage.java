@@ -60,6 +60,16 @@ public class HizmetAlPage {
     @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
     public WebElement satinAlGencEmeklilik;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.LinearLayout\").instance(26)")
+    public WebElement StandartKritikHastalikSigortasi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/img_header")
+    public WebElement StandartKritikHastalikAigortaSayfasi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    public WebElement SatinAlStandartKritikHastalikSigortasi;
+
+
 
 
 
