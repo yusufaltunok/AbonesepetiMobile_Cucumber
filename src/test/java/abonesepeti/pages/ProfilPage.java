@@ -204,7 +204,7 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = ("android.widget.Button"))
     public WebElement Kaydet_SifreDegistir;
 
-    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    @AndroidFindBy(xpath="//android.widget.LinearLayout[@resource-id=\"com.abonesepeti.app:id/btn_promotional_code\"]/android.view.ViewGroup")
     public WebElement SifreDegistirildiMesaj;
 
     @AndroidFindBy(id = ("com.abonesepeti.app:id/txt_message_custom_dialog"))
