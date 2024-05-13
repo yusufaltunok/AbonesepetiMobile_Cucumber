@@ -7,8 +7,5 @@ import org.openqa.selenium.support.PageFactory;
 import java.net.MalformedURLException;
 
 public class AbonelikBaslatPage {
-    public AbonelikBaslatPage(){
-        PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
-    }
-
+    public AbonelikBaslatPage(){PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);}
 }

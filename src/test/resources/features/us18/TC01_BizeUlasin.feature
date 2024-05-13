@@ -6,5 +6,5 @@ Feature: Us18
     And Kullanici Profil butonununa tiklar
     And Bize ulasin menusune tiklar
     And Aciklama alanina aciklama girilir
-    And Gönder butonuna tiklanir
+    And Gonder butonuna tiklanir
     And Geri bildirim mesaji dogrulanir
