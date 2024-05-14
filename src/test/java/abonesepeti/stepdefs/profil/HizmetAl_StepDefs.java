@@ -50,4 +50,25 @@ public class HizmetAl_StepDefs {
     public void kullaniciAnadoluHayatEmeklilikBankaUygulamasiGirisSayfasinaYonlendirilir() {
         hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
     }
+
+    @And("Kullanici SigortaUrunlerinden Kadina Ozel Kritik Hastalik Sigortas tiklar")
+    public void kullaniciSigortaUrunlerindenKadinaOzelKritikHastalikSigortasTiklar() {
+        hizmetAlPage.KadinaOzelKritikHastalikSigortasiSekmesi.click();
+    }
+
+    @And("Kullanici Kadina Ozel Kritik Hastalik Sigortasi bilgilendirme sayfasini gorur")
+    public void kullaniciKadinaOzelKritikHastalikSigortasiBilgilendirmeSayfasiniGorur() {
+        Assert.assertTrue(hizmetAlPage.StandartKritikHastalikAigortaSayfasi.isDisplayed());
+    }
+
+    @And("Kullanici Kadina Ozel Kritik Hastalik Sigorta sayfasindaki {string} butonunu gorebilmeli")
+    public void kullaniciKadinaOzelKritikHastalikSigortaSayfasindakiSatinAlButonunuGorebilmeli() {
+        Assert.assertTrue(hizmetAlPage.satinAldogrulama.isDisplayed());
+
+    }
+
+    @And("Kullanici Kadina Ozel Kritik Hastalik Sigorta sayfasindaki {string} butonuna tiklar")
+    public void kullaniciKadinaOzelKritikHastalikSigortaSayfasindakiSatinAlButonunaTiklar() {
+        hizmetAlPage.satinAldogrulama.click();
+    }
 }

@@ -130,6 +130,9 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.LinearLayout")
     public List<WebElement> ilkHane;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_delete_account")
+    public WebElement bildirimler;
+
 
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/tv_membership_status")
