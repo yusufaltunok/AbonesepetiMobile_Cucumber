@@ -69,6 +69,14 @@ public class HizmetAlPage {
     @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
     public WebElement SatinAlStandartKritikHastalikSigortasi;
 
+    @AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"com.abonesepeti.app:id/txtTitle\" and @text=\"Kadına Özel Kritik Hastalık Sigortası\"]")
+    public WebElement KadinaOzelKritikHastalikSigortasiSekmesi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+    public  WebElement KadinaOzelKritikHastalikSigortasiSayfasi;
+
+
+
 
 
 
