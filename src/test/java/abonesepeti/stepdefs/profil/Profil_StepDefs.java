@@ -229,10 +229,13 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Kullanici anasayfada Profil linkine tiklar")
     public void kullaniciAnasayfadaProfilLinkineTiklar() {
+        profilPage.profil.click();
+
     }
 
     @And("Kullanici profil sayfasinda bildirimler linkine tiklar")
     public void kullaniciProfilSayfasindaBildirimlerLinkineTiklar() {
+        profilPage.bildirimler.click();
     }
 
     @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini kapatir")
