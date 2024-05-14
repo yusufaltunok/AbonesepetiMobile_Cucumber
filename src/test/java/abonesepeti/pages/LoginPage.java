@@ -45,7 +45,7 @@ public class LoginPage extends ReusableMethods {
     @AndroidFindBy(className="android.widget.EditText")
     public List<WebElement> textBoxList; // e-posta ve şifre
 
-    @AndroidFindBy(id="com.abonesepeti.app:id/btndDismissDialog")
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Tamam\")")
     public WebElement tamam;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/imgProfile")
