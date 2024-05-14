@@ -243,4 +243,35 @@ public class AnasayfaStepDefs extends ReusableMethods {
     public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
         hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
     }
+
+    @And("Kullanici Ev Hanimlari Emeklilik Plani linkine tiklar")
+    public void kullaniciEvHanimlariEmeklilikPlaniLinkineTiklar() {
+        hizmetAlPage.EvHanimlariEmeklilikPlani.click();
+    }
+
+    @And("Kullanici Acilan Sayfada Ev Hanimlari Emeklilik Plani Basligini Gorur")
+    public void kullaniciAcilanSayfadaEvHanimlariEmeklilikPlaniBasliginiGorur() {
+        assertEquals("Ev Hanımları Emeklilik Planı", hizmetAlPage.EvHanimlariEmeklilikPlaniTitle.getText());
+    }
+
+    @And("Kullanici Acilan Sayfada Satin Al Butonunu Gorur")
+    public void kullaniciAcilanSayfadaSatinAlButonunuGorur() {
+        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikPlaniSatinAlButton.getAttribute("enabled"));
+        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikPlaniSatinAlButton.getAttribute("displayed"));
+    }
+
+    @And("Kullanici Ev Hanimlari Emeklilik Plani Sayfasinda Satin Al Butonuna Tiklar")
+    public void kullaniciEvHanimlariEmeklilikPlaniSayfasindaSatinAlButonunaTiklar() {
+        hizmetAlPage.EvHanimlariEmeklilikPlaniSatinAlButton.click();
+    }
+
+    @And("Kullanici Acilan Sayfada Anadolu Hayat Emeklilik Icin Musteri Numarasi Input Alaninin Editable Oldugunu Dogrular")
+    public void kullaniciAcilanSayfadaAnadoluHayatEmeklilikIcinMusteriNumarasiInputAlanininEditableOldugunuDogrular() {
+        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikMusteriTcNo.getAttribute("enabled"));
+    }
+
+    @And("Kullanici Acilan Sayfada Anadolu Hayat Emeklilik Icin Sifre Input Alaninin Editable Oldugunu Dogrular")
+    public void kullaniciAcilanSayfadaAnadoluHayatEmeklilikIcinSifreInputAlanininEditableOldugunuDogrular() {
+        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikSifre.getAttribute("enabled"));
+    }
 }
