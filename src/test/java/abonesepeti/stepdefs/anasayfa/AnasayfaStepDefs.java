@@ -1,11 +1,15 @@
 package abonesepeti.stepdefs.anasayfa;
 
 import abonesepeti.pages.AnasayfaPage;
+import abonesepeti.pages.HizmetAlPage;
+import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
@@ -14,6 +18,9 @@ import static org.junit.Assert.assertEquals;
 public class AnasayfaStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();
+    HizmetAlPage hizmetAlPage = new HizmetAlPage();
+
+    LoginPage loginPage=new LoginPage();
 
     @Then("Kullanici Profil butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciProfilButonununTiklanabilirOldugunuDogrular() {
@@ -179,5 +186,61 @@ public class AnasayfaStepDefs extends ReusableMethods {
     @And("Kullanici Yonet butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciYonetButonununTiklanabilirOldugunuDogrular() {
         assertEquals("true", anasayfaPage.yonetButton.getAttribute("clickable"));
+    }
+
+    @When("Kullanici email ve yeni sifre ile login olur")
+    public void kullaniciEmailVeYeniSifreIleLoginOlur() {
+
+    }
+
+    @When("Kullanici E_posta ile abonesepeti uygulamasina giris yapar")
+    public void kullaniciE_postaIleAbonesepetiUygulamasinaGirisYapar() {
+        loginPage.girisYapEposta("testermehmetemin@gmail.com","1234tester");
+
+
+    }
+
+    @When("Kullanici E_postaileAboneSepeti uygulamasina giris yapar")
+    public void kullaniciE_postaileAboneSepetiUygulamasinaGirisYapar() {
+      //  loginPage.girisYapEposta("alsonbahar@gmail.com", "111116");
+    }
+
+    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
+    public void kullaniciAbonesepetiMobilUygulamasındaGirer(String arg0) {
+        loginPage.atla.click();
+        loginPage.girisYap.click();
+        loginPage.cepTelefonu.sendKeys("5418743098");
+        loginPage.sifre.sendKeys("1234tester");
+        loginPage.girisYapButton.click();
+    }
+
+    @And("Kullanici Anasayfada Tum Islemler sekmesine tiklar")
+    public void kullaniciAnasayfadaTumIslemlerSekmesineTiklar() {
+        loginPage.tamam.click();
+        hizmetAlPage.tumIslemler.click();
+        bekle(2);
+    }
+
+    @And("Kullanici Gelecegim sekmesine tiklar")
+    public void kullaniciGelecegimSekmesineTiklar() {
+        hizmetAlPage.gelecegimbutton.click();
+        bekle(2);
+    }
+
+
+    @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
+    public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
+        hizmetAlPage.ustaEmeklilikPlani.click();
+    }
+
+
+    @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
+    public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()
+    {anasayfaPage.Standart_Kritik_Hastalık_Sigortası_Sekmesi.click();
+    }
+
+    @When("Kullanici Standart Kritik Hastalik Sigortasi sayfasindaki {string} butonunu gorur")
+    public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
+        hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
     }
 }

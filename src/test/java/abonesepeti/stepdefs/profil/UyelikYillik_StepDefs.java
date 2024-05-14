@@ -1,9 +1,11 @@
 package abonesepeti.stepdefs.profil;
 
+import abonesepeti.pages.HizmetAlPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPageUyelik;
 import abonesepeti.pages.RegisterPage;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,6 +13,8 @@ public class UyelikYillik_StepDefs {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     ProfilPageUyelik profilPageUyelik = new ProfilPageUyelik();
+
+    HizmetAlPage hizmetAlPage = new HizmetAlPage();
 
 
     @And("Kullanici Uyelik butonuna tiklar")
@@ -126,5 +130,41 @@ public class UyelikYillik_StepDefs {
     @And("Kullanici Add creditor debit card butonuna tiklar")
     public void kullaniciAddCreditorDebitCardButonunaTiklar() {
         profilPageUyelik.addCreditCardButton.click();
+    }
+
+
+    @Then("Kullanici Hizmet Al butonunu tiklar")
+    public void kullaniciHizmetAlButonunuTiklar() {
+    hizmetAlPage.hizmetAl.click();
+    }
+
+    @Then("Kullanici Anadolu Hayat Gelecegim sekmesi tiklar")
+    public void kullaniciAnadoluHayatGelecegimSekmesiTiklar() {
+        hizmetAlPage.anadoluHayatGelecegim.click();
+    }
+
+    @Then("Kullanici Sigorta Urunlerim basligi altında cocugum icin egitim sigortasi butonu tikklar")
+    public void kullaniciSigortaUrunlerimBasligiAltındaCocugumIcinEgitimSigortasiButonuTikklar() {
+        hizmetAlPage.cocugumIcinEgitimSigortasi.click();
+    }
+
+    @Then("Kullanici gerekli bilgileri sayfada goruntuler")
+    public void kullaniciGerekliBilgileriSayfadaGoruntuler() {
+        hizmetAlPage.satinAl_egitim.isDisplayed();
+    }
+
+    @Then("Kullanici Satin Al butonunun gorur")
+    public void kullaniciSatinAlButonununGorur() {
+        hizmetAlPage.satinAl_egitim.isDisplayed();
+    }
+
+    @Then("Kullanici Satin Al butonu tiklar")
+    public void kullaniciSatinAlButonuTiklar() {
+        hizmetAlPage.satinAl_egitim.click();
+    }
+
+    @Then("Kullanici Anandolu Hayat Emeklilik banka uygulamasi sayfasina ulasir")
+    public void kullaniciAnandoluHayatEmeklilikBankaUygulamasiSayfasinaUlasir() {
+        hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
     }
 }
