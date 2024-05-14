@@ -227,9 +227,26 @@ public class AnasayfaStepDefs extends ReusableMethods {
         bekle(2);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
         hizmetAlPage.ustaEmeklilikPlani.click();
     }
 
+<<<<<<< HEAD
+=======
+
+    @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
+    public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()
+    {anasayfaPage.Standart_Kritik_Hastalık_Sigortası_Sekmesi.click();
+    }
+
+    @When("Kullanici Standart Kritik Hastalik Sigortasi sayfasindaki {string} butonunu gorur")
+    public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
+        hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
+    }
+>>>>>>> master
 }
