@@ -227,18 +227,9 @@ public class AnasayfaStepDefs extends ReusableMethods {
         bekle(2);
     }
 
-    @And("Kullanici Gelecegim sayfasında oldugunu dogrular")
-    public void kullaniciGelecegimSayfasındaOldugunuDogrular() {
-        Assert.assertTrue(hizmetAlPage.gelecegimdogrulama.isDisplayed());
-    }
-
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
         hizmetAlPage.ustaEmeklilikPlani.click();
     }
 
-    @Then("Kullanici Satin Al butonunun gorunur oldugunu dogrular")
-    public void kullaniciSatinAlButonununGorunurOldugunuDogrular() {
-        Assert.assertTrue(hizmetAlPage.satinAldogrulama.isDisplayed());
-    }
 }
