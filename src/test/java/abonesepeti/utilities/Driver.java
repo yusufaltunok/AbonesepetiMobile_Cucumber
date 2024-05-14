@@ -35,20 +35,32 @@ public class Driver {
         return driver;
     }
 
-    public static void serverBaslat(String ipAdress, int port){
-        String ortakYol = "/AppData/Roaming/npm/node_modules/appium/build/lib/main.js";
+    public static void serverBaslat(String ipAddress, int port){
+        String ortakYol;
+        File appiumJSFile;
+
+        String osName = System.getProperty("os.name").toLowerCase();
+        if (osName.contains("mac") || osName.contains("darwin")) {
+            ortakYol = "/usr/local/lib/node_modules/appium/build/lib/main.js";
+            appiumJSFile = new File(ortakYol);
+        } else if (osName.contains("win")) {
+            ortakYol = "/AppData/Roaming/npm/node_modules/appium/build/lib/main.js";
+//            appiumJSFile = new File(System.getProperty("user.home") + ortakYol);
+        } else {
+            throw new UnsupportedOperationException("Unsupported operating system");
+        }
+
         service = new AppiumServiceBuilder()
-                .withAppiumJS(new File(System.getProperty("user.home") + ortakYol))
-                .withIPAddress(ipAdress)
+//                .withAppiumJS(appiumJSFile)
+                .withIPAddress(ipAddress)
                 .usingPort(port)
                 .build();
         service.start();
     }
-
     public static void uygulamayiKapat() {
         if (driver != null) {
             driver.quit();
-           driver = null;
+            driver = null;
         }
     }
 
