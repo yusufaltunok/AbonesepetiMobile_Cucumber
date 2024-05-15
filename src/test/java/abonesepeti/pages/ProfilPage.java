@@ -44,7 +44,7 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Yinede Sil\")")
     public WebElement yinedeSil_button;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Mevcut Şifre\")")
+    @AndroidFindBy(className="android.widget.EditText")
     public WebElement mevcutSifre_textbox;
   
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_continue_to_delete_account\")")
@@ -168,9 +168,8 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Devam Et\")")
     public WebElement devamEt_text;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_negative_custom_dialog\")")
+    @AndroidFindBy(id="com.abonesepeti.app:id/btn_continue_to_delete_account")
     public WebElement sil;
-
 
     @AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.EditText\")")
     public WebElement dogrulamaKoduGir;
