@@ -5,6 +5,7 @@ import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPageUyelik;
 import abonesepeti.pages.RegisterPage;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class HizmetAl_StepDefs {
@@ -33,4 +34,41 @@ public class HizmetAl_StepDefs {
         Assert.assertTrue(hizmetAlPage.satinAlGencEmeklilik.isDisplayed());
     }
 
+
+
+    @When("Kullanci Standart Kritik Hastalik Sigortasi bilgilendirme Sayfasini gorur")
+    public void kullanciStandartKritikHastalikSigortasiBilgilendirmeSayfasiniGorur() {
+        Assert.assertTrue(hizmetAlPage.StandartKritikHastalikAigortaSayfasi.isDisplayed());
+    }
+
+    @When("Kullanici Kullanici Standart Kritik Hastalik Sigortasi sayfasindaki {string} butonuna tiklar")
+    public void kullaniciKullaniciStandartKritikHastalikSigortasiSayfasindakiButonunaTiklar(String arg0) {
+        hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.click();
+    }
+
+    @When("Kullanici Anadolu Hayat Emeklilik banka uygulamasi giris sayfasina yonlendirilir")
+    public void kullaniciAnadoluHayatEmeklilikBankaUygulamasiGirisSayfasinaYonlendirilir() {
+        hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
+    }
+
+    @And("Kullanici SigortaUrunlerinden Kadina Ozel Kritik Hastalik Sigortas tiklar")
+    public void kullaniciSigortaUrunlerindenKadinaOzelKritikHastalikSigortasTiklar() {
+        hizmetAlPage.KadinaOzelKritikHastalikSigortasiSekmesi.click();
+    }
+
+    @And("Kullanici Kadina Ozel Kritik Hastalik Sigortasi bilgilendirme sayfasini gorur")
+    public void kullaniciKadinaOzelKritikHastalikSigortasiBilgilendirmeSayfasiniGorur() {
+        Assert.assertTrue(hizmetAlPage.StandartKritikHastalikAigortaSayfasi.isDisplayed());
+    }
+
+    @And("Kullanici Kadina Ozel Kritik Hastalik Sigorta sayfasindaki {string} butonunu gorebilmeli")
+    public void kullaniciKadinaOzelKritikHastalikSigortaSayfasindakiSatinAlButonunuGorebilmeli() {
+        Assert.assertTrue(hizmetAlPage.satinAldogrulama.isDisplayed());
+
+    }
+
+    @And("Kullanici Kadina Ozel Kritik Hastalik Sigorta sayfasindaki {string} butonuna tiklar")
+    public void kullaniciKadinaOzelKritikHastalikSigortaSayfasindakiSatinAlButonunaTiklar() {
+        hizmetAlPage.satinAldogrulama.click();
+    }
 }

@@ -8,13 +8,13 @@ import org.junit.runner.RunWith;
             plugin = "html:raporlar/CucumberRapor.html",
             features = "src/test/resources/features",
             glue = {"abonesepeti/stepdefs","abonesepeti/hooks"},
-            tags = "@us20_02",
+            tags = "@US29",
             dryRun = false,
             monochrome = true
-    
+
 )
 
-        
+
 public class Runner {
 }
 

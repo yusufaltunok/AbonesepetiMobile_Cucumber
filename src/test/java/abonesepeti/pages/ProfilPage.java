@@ -130,6 +130,9 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = "android.widget.LinearLayout")
     public List<WebElement> ilkHane;
 
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_delete_account")
+    public WebElement bildirimler;
+
 
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/tv_membership_status")
@@ -203,7 +206,7 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(className = ("android.widget.Button"))
     public WebElement Kaydet_SifreDegistir;
 
-    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    @AndroidFindBy(xpath="//android.widget.LinearLayout[@resource-id=\"com.abonesepeti.app:id/btn_promotional_code\"]/android.view.ViewGroup")
     public WebElement SifreDegistirildiMesaj;
 
     @AndroidFindBy(id = ("com.abonesepeti.app:id/txt_message_custom_dialog"))
