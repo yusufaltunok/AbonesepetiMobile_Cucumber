@@ -233,6 +233,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
         Assert.assertTrue(hizmetAlPage.gelecegim.isDisplayed());
     }
 
+
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
         hizmetAlPage.ustaEmeklilikPlani.click();
@@ -252,4 +253,13 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
 
 
+    @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
+    public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()
+    {anasayfaPage.Standart_Kritik_Hastalık_Sigortası_Sekmesi.click();
+    }
+
+    @When("Kullanici Standart Kritik Hastalik Sigortasi sayfasindaki {string} butonunu gorur")
+    public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
+        hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
+    }
 }
