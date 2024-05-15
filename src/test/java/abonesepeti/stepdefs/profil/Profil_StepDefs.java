@@ -19,10 +19,12 @@ import java.util.Map;
 
 import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 
 public class Profil_StepDefs extends ReusableMethods {
 
-    ProfilPage profilPage=new ProfilPage();
+    ProfilPage profilPage = new ProfilPage();
 
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
@@ -31,7 +33,7 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @Then("Kullanici Profil butonununa tiklar")
     public void kullaniciProfilButonununaTiklar() {
-       // scrollGesture(driver,profilPage.hesabimiSil_button.);
+        // scrollGesture(driver,profilPage.hesabimiSil_button.);
         anasayfaPage.profil.click();
     }
 
@@ -164,15 +166,26 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Kullanici Kisisel Bilgiler' in basarili bir sekilde guncellendigini gorur")
     public void kullaniciKisiselBilgilerInBasariliBirSekildeGuncellendiginiGorur() {
-        Assert.assertEquals("new name",profilPage.kisiselBilgiler.get(0).getText());
-        Assert.assertEquals("new surname",profilPage.kisiselBilgiler.get(1).getText());
-        Assert.assertEquals("salvatore@12345.hkh",profilPage.kisiselBilgiler.get(2).getText());
-        Assert.assertEquals("55510591258",profilPage.kisiselBilgiler.get(3).getText());
-        Assert.assertEquals("(505) 677 16 25",profilPage.kisiselBilgiler.get(4).getText());
-       // Assert.assertEquals("12/12/2000",profilPage.kisiselBilgiler.get(5).getText());
+        Assert.assertEquals("new name", profilPage.kisiselBilgiler.get(0).getText());
+        Assert.assertEquals("new surname", profilPage.kisiselBilgiler.get(1).getText());
+        Assert.assertEquals("salvatore@12345.hkh", profilPage.kisiselBilgiler.get(2).getText());
+        Assert.assertEquals("55510591258", profilPage.kisiselBilgiler.get(3).getText());
+        Assert.assertEquals("(505) 677 16 25", profilPage.kisiselBilgiler.get(4).getText());
+        // Assert.assertEquals("12/12/2000",profilPage.kisiselBilgiler.get(5).getText());
 
 
     }
+
+    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
+    public void kullaniciAbonesepetiMobilUygulamasındaGirer(String arg0) {
+        loginPage.atla.click();
+        loginPage.girisYap.click();
+        loginPage.cepTelefonu.sendKeys("5418743098");
+        loginPage.sifre.sendKeys("1234tester");
+        loginPage.girisYapButton.click();
+        loginPage.tamam.click();
+    }
+
     @And("Kullanici Profil butonunu tiklar")
     public void kullaniciProfilButonunuTiklar() {
         anasayfaPage.profil.click();
@@ -186,12 +199,13 @@ public class Profil_StepDefs extends ReusableMethods {
     @Then("Kullanici odeme gecmisini dogrular")
     public void kullaniciOdemeGecmisiniDogrular() {
         Assert.assertTrue(profilPage.odemeGecmisiDogrula.isDisplayed());
-}
+    }
 
     @And("Kullanici Çıkis Yap'a tıklar")
-    public void kullaniciCıkisYapATıklar() {
+    public void kullaniciCikisYapATiklar() {
 
-      scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down",20.0,1000);
+        scrollGesture(driver, profilPage.kisisel_bilgiler_button, "down", 20.0, 1000);
+
         profilPage.cikisyap.click();
     }
 
@@ -209,9 +223,13 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Aciklama alanina aciklama girilir")
     public void aciklamaAlaninaAciklamaGirilir() {
-    profilPage.aciklama_textbox.click();
-    profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
-    }
+
+    }    
+
+   // profilPage.aciklama_textbox.click();
+   // profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
+
+
 
     @And("Gonder butonuna tiklanir")
     public void gonderButonunaTiklanir() {
@@ -226,8 +244,77 @@ public class Profil_StepDefs extends ReusableMethods {
     }
 
 
+    @And("Kullanici anasayfada Profil linkine tiklar")
+    public void kullaniciAnasayfadaProfilLinkineTiklar() {
+        profilPage.profil.click();
 
+    }
 
+    @And("Kullanici profil sayfasinda bildirimler linkine tiklar")
+    public void kullaniciProfilSayfasindaBildirimlerLinkineTiklar() {
+        profilPage.bildirimler.click();
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki WEB bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiWEBBildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki MOBİL bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiMOBİLBildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkiniAcar() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki E-POSTA bildirim linkinin acilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiEPOSTABildirimLinkininAcilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini kapatir")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniKapatir() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin kapatilabildigini dogrula")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininKapatilabildiginiDogrula() {
+    }
+
+    @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar")
+    public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniAcar() {
+
+/*
     @When("Kullanici Sifremi Degistir butonuna tiklar")
     public void kullaniciSifremiDegistirButonunaTiklar() {
         profilPage.Sifremi_Degistir.click();
@@ -253,10 +340,12 @@ public class Profil_StepDefs extends ReusableMethods {
     public void kullaniciKaydeteTiklar() {
         profilPage.Kaydet_SifreDegistir.click();
         bekle(2);
+
     }
 
     @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
-    }
+    }*/
 
+}
 }

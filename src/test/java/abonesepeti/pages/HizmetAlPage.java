@@ -47,4 +47,40 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"ahe-logo\")")
     public WebElement anadoluHayatEmeklilik;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğim\")")
+    public WebElement gelecegim;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Genç Emeklilik Planı\")")
+    public WebElement gencEmeklilikPlani;
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Ferdi Kaza Sigortası\")")
+    public WebElement ferdiKazaSigortasi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+    public WebElement gencEmeklilikPlaniDogrula;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    public WebElement satinAlGencEmeklilik;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.LinearLayout\").instance(26)")
+    public WebElement StandartKritikHastalikSigortasi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/img_header")
+    public WebElement StandartKritikHastalikAigortaSayfasi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/btnContinue")
+    public WebElement SatinAlStandartKritikHastalikSigortasi;
+
+    @AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"com.abonesepeti.app:id/txtTitle\" and @text=\"Kadına Özel Kritik Hastalık Sigortası\"]")
+    public WebElement KadinaOzelKritikHastalikSigortasiSekmesi;
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+    public  WebElement KadinaOzelKritikHastalikSigortasiSayfasi;
+
+
+
+
+
+
+
 }

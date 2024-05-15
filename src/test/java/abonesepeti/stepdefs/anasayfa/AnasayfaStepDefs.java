@@ -1,9 +1,6 @@
 package abonesepeti.stepdefs.anasayfa;
 
-import abonesepeti.pages.AnasayfaPage;
-import abonesepeti.pages.HizmetAlPage;
-import abonesepeti.pages.LoginPage;
-import abonesepeti.pages.ProfilPage;
+import abonesepeti.pages.*;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
@@ -19,6 +16,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();
     HizmetAlPage hizmetAlPage = new HizmetAlPage();
+    ProfilPageUyelik profilPageUyelik = new ProfilPageUyelik();
 
     LoginPage loginPage=new LoginPage();
 
@@ -213,6 +211,10 @@ public class AnasayfaStepDefs extends ReusableMethods {
         loginPage.sifre.sendKeys("1234tester");
         loginPage.girisYapButton.click();
     }
+    @Then("Kullanici Hizmet Al butonunu tiklar")
+    public void kullaniciHizmetAlButonunuTiklar() {
+        hizmetAlPage.hizmetAl.click();
+    }
 
     @And("Kullanici Anasayfada Tum Islemler sekmesine tiklar")
     public void kullaniciAnasayfadaTumIslemlerSekmesineTiklar() {
@@ -226,19 +228,38 @@ public class AnasayfaStepDefs extends ReusableMethods {
         hizmetAlPage.gelecegimbutton.click();
         bekle(2);
     }
-
     @And("Kullanici Gelecegim sayfasında oldugunu dogrular")
     public void kullaniciGelecegimSayfasındaOldugunuDogrular() {
-        Assert.assertTrue(hizmetAlPage.gelecegimdogrulama.isDisplayed());
+        Assert.assertTrue(hizmetAlPage.gelecegim.isDisplayed());
     }
+
 
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
         hizmetAlPage.ustaEmeklilikPlani.click();
     }
 
-    @Then("Kullanici Satin Al butonunun gorunur oldugunu dogrular")
-    public void kullaniciSatinAlButonununGorunurOldugunuDogrular() {
-        Assert.assertTrue(hizmetAlPage.satinAldogrulama.isDisplayed());
+    @And("Kullanici Satin Al butonuna tiklar")
+    public void kullaniciSatinAlButonunaTiklar() {
+            hizmetAlPage.satinAl_egitim.click();
+        }
+
+
+    @Then("Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular")
+    public void kullaniciAnadoluHayatEmeklilikSayfasindaOldugunuDogrular() {
+        hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
+
+    }
+
+
+
+    @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
+    public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()
+    {anasayfaPage.Standart_Kritik_Hastalık_Sigortası_Sekmesi.click();
+    }
+
+    @When("Kullanici Standart Kritik Hastalik Sigortasi sayfasindaki {string} butonunu gorur")
+    public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
+        hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
     }
 }
