@@ -25,9 +25,15 @@ public class Login_StepDefs {
 
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
+<<<<<<< HEAD
         //loginPage.girisYapTelefon("5353956054","56%4809n");
         loginPage.girisYapTelefon("5056771625","aaaaaa");
 
+=======
+        loginPage.girisYapTelefon("5056771625","aaaaaa");
+     //   loginPage.girisYapTelefon("5353956054","56%4809n");
+       
+>>>>>>> master
     }
 
     @Then("Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular")
