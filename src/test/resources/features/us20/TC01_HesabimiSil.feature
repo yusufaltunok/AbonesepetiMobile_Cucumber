@@ -27,7 +27,6 @@ Feature: Us20 - Hesap Silme İslemi
     Then Kullanici Hesabimi Sil butonuna tiklar
     Then Kullanici Yinede Sil butonunu tiklar
     Then Kullanici mevcut sifre textboxina sifresini girer
-
     Then Kullanici sifrenin yanindaki goz simgesine tiklar
     Then Kullanici gecerli sifresini girdigini dogrular
     Then Kullanici sil butonunu tiklar
