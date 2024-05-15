@@ -4,12 +4,15 @@ import abonesepeti.pages.HizmetAlPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPageUyelik;
 import abonesepeti.pages.RegisterPage;
+import abonesepeti.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
+import static abonesepeti.utilities.Driver.driver;
 import static org.junit.Assert.assertEquals;
 
-public class UyelikYillik_StepDefs {
+public class UyelikYillik_StepDefs extends ReusableMethods {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     ProfilPageUyelik profilPageUyelik = new ProfilPageUyelik();
@@ -167,4 +170,39 @@ public class UyelikYillik_StepDefs {
     public void kullaniciAnandoluHayatEmeklilikBankaUygulamasiSayfasinaUlasir() {
         hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
     }
+
+    @When("Kullanici Abonesepeti mobil uygulamasına {string} girer")
+    public void kullaniciAbonesepetiMobilUygulamasınaGirer(String arg0) {
+        loginPage.atla.click();
+        loginPage.girisYap.click();
+        loginPage.cepTelefonu.sendKeys("5418743098");
+        loginPage.sifre.sendKeys("1234tester");
+        loginPage.girisYapButton.click();
+        loginPage.tamam.click();
+    }
+
+    @And("Kullanici Hizmet Al butonuna tiklar")
+    public void kullaniciHizmetAlButonunaTiklar() {
+        hizmetAlPage.hizmetAl.click();
+    }
+
+    @And("Kullanici Anadolu Hayat Gelecegim sekmesine tiklar")
+    public void kullaniciAnadoluHayatGelecegimSekmesineTiklar() {
+        hizmetAlPage.anadoluHayatGelecegim.click();
+        scrollGesture(driver, hizmetAlPage.ustaEmeklilikPlani, "down",7.0,1000);
+    }
+    @And("Kullanici Ferdi Kaza Sigortasi sekmesine tiklar")
+    public void kullaniciFerdiKazaSigortasiSekmesineTiklar() {
+        hizmetAlPage.ferdiKazaSigortasi.click();
+    }
+    @And("Kullanici Satin Al butonunu tiklar")
+    public void kullaniciSatinAlButonunuTiklar() {
+        hizmetAlPage.satinAl_egitim.click();
+    }
+    @Then("Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular")
+    public void kullaniciAnadoluHayatEmeklilikSayfasindaOldugunuDogrular() {
+        hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
+
+    }
+
 }
