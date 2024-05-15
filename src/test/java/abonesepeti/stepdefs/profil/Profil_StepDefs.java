@@ -314,7 +314,7 @@ public class Profil_StepDefs extends ReusableMethods {
     @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniAcar() {
 
-/*
+    }
     @When("Kullanici Sifremi Degistir butonuna tiklar")
     public void kullaniciSifremiDegistirButonunaTiklar() {
         profilPage.Sifremi_Degistir.click();
@@ -345,7 +345,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
-    }*/
+    }
 
-}
 }
