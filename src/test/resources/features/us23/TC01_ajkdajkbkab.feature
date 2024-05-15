@@ -1,7 +1,7 @@
 @US23_TC01
-  Feature: Us23 - Cocugum Icin Egitim Sigortasi
+  Feature: Us23_Cocugum Icin Egitim Sigortasi
 
-  Scenario : TC01 "Cocugum icin Egitim Sigortasi" satin alma islemi
+  Scenario : TC01_"Cocugum icin Egitim Sigortasi" satin alma islemi
 
 
     When Kullanici Abonesepeti uygulamasina giris yapar

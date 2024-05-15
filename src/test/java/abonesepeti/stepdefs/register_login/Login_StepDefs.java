@@ -165,7 +165,6 @@ public class Login_StepDefs {
         loginPage.girisYapTelefon("5336954588","123456");
        // profilPage.devamEt_hosgeldinSayfasi.click();
 
-        loginPage.girisYapTelefon("5336954588","Rabia3545");
 
 
     }
