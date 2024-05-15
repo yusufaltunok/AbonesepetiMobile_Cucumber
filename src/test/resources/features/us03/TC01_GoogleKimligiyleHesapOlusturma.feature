@@ -9,7 +9,7 @@
     And Kullanici gecerli bir sifre girer
     And Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar
     And Hesap olustur butonuna tiklar
-    And Telefona SMS ile gelen 4 haneli dogrulama kodunu girer
+    And Kullanici Telefona SMS ile gelen 4 haneli dogrulama kodunu girer
     And Dogrula butonuna tiklar
     Then Basarili bir sekilde hesap olusturuldugunu dogrular
 
