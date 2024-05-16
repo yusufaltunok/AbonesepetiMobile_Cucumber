@@ -135,6 +135,13 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
         profilPageUyelik.addCreditCardButton.click();
     }
 
+
+
+    @Then("Kullanici Hizmet Al bbutonunu tiklar")
+    public void kullaniciHizmetAlBbutonunuTiklar() {
+    hizmetAlPage.hizmetAl.click();
+    }
+
     @Then("Kullanici Anadolu Hayat Gelecegim sekmesi tiklar")
     public void kullaniciAnadoluHayatGelecegimSekmesiTiklar() {
         hizmetAlPage.anadoluHayatGelecegim.click();
@@ -155,10 +162,11 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
         hizmetAlPage.satinAl_egitim.isDisplayed();
     }
 
-    @Then("Kullanici Satin Al butonu tiklar")
-    public void kullaniciSatinAlButonuTiklar() {
-        hizmetAlPage.satinAl_egitim.click();
-    }
+   // @Then("Kullanici Satin Al butonu tiklar")
+  //  public void kullaniciSatinAlButonuTiklar() {
+
+      //  hizmetAlPage.satinAl_egitim.click();
+   // }
 
     @Then("Kullanici Anandolu Hayat Emeklilik banka uygulamasi sayfasina ulasir")
     public void kullaniciAnandoluHayatEmeklilikBankaUygulamasiSayfasinaUlasir() {
@@ -199,4 +207,13 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
 
     }
 
+    @Then("Kullanici Sigorta Urunlerim basligi altında Tam Kapsamli Hayat Sigortasi butonu tikklar")
+    public void kullaniciSigortaUrunlerimBasligiAltındaTamKapsamliHayatSigortasiButonuTikklar() {
+        hizmetAlPage.tamKapsamliHayatSigortasi.click();
+    }
+
+    @Then("Kullanici hayat sigortasisayfasinda oldugunu dogrular")
+    public void kullaniciHayatSigortasisayfasindaOldugunuDogrular() {
+        hizmetAlPage.hayatSigortasiSayfasi.isDisplayed();
+    }
 }
