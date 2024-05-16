@@ -78,8 +78,8 @@ public class Register_StepDefs extends ReusableMethods {
 
     @And("Kullanici Telefona SMS ile gelen {int} haneli dogrulama kodunu girer")
     public void kullaniciTelefonaSMSIleGelenHaneliDogrulamaKodunuGirer(int arg0) {
+        bekle(2);
         profilPage.dogrulamaKoduGir.sendKeys("8765");
-
 
     }
 

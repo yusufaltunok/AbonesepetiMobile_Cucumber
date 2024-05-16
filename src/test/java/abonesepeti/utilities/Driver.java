@@ -67,6 +67,7 @@ public class Driver {
 //        service.start();
 //    }
 
+
     public static void uygulamayiKapat() {
         if (driver != null) {
             driver.quit();

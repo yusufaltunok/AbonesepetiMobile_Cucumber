@@ -175,16 +175,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
     }
 
-    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
-    public void kullaniciAbonesepetiMobilUygulamasındaGirer(String arg0) {
-        loginPage.atla.click();
-        loginPage.girisYap.click();
-        loginPage.cepTelefonu.sendKeys("5418743098");
-        loginPage.sifre.sendKeys("1234tester");
-        loginPage.girisYapButton.click();
-        loginPage.tamam.click();
-    }
-
     @And("Kullanici Profil butonunu tiklar")
     public void kullaniciProfilButonunuTiklar() {
         anasayfaPage.profil.click();
@@ -313,7 +303,7 @@ public class Profil_StepDefs extends ReusableMethods {
     @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniAcar() {
 
-/*
+    }
     @When("Kullanici Sifremi Degistir butonuna tiklar")
     public void kullaniciSifremiDegistirButonunaTiklar() {
         profilPage.Sifremi_Degistir.click();
@@ -344,7 +334,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @Then("Kullanici Bildirimler sayfasindaki SMS bildirim linkinin acilabildigini dogrula")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkininAcilabildiginiDogrula() {
-    }*/
+    }
 
-}
 }
