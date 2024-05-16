@@ -18,6 +18,7 @@ Feature: US02 Yeni Hesap Olusturma
     Then Basarili bir sekilde hesap olusturuldugunu dogrular
     And Kullanici devam et butonuna tiklar
 
+
     Examples:
       |   ad_soyad   |    E_posta       | sifre  |
       | tester yusuf |  testabc@abc.com | aaaaaa |
