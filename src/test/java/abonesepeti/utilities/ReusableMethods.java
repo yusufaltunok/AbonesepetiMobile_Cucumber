@@ -125,7 +125,7 @@ public class ReusableMethods {
         ));
     }
 
-                 public void swipeGesture(AndroidDriver driver, WebElement element, String direction, double percent, int speed) {
+    public void swipeGesture(AndroidDriver driver, WebElement element, String direction, double percent, int speed) {
         driver.executeScript("mobile: swipeGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "direction", direction,
@@ -157,7 +157,7 @@ public class ReusableMethods {
         }
     }
 
-    public void testFling() {
+    public void testFling() { // Sayfayı en sona kaydırma metodu
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence sequence = new Sequence(finger, 1)
                 .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),750,1500))
