@@ -57,8 +57,6 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Genç Emeklilik Planı\")")
     public WebElement gencEmeklilikPlani;
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Ferdi Kaza Sigortası\")")
-    public WebElement ferdiKazaSigortasi;
 
     @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
     public WebElement gencEmeklilikPlaniDogrula;
@@ -80,18 +78,6 @@ public class HizmetAlPage {
 
     @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
     public  WebElement KadinaOzelKritikHastalikSigortasiSayfasi;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Ev Hanımları Emeklilik Planı\")")
-    public WebElement EvHanimlariEmeklilikPlani;
-    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_title")
-    public WebElement EvHanimlariEmeklilikPlaniTitle;
-    @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
-    public WebElement EvHanimlariEmeklilikPlaniSatinAlButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(0)")
-    public WebElement EvHanimlariEmeklilikMusteriTcNo;
-    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
-    public WebElement EvHanimlariEmeklilikSifre;
 
 
 
