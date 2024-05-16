@@ -38,6 +38,10 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.LinearLayout\").instance(24)")
     public WebElement cocugumIcinEgitimSigortasi;
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/category_container_view\").instance(6)")
+    public WebElement tamKapsamliHayatSigortasi;
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Tam Kapsamlı Hayat Sigortası\")")
+    public WebElement hayatSigortasiSayfasi;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ScrollView\")")
     public WebElement cocukEgitimiBilgileri;

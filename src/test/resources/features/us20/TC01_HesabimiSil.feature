@@ -23,9 +23,27 @@ Feature: Us20 - Hesap Silme İslemi
          |   ad_soyad     |    E_posta       | sifre  |
          | bu bir  deneme |  deneme@abc.com  | 123456 |
 
-
   @us20_02
-  Scenario: TC02-Pozitive Scenario- Kullanici "Hesabimi Sil" islemini gerceklestirebildigini dogrular
+  Scenario: TC02 -Negative Scenario - Kullanici sistemde kayitli cep telefonu ve gecersiz sifre bilgisiyle
+  "Hesabimi Sil" islemini gerceklestirememeli"
+
+
+    When Kullanici silmek istedigi hesaba giris yapar
+    Then Kullanici Profil butonununa tiklar
+    Then Kullanici Hesabimi Sil butonuna tiklar
+    Then Kullanici Yinede Sil ve Iptal butonlarını goruntuler
+    Then Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular
+    Then Kullanici Hesabimi Sil butonuna tiklar
+    Then Kullanici Yinede Sil butonunu tiklar
+    Then Kullanici mevcut sifre textboxina gecersiz sifre girer
+    Then Kullanici sil butonunu tiklar
+    Then Kullanici musteri uyari mesajini goruntuler
+    Then Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular
+    Then Kullanici sil butonunu tiklar
+    And Kullanici girmis oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.
+
+  @us20_03
+  Scenario: TC03-Pozitive Scenario- Kullanici "Hesabimi Sil" islemini gerceklestirebildigini dogrular
     Given Kullanici Abonesepeti uygulamasina giris yapar
 #    When Kullanici silmek istedigi hesaba giris yapar
     Then Kullanici Profil butonununa tiklar
@@ -44,24 +62,6 @@ Feature: Us20 - Hesap Silme İslemi
     And Kullanici silinen hesap bilgileri ile giris yapamadigini dogrular ve tamam butonuna tiklar
 
 
-#hesaba girip profil sayfayasona geliyor. sayfann en altına imnmediği için hesabımı sil butonunu göremiyor
   #Ayrıca manuel olarak da silmeye çalışınca "beklenmeyen bir hata oluştu" uyarısı çıkıyor.
 
-  @us20_03
-  Scenario: TC03 -Negative Scenario - Kullanici sistemde kayitli cep telefonu ve gecersiz sifre bilgisiyle
-  "Hesabimi Sil" islemini gerceklestirememeli"
 
-
-    When Kullanici silmek istedigi hesaba giris yapar
-    Then Kullanici Profil butonununa tiklar
-    Then Kullanici Hesabimi Sil butonuna tiklar
-    Then Kullanici Yinede Sil ve Iptal butonlarını goruntuler
-    Then Kullanici Iptal butonuna tiklar ve profil sayfasında kaldıgını dogrular
-    Then Kullanici Hesabimi Sil butonuna tiklar
-    Then Kullanici Yinede Sil butonunu tiklar
-    Then Kullanici mevcut sifre textboxina gecersiz sifre girer
-    Then Kullanici sil butonunu tiklar
-    Then Kullanici musteri uyari mesajini goruntuler
-    Then Kullanici Sil ve Devam Et butonlarinin tiklanabilir oldugunu dogrular
-    Then Kullanici sil butonunu tiklar
-    And Kullanici girmis oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.
