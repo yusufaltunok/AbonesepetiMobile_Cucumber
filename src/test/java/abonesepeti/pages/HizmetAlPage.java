@@ -75,7 +75,17 @@ public class HizmetAlPage {
     @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
     public  WebElement KadinaOzelKritikHastalikSigortasiSayfasi;
 
+    @AndroidFindBy(xpath = "//*[@text='Çocuğum için BES']")
+    public WebElement cocugumIcinBES;
 
+    @AndroidFindBy(xpath = "(//*[@text='Çocuğum için BES'])[1]")
+    public WebElement cocugumIcinBESDogrula;
+
+    @AndroidFindBy (xpath = "Satın Al")
+    public  WebElement cocugumIcinBESSatinAlButon;
+
+    //@AndroidFindBy (xpath = "Anadolu Hayat Geleceğim")
+   // public  WebElement anadoluHayatGelecegim;
 
 
 

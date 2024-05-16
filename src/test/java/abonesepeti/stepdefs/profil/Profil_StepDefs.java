@@ -212,8 +212,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Aciklama alanina aciklama girilir")
     public void aciklamaAlaninaAciklamaGirilir() {
-        
-    }    
 
     profilPage.aciklama_textbox.click();
     profilPage.aciklama_textbox.sendKeys("Bu Test Mesajidir");
@@ -302,6 +300,8 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @And("Kullanici Bildirimler sayfasindaki SMS bildirim linkini acar")
     public void kullaniciBildirimlerSayfasindakiSMSBildirimLinkiniAcar() {
+
+    }
 
 
     @When("Kullanici Sifremi Degistir butonuna tiklar")
