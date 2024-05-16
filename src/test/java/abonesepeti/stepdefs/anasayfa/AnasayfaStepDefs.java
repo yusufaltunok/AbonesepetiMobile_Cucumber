@@ -243,5 +243,4 @@ public class AnasayfaStepDefs extends ReusableMethods {
     public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
         hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
     }
-
 }

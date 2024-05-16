@@ -4,17 +4,21 @@ import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.Driver;
+import abonesepeti.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
+import java.util.Random;
+
+import static abonesepeti.utilities.Driver.driver;
 import static abonesepeti.utilities.ReusableMethods.bekle;
 import static abonesepeti.utilities.ReusableMethods.visibleWait;
 import static org.junit.Assert.assertTrue;
 
-public class Register_StepDefs {
+public class Register_StepDefs extends ReusableMethods {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
 
@@ -71,10 +75,10 @@ public class Register_StepDefs {
         registerPage.yeniHesapOlustur.click();
     }
 
-    @And("Telefona SMS ile gelen {int} haneli dogrulama kodunu girer")
-    public void telefonaSMSIleGelenHaneliDogrulamaKodunuGirer(int arg0) {
+    @And("Kullanici Telefona SMS ile gelen {int} haneli dogrulama kodunu girer")
+    public void kullaniciTelefonaSMSIleGelenHaneliDogrulamaKodunuGirer(int arg0) {
+        bekle(2);
         profilPage.dogrulamaKoduGir.sendKeys("8765");
-
 
     }
 
@@ -142,6 +146,7 @@ public class Register_StepDefs {
 
         @Then("Kullanici Hesabimi Sil butonuna tiklar")
         public void kullaniciHesabimiSilButonunaTiklar () {
+            testFling();
             profilPage.hesabimiSil_button.click();
 
         }
@@ -165,7 +170,7 @@ public class Register_StepDefs {
 
         @Then("Kullanici mevcut sifre textboxina sifresini girer")
         public void kullaniciMevcutSifreTextboxinaSifresiniGirer () {
-            profilPage.mevcutSifre_textbox.sendKeys("123456");
+            profilPage.mevcutSifre_textbox.sendKeys("aaaaaa");
         }
 
         @Then("Kullanici sifrenin yanindaki goz simgesine tiklar")
@@ -175,12 +180,14 @@ public class Register_StepDefs {
 
         @Then("Kullanici gecerli sifresini girdigini dogrular")
         public void kullaniciGecerliSifresiniGirdiginiDogrular () {
-            Assert.assertEquals("123456", profilPage.mevcutSifre_textbox.getText());
+            System.out.println(profilPage.mevcutSifre_textbox.getText());
+            Assert.assertEquals( profilPage.mevcutSifre_textbox.getText(),"aaaaaa");
         }
 
         @Then("Kullanici sil butonunu tiklar")
         public void kullaniciSilButonunuTiklar () {
-            profilPage.sil.click();
+             driver.hideKeyboard(); // klavyeyi gizle
+             profilPage.sil.click();
         }
 
         @Then("Kullanici musteri uyari mesajini goruntuler")
@@ -258,4 +265,58 @@ public class Register_StepDefs {
     public void kullaniciKayitliOlmayanBirTelefonNumarasiGirer() {
         registerPage.cepTelefonu.sendKeys("5356901971");
     }
+
+    @And("Kullanici Basla butonuna tiklar")
+    public void kullaniciBaslaButonunaTiklar() {
+        registerPage.basla.click();
+    }
+
+    @And("Kullanici eklemek istedigi aboneligi secer")
+    public void kullaniciEklemekIstedigiAboneligiSecer() {
+        scrollGesture(driver,registerPage.telefon,"down",10.0,1500);
+        registerPage.baslatKurumCheckbox.get(2).click();
+    }
+
+    @And("Kullanici Devam Et butonuna tiklar")
+    public void kullaniciDevamEtButonunaTiklar() {
+        registerPage.devamEtButton.click();
+    }
+
+    @And("Kullanici eklemek istedigi abonelik paketini secer")
+    public void kullaniciEklemekIstedigiAbonelikPaketiniSecer() {
+        registerPage.abonelikPaketleri.get(0).click();
+    }
+
+    @And("Kullanici KAYDET'e tiklar")
+    public void kullaniciKAYDETETiklar() {
+        registerPage.kaydet.click();
+    }
+
+    @And("Kullanici bildirim izni secer")
+    public void kullaniciBildirimIzniSecer() {
+        registerPage.bildirimIzniSonra.click();
+    }
+
+    @And("Kullanici telefon numarasini girer")
+    public void kullaniciTelefonNumarasiniGirer() {
+        registerPage.telefonNumaraniz.sendKeys("5056771625");
+    }
+
+
+    @And("Kullanici {string}, {string}, {string} bilgilerini girer")
+    public void kullaniciBilgileriniGirer(String ad_soyad, String E_posta, String sifre) {
+        registerPage.adSoyad.sendKeys(ad_soyad);
+        registerPage.e_Posta.sendKeys(E_posta);
+        registerPage.sifre.sendKeys(sifre);
+    }
+
+    @And("Kullanici devam et butonuna tiklar")
+    public void kullanicidevamEtButonunaTiklar() {
+        registerPage.DevamEt.click();
+        bekle(2);
+        registerPage.DevamEt.click();
+    }
+
+
+
 }
