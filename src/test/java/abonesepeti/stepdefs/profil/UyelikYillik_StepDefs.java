@@ -90,10 +90,10 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
         profilPageUyelik.proYillik.click();
     }
 
-    @And("Kullanici Satin Al butonuna tiklar")
-    public void kullaniciSatinAlButonunaTiklar() {
-        assertEquals("true", profilPageUyelik.satinAl.getAttribute("clickable"));
-    }
+//    @And("Kullanici Satin Al butonuna tiklar")
+//    public void kullaniciSatinAlButonunaTiklar() {
+//        assertEquals("true", profilPageUyelik.satinAl.getAttribute("clickable"));
+//    }
 
     @And("Kullanici acilan sayfada Redeem code butonunun goruldugunu dogrular")
     public void kullaniciAcilanSayfadaRedeemCodeButonununGoruldugunuDogrular() {
@@ -133,12 +133,6 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     @And("Kullanici Add creditor debit card butonuna tiklar")
     public void kullaniciAddCreditorDebitCardButonunaTiklar() {
         profilPageUyelik.addCreditCardButton.click();
-    }
-
-
-    @Then("Kullanici Hizmet Al butonunu tiklar")
-    public void kullaniciHizmetAlButonunuTiklar() {
-    hizmetAlPage.hizmetAl.click();
     }
 
     @Then("Kullanici Anadolu Hayat Gelecegim sekmesi tiklar")

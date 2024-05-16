@@ -228,11 +228,6 @@ public class AnasayfaStepDefs extends ReusableMethods {
         hizmetAlPage.gelecegimbutton.click();
         bekle(2);
     }
-    @And("Kullanici Gelecegim sayfasında oldugunu dogrular")
-    public void kullaniciGelecegimSayfasındaOldugunuDogrular() {
-        Assert.assertTrue(hizmetAlPage.gelecegim.isDisplayed());
-    }
-
 
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
@@ -243,15 +238,6 @@ public class AnasayfaStepDefs extends ReusableMethods {
     public void kullaniciSatinAlButonunaTiklar() {
             hizmetAlPage.satinAl_egitim.click();
         }
-
-
-    @Then("Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular")
-    public void kullaniciAnadoluHayatEmeklilikSayfasindaOldugunuDogrular() {
-        hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
-
-    }
-
-
 
     @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
     public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()
