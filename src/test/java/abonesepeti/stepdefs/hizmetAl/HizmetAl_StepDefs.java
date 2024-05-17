@@ -1,14 +1,15 @@
-package abonesepeti.stepdefs.profil;
+package abonesepeti.stepdefs.hizmetAl;
 
 import abonesepeti.pages.HizmetAlPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPageUyelik;
 import abonesepeti.pages.RegisterPage;
+import abonesepeti.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class HizmetAl_StepDefs {
+public class HizmetAl_StepDefs extends ReusableMethods {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     ProfilPageUyelik profilPageUyelik = new ProfilPageUyelik();
@@ -71,37 +72,43 @@ public class HizmetAl_StepDefs {
         hizmetAlPage.satinAldogrulama.click();
     }
 
-    @When("Kullicini Anadolu Hayat Gelecegim sekmesine tiklar.")
-    public void kullicini_anadolu_hayat_gelecegim_sekmesine_tiklar() {
+    @And("Kullicini Anadolu Hayat Gelecegim sekmesine tiklar.")
+    public void kulliciniAnadoluHayatGelecegimSekmesineTiklar() {
         hizmetAlPage.anadoluHayatGelecegim.click();
     }
 
-    @When("Kullanici Cocugum icin BES sekmesine tiklar")
-    public void kullanici_cocugum_icin_bes_sekmesine_tiklar() throws InterruptedException {
+    @And("Kullanici Cocugum icin BES sekmesine tiklar")
+    public void kullaniciCocugumIcinBESSekmesineTiklar() {
         hizmetAlPage.cocugumIcinBES.click();
-        Thread.sleep(2000);
+        bekle(2);
     }
 
-    @When("Kullanici Cocugum icin BES sayfasinda oldugunu dogrular")
-    public void kullanici_cocugum_icin_bes_sayfasinda_oldugunu_dogrular() {
+    @And("Kullanici Cocugum icin BES sayfasinda oldugunu dogrular")
+    public void kullaniciCocugumIcinBESSayfasindaOldugunuDogrular() {
         Assert.assertTrue(hizmetAlPage.cocugumIcinBESDogrula.isDisplayed());
     }
 
-    @When("Kullanici {string} butonunun gorunur oldugunu dogrular")
-    public void kullanici_butonunun_gorunur_oldugunu_dogrular(String string) {
+    @And("Kullanici {string} butonunun gorunur oldugunu dogrular")
+    public void kullaniciButonununGorunurOldugunuDogrular(String arg0) {
         hizmetAlPage.satinAldogrulama.isDisplayed();
     }
 
-    @When("Kullanici cocugum icin BES Satin Al butonu tiklar")
-    public void kullanici_cocugum_icin_bes_satin_al_butonu_tiklar() {
+    @And("Kullanici cocugum icin BES Satin Al butonu tiklar")
+    public void kullaniciCocugumIcinBESSatinAlButonuTiklar() {
         hizmetAlPage.satinAldogrulama.click();
     }
 
 
-    @When("Kullanici {isim} Abone Sepeti uygulamasina giris yapar")
-    public void kullaniciIsimAboneSepetiUygulamasinaGirisYapar() {
+//    @When("Kullanici {isim} Abone Sepeti uygulamasina giris yapar")
+//    public void kullaniciIsimAboneSepetiUygulamasinaGirisYapar() {
+//
+//    }
 
-    }
+
+
+
+
+
 
     @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
     public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {

@@ -93,7 +93,10 @@ public class HizmetAlPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
+  public WebElement cocugumIcinBES;
 
+<<<<<<< HEAD
   @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
   public WebElement GelecegeYatırımPlaniSekmesı;
 
@@ -101,6 +104,10 @@ public class HizmetAlPage {
   public WebElement GelecegeYatırımPlaniSayfasınıDogrula;
 
 
+=======
+  @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
+  public WebElement cocugumIcinBESDogrula;
+>>>>>>> master
 
 
 
