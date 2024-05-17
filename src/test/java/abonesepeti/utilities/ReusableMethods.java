@@ -4,12 +4,18 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Pause;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Collections;
+
+import static abonesepeti.utilities.Driver.driver;
 
 public class ReusableMethods {
 
@@ -119,7 +125,7 @@ public class ReusableMethods {
         ));
     }
 
-                 public void swipeGesture(AndroidDriver driver, WebElement element, String direction, double percent, int speed) {
+    public void swipeGesture(AndroidDriver driver, WebElement element, String direction, double percent, int speed) {
         driver.executeScript("mobile: swipeGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "direction", direction,
@@ -149,6 +155,20 @@ public class ReusableMethods {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void testFling() { // Sayfayı en sona kaydırma metodu
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence sequence = new Sequence(finger, 1)
+                .addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(),750,1500))
+                .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(new Pause(finger, Duration.ofMillis(50)))
+                .addAction(finger.createPointerMove(Duration.ofMillis(50), PointerInput.Origin.viewport(),750,1000))
+                .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Collections.singletonList(sequence));
+
+        bekle(5);
+
     }
 
 }
