@@ -94,6 +94,11 @@ public class HizmetAlPage {
     public WebElement EvHanimlariEmeklilikSifre;
 
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
+  public WebElement GelecegeYatırımPlaniSekmesı;
+
+  @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+  public WebElement GelecegeYatırımPlaniSayfasınıDogrula;
 
 
 

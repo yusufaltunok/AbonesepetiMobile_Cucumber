@@ -103,5 +103,19 @@ public class HizmetAl_StepDefs {
 
     }
 
+    @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
+    public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
+        hizmetAlPage.GelecegeYatırımPlaniSekmesı.click();
+    }
+
+    @And("Kullanici Gelecege Yatirim Plani bilgilendirme sayfasini gorur")
+    public void kullaniciGelecegeYatirimPlaniBilgilendirmeSayfasiniGorur() {
+        hizmetAlPage.GelecegeYatırımPlaniSayfasınıDogrula.isDisplayed();
+    }
+
+    @And("Kullanici Gelecege Yatirim sayfasindaki {string} butonu gorur")
+    public void kullaniciGelecegeYatirimSayfasindakiSatinAlButonuGorur() {
+        hizmetAlPage.satinAldogrulama.isDisplayed();
+    }
 }
 
