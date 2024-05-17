@@ -100,8 +100,18 @@ public class HizmetAlPage {
   @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
   public WebElement cocugumIcinBES;
 
+
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
+  public WebElement GelecegeYatirimPlaniSekmesi;
+
+  @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+  public WebElement GelecegeYatirimPlaniSayfasiniDogrula;
+
+
+
   @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
   public WebElement cocugumIcinBESDogrula;
+
 
 
 
