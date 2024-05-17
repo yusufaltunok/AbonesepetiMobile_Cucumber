@@ -210,6 +210,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
         loginPage.cepTelefonu.sendKeys("5418743098");
         loginPage.sifre.sendKeys("1234tester");
         loginPage.girisYapButton.click();
+        loginPage.tamam.click();
     }
     @Then("Kullanici Hizmet Al butonunu tiklar")
     public void kullaniciHizmetAlButonunuTiklar() {
@@ -218,7 +219,6 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @And("Kullanici Anasayfada Tum Islemler sekmesine tiklar")
     public void kullaniciAnasayfadaTumIslemlerSekmesineTiklar() {
-        loginPage.tamam.click();
         hizmetAlPage.tumIslemler.click();
         bekle(2);
     }
@@ -227,6 +227,10 @@ public class AnasayfaStepDefs extends ReusableMethods {
     public void kullaniciGelecegimSekmesineTiklar() {
         hizmetAlPage.gelecegimbutton.click();
         bekle(2);
+    }
+    @When("Kullanici Gelecegim sayfasında oldugunu dogrular")
+    public void kullanici_gelecegim_sayfasında_oldugunu_dogrular() {
+        Assert.assertTrue(hizmetAlPage.gelecegim.isDisplayed());
     }
 
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
@@ -237,7 +241,13 @@ public class AnasayfaStepDefs extends ReusableMethods {
     @And("Kullanici Satin Al butonuna tiklar")
     public void kullaniciSatinAlButonunaTiklar() {
             hizmetAlPage.satinAl_egitim.click();
+            bekle(3);
         }
+    @Then("Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular")
+    public void kullaniciAnadoluHayatEmeklilikSayfasindaOldugunuDogrular() {
+        hizmetAlPage.ferdiKazaSigortasiDogrulama.isDisplayed();
+
+    }
 
     @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
     public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()

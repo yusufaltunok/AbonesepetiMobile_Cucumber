@@ -47,6 +47,10 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"ahe-logo\")")
     public WebElement anadoluHayatEmeklilik;
+    @AndroidFindBy(className= "android.webkit.WebView")
+    public WebElement anadoluHayatEmeklilikDogrulama;
+    @AndroidFindBy(id= "com.abonesepeti.app:id/txt_title")
+    public WebElement ferdiKazaSigortasiDogrulama;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğim\")")
     public WebElement gelecegim;
