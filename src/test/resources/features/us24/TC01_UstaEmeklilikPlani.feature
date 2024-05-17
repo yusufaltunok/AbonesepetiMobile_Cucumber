@@ -7,4 +7,4 @@ Feature: US24 Usta Emeklilik Plani
     And Kullanici Gelecegim sayfasında oldugunu dogrular
     And Kullanici Usta Emeklilik Plani sekmesine tiklar
     And Kullanici Satin Al butonuna tiklar
-    Then Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular
+    And Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular
