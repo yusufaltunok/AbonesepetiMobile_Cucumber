@@ -93,6 +93,12 @@ public class HizmetAlPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
+    @AndroidFindBy(xpath = "//*[@text='Çocuğum için BES']")
+    public WebElement cocugumIcinBES;
+
+  @AndroidFindBy(xpath = "(//*[@text='Çocuğum için BES'])[1]")
+  public WebElement cocugumIcinBESDogrula;
+
 
 
 
