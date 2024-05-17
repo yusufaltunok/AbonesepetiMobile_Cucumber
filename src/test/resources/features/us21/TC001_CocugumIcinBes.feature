@@ -9,6 +9,8 @@ Feature: US 21 Cocugum Icin BES
     And Kullanici Cocugum icin BES sekmesine tiklar
     And Kullanici Cocugum icin BES sayfasinda oldugunu dogrular
     And Kullanici "Satın Al" butonunun gorunur oldugunu dogrular
+#    And Kullanici cocugum icin BES Satin Al butonu tiklar
+#    And Kullanici Anadolu Hayat Emeklilik banka uygulamasi giris sayfasina yonlendirilir
 
 
   Scenario: TC 02 Kullanici Satin Al butonuna basinca url Anadolu Hayat Emeklilik banka uygulamasi giris sayfasina yonlendirilmeli.

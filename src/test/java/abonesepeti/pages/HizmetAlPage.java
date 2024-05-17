@@ -93,14 +93,18 @@ public class HizmetAlPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
-    @AndroidFindBy(xpath = "//*[@text='Çocuğum için BES']")
-    public WebElement cocugumIcinBES;
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
+  public WebElement cocugumIcinBES;
 
-  @AndroidFindBy(xpath = "(//*[@text='Çocuğum için BES'])[1]")
+
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
+  public WebElement GelecegeYatırımPlaniSekmesı;
+
+  @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+  public WebElement GelecegeYatırımPlaniSayfasınıDogrula;
+
+  @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
   public WebElement cocugumIcinBESDogrula;
-
-
-
 
 
 
