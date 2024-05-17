@@ -93,9 +93,11 @@ public class HizmetAlPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
+  public WebElement cocugumIcinBES;
 
-
-
+  @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
+  public WebElement cocugumIcinBESDogrula;
 
 
 
