@@ -15,10 +15,10 @@ public class Hooks {
         Driver.serverBaslat(ConfigReader.getProperty("localIpAdres"), Integer.parseInt(ConfigReader.getProperty("localPort")));
     }
 
-//    @Before
-//    public void setUp() {
-//        Driver.getDriver().activateApp(ConfigReader.getProperty("AppPackage"));
-//    }
+    @Before
+    public void setUp() {
+       Driver.getDriver().activateApp(ConfigReader.getProperty("AppPackage"));
+    }
 
     @After
     public void tearDown(Scenario scenario) {

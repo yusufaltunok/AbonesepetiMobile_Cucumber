@@ -101,4 +101,42 @@ public class RegisterPage {
     @AndroidFindBy(className = "com.abonesepeti.app:id/txt_message_custom_dialog")
     public WebElement googleHesap;
 
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"BAŞLA\")")
+    public WebElement basla;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/cb_platform")
+    public List <WebElement> baslatKurumCheckbox; // Giriş ekranındaki kurumların checkbox'ları
+
+    @AndroidFindBy(id="com.abonesepeti.app:id/ll_platform")
+    public WebElement telefon;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"DEVAM ET\")")
+    public WebElement devamEtButton; // Girişte kurum seçtikten sonraki
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"KAYDET\")")
+    public WebElement kaydet;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/radio_temel")
+    public List <WebElement> abonelikPaketleri;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Sonra\")")
+    public WebElement bildirimIzniSonra;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"İzin Ver\")")
+    public WebElement bildirimIzinVer;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Telefon Numaranız\")")
+    public WebElement telefonNumaraniz;
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ad Soyad\")")
+    public WebElement adSoyad;  //yeni giriş ekranı
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"E-posta\")")
+    public WebElement e_Posta; //yeni giriş ekranı
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Devam Et\")")
+    public WebElement DevamEt; //yeni giriş ekranı
+
+
+
 }

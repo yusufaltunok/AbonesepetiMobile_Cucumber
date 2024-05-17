@@ -1,5 +1,5 @@
 
-@giris @hepsi
+@us001
   Feature: Us06
     Scenario: TC02
       When Kullanici Abonesepeti uygulamasina giris yapar
