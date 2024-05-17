@@ -25,9 +25,11 @@ public class Login_StepDefs {
 
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
+
         loginPage.girisYapTelefon("5056771625","aaaaaa");
      //   loginPage.girisYapTelefon("5353956054","56%4809n");
        
+
     }
 
     @Then("Kullanici Uygulamada basarili bir sekilde oturum acildigini dogrular")
@@ -163,13 +165,14 @@ public class Login_StepDefs {
     @When("Kullanici silmek istedigi hesaba giris yapar")
     public void kullaniciSilmekIstedigiHesabaGirisYapar() {
 
-        loginPage.girisYapTelefon("5336954588","123456");
+        loginPage.
+                girisYapTelefon("5336954588","123456");
        // profilPage.devamEt_hosgeldinSayfasi.click();
 
-        loginPage.girisYapTelefon("5336954588","Rabia3545");
 
 
     }
+
 }
 
 

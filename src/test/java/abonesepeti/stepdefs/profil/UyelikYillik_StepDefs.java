@@ -201,7 +201,11 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     public void kullaniciSatinAlButonunuTiklar() {
         hizmetAlPage.satinAl_egitim.click();
     }
+    @Then("Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular")
+    public void kullaniciAnadoluHayatEmeklilikSayfasindaOldugunuDogrular() {
+        hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
 
+    }
 
     @Then("Kullanici Sigorta Urunlerim basligi altında Tam Kapsamli Hayat Sigortasi butonu tikklar")
     public void kullaniciSigortaUrunlerimBasligiAltındaTamKapsamliHayatSigortasiButonuTikklar() {

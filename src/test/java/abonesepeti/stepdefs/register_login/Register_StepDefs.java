@@ -5,6 +5,7 @@ import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.Driver;
 import abonesepeti.utilities.ReusableMethods;
+import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -201,7 +202,8 @@ public class Register_StepDefs extends ReusableMethods {
         }
 
         @Then("Kullanici sil butonunu tiklar")
-        public void kullaniciSilButonunuTiklar () {
+        public void kullaniciSilButonunuTiklar () throws InterruptedException {
+        wait(1);
              driver.hideKeyboard(); // klavyeyi gizle
              profilPage.sil.click();
         }
@@ -229,8 +231,9 @@ public class Register_StepDefs extends ReusableMethods {
         }
 
         @Then("Kullanici mevcut sifre textboxina gecersiz sifre girer")
-        public void kullaniciMevcutSifreTextboxinaGecersizSifreGirer () {
+        public void kullaniciMevcutSifreTextboxinaGecersizSifreGirer () throws InterruptedException {
             profilPage.sifreText.sendKeys("gnnghmfgm");
+         wait(2);
         }
 
         @And("Kullanici girmis oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.")
@@ -315,7 +318,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @And("Kullanici telefon numarasini girer")
     public void kullaniciTelefonNumarasiniGirer() {
-        registerPage.telefonNumaraniz.sendKeys("5056771625");
+        registerPage.telefonNumaraniz.sendKeys("5336954588");
     }
 
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HizmetAlPage {
 
-    public HizmetAlPage(){
+  public HizmetAlPage(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
@@ -38,6 +38,10 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.LinearLayout\").instance(24)")
     public WebElement cocugumIcinEgitimSigortasi;
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/category_container_view\").instance(6)")
+    public WebElement tamKapsamliHayatSigortasi;
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Tam Kapsamlı Hayat Sigortası\")")
+    public WebElement hayatSigortasiSayfasi;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ScrollView\")")
     public WebElement cocukEgitimiBilgileri;
@@ -93,8 +97,11 @@ public class HizmetAlPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
+  public WebElement cocugumIcinBES;
 
-
+  @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
+  public WebElement cocugumIcinBESDogrula;
 
 
 
