@@ -30,6 +30,7 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         Assert.assertTrue(hizmetAlPage.gencEmeklilikPlaniDogrula.isDisplayed());
     }
 
+
     @And("Kullanici Satin Al butonunun gorunur oldugunu dogrular")
     public void kullaniciSatinAlButonununGorunurOldugunuDogrular() {
         Assert.assertTrue(hizmetAlPage.satinAlGencEmeklilik.isDisplayed());
@@ -98,6 +99,11 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.satinAldogrulama.click();
     }
 
+    @And("Kullanici Satin Al butonuna tiklar")
+    public void kullaniciSatinAlButonunaTiklar() {
+        hizmetAlPage.satinAl_egitim.click();
+    }
+
 
 //    @When("Kullanici {isim} Abone Sepeti uygulamasina giris yapar")
 //    public void kullaniciIsimAboneSepetiUygulamasinaGirisYapar() {
@@ -110,19 +116,5 @@ public class HizmetAl_StepDefs extends ReusableMethods {
 
 
 
-    @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
-    public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
-        hizmetAlPage.GelecegeYatirimPlaniSekmesi.click();
-    }
-
-    @And("Kullanici Gelecege Yatirim Plani bilgilendirme sayfasini gorur")
-    public void kullaniciGelecegeYatirimPlaniBilgilendirmeSayfasiniGorur() {
-        hizmetAlPage.GelecegeYatirimPlaniSayfasiniDogrula.isDisplayed();
-    }
-
-    @And("Kullanici Gelecege Yatirim sayfasindaki {string} butonu gorur")
-    public void kullaniciGelecegeYatirimSayfasindakiSatinAlButonuGorur() {
-        hizmetAlPage.satinAldogrulama.isDisplayed();
-    }
 }
 
