@@ -124,5 +124,15 @@ public class HizmetAl_StepDefs extends ReusableMethods {
     public void kullaniciGelecegeYatirimSayfasindakiSatinAlButonuGorur() {
         hizmetAlPage.satinAldogrulama.isDisplayed();
     }
+
+    @And("Kullanici Hizmet Al butonunu tiklar")
+    public void kullaniciHizmetAlButonunuTiklar() {
+        hizmetAlPage.hizmetAl.click();
+    }
+
+    @And("Kullanici Satin Al butonuna tiklar")
+    public void kullaniciSatinAlButonunaTiklar() {
+        hizmetAlPage.satinAl_egitim.click();
+    }
 }
 
