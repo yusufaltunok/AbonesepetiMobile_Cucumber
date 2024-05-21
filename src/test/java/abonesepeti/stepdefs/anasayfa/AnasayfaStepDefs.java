@@ -92,7 +92,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @And("Kullanici Abonelik Ekle butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciAbonelikEkleButonununTiklanabilirOldugunuDogrular() {
-         assertEquals("true", anasayfaPage.abonelikEkle.get(0).getAttribute("clickable"));
+        assertEquals("true", anasayfaPage.abonelikEkle.get(0).getAttribute("clickable"));
     }
 
     @And("Kullanici Yeni Abonelik butonunun tiklanabilir oldugunu dogrular")
@@ -202,23 +202,21 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @When("Kullanici E_postaileAboneSepeti uygulamasina giris yapar")
     public void kullaniciE_postaileAboneSepetiUygulamasinaGirisYapar() {
-      //  loginPage.girisYapEposta("alsonbahar@gmail.com", "111116");
+        //  loginPage.girisYapEposta("alsonbahar@gmail.com", "111116");
     }
 
-    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
+  /*@When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
     public void kullaniciAbonesepetiMobilUygulamasındaGirer(String arg0) {
         loginPage.atla.click();
         loginPage.girisYap.click();
         loginPage.cepTelefonu.sendKeys("5418743098");
         loginPage.sifre.sendKeys("1234tester");
         loginPage.girisYapButton.click();
-    }
+    }*/
 
     @And("Kullanici Anasayfada Tum Islemler sekmesine tiklar")
     public void kullaniciAnasayfadaTumIslemlerSekmesineTiklar() {
-        loginPage.tamam.click();
         hizmetAlPage.tumIslemler.click();
-        bekle(2);
     }
 
     @And("Kullanici Gelecegim sekmesine tiklar")
