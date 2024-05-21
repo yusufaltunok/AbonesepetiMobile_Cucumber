@@ -1,6 +1,9 @@
 package abonesepeti.stepdefs.anasayfa;
 
-import abonesepeti.pages.*;
+import abonesepeti.pages.AnasayfaPage;
+import abonesepeti.pages.HizmetAlPage;
+import abonesepeti.pages.LoginPage;
+import abonesepeti.pages.ProfilPage;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
 import io.cucumber.java.en.And;
@@ -16,7 +19,6 @@ public class AnasayfaStepDefs extends ReusableMethods {
     ProfilPage profilPage = new ProfilPage();
     AnasayfaPage anasayfaPage = new AnasayfaPage();
     HizmetAlPage hizmetAlPage = new HizmetAlPage();
-    ProfilPageUyelik profilPageUyelik = new ProfilPageUyelik();
 
     LoginPage loginPage=new LoginPage();
 
@@ -90,7 +92,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @And("Kullanici Abonelik Ekle butonunun tiklanabilir oldugunu dogrular")
     public void kullaniciAbonelikEkleButonununTiklanabilirOldugunuDogrular() {
-         assertEquals("true", anasayfaPage.abonelikEkle.get(0).getAttribute("clickable"));
+        assertEquals("true", anasayfaPage.abonelikEkle.get(0).getAttribute("clickable"));
     }
 
     @And("Kullanici Yeni Abonelik butonunun tiklanabilir oldugunu dogrular")
@@ -200,27 +202,21 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @When("Kullanici E_postaileAboneSepeti uygulamasina giris yapar")
     public void kullaniciE_postaileAboneSepetiUygulamasinaGirisYapar() {
-      //  loginPage.girisYapEposta("alsonbahar@gmail.com", "111116");
+        //  loginPage.girisYapEposta("alsonbahar@gmail.com", "111116");
     }
 
-    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
+  /*@When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
     public void kullaniciAbonesepetiMobilUygulamasındaGirer(String arg0) {
         loginPage.atla.click();
         loginPage.girisYap.click();
         loginPage.cepTelefonu.sendKeys("5418743098");
         loginPage.sifre.sendKeys("1234tester");
         loginPage.girisYapButton.click();
-    }
-    @Then("Kullanici Hizmet Al butonunu tiklar")
-    public void kullaniciHizmetAlButonunuTiklar() {
-        hizmetAlPage.hizmetAl.click();
-    }
+    }*/
 
     @And("Kullanici Anasayfada Tum Islemler sekmesine tiklar")
     public void kullaniciAnasayfadaTumIslemlerSekmesineTiklar() {
-        loginPage.tamam.click();
         hizmetAlPage.tumIslemler.click();
-        bekle(2);
     }
 
     @And("Kullanici Gelecegim sekmesine tiklar")
@@ -229,15 +225,12 @@ public class AnasayfaStepDefs extends ReusableMethods {
         bekle(2);
     }
 
+
     @And("Kullanici Usta Emeklilik Plani sekmesine tiklar")
     public void kullaniciUstaEmeklilikPlaniSekmesineTiklar() {
         hizmetAlPage.ustaEmeklilikPlani.click();
     }
 
-    @And("Kullanici Satin Al butonuna tiklar")
-    public void kullaniciSatinAlButonunaTiklar() {
-            hizmetAlPage.satinAl_egitim.click();
-        }
 
     @When("Kullanici Standart kritik Hastalik Sigortasi sekmesine tiklar")
     public void kullaniciStandartKritikHastalikSigortasiSekmesineTiklar()
@@ -247,36 +240,5 @@ public class AnasayfaStepDefs extends ReusableMethods {
     @When("Kullanici Standart Kritik Hastalik Sigortasi sayfasindaki {string} butonunu gorur")
     public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
         hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
-    }
-
-    @And("Kullanici Ev Hanimlari Emeklilik Plani linkine tiklar")
-    public void kullaniciEvHanimlariEmeklilikPlaniLinkineTiklar() {
-        hizmetAlPage.EvHanimlariEmeklilikPlani.click();
-    }
-
-    @And("Kullanici Acilan Sayfada Ev Hanimlari Emeklilik Plani Basligini Gorur")
-    public void kullaniciAcilanSayfadaEvHanimlariEmeklilikPlaniBasliginiGorur() {
-        assertEquals("Ev Hanımları Emeklilik Planı", hizmetAlPage.EvHanimlariEmeklilikPlaniTitle.getText());
-    }
-
-    @And("Kullanici Acilan Sayfada Satin Al Butonunu Gorur")
-    public void kullaniciAcilanSayfadaSatinAlButonunuGorur() {
-        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikPlaniSatinAlButton.getAttribute("enabled"));
-        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikPlaniSatinAlButton.getAttribute("displayed"));
-    }
-
-    @And("Kullanici Ev Hanimlari Emeklilik Plani Sayfasinda Satin Al Butonuna Tiklar")
-    public void kullaniciEvHanimlariEmeklilikPlaniSayfasindaSatinAlButonunaTiklar() {
-        hizmetAlPage.EvHanimlariEmeklilikPlaniSatinAlButton.click();
-    }
-
-    @And("Kullanici Acilan Sayfada Anadolu Hayat Emeklilik Icin Musteri Numarasi Input Alaninin Editable Oldugunu Dogrular")
-    public void kullaniciAcilanSayfadaAnadoluHayatEmeklilikIcinMusteriNumarasiInputAlanininEditableOldugunuDogrular() {
-        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikMusteriTcNo.getAttribute("enabled"));
-    }
-
-    @And("Kullanici Acilan Sayfada Anadolu Hayat Emeklilik Icin Sifre Input Alaninin Editable Oldugunu Dogrular")
-    public void kullaniciAcilanSayfadaAnadoluHayatEmeklilikIcinSifreInputAlanininEditableOldugunuDogrular() {
-        assertEquals("true", hizmetAlPage.EvHanimlariEmeklilikSifre.getAttribute("enabled"));
     }
 }
