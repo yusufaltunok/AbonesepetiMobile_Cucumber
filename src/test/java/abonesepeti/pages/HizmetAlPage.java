@@ -51,6 +51,10 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"ahe-logo\")")
     public WebElement anadoluHayatEmeklilik;
+    @AndroidFindBy(className= "android.webkit.WebView")
+    public WebElement anadoluHayatEmeklilikDogrulama;
+    @AndroidFindBy(id= "com.abonesepeti.app:id/txt_title")
+    public WebElement ferdiKazaSigortasiDogrulama;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğim\")")
     public WebElement gelecegim;
@@ -98,10 +102,12 @@ public class HizmetAlPage {
 
 
   @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
-  public WebElement GelecegeYatırımPlaniSekmesı;
+  public WebElement GelecegeYatirimPlaniSekmesi;
 
   @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
-  public WebElement GelecegeYatırımPlaniSayfasınıDogrula;
+  public WebElement GelecegeYatirimPlaniSayfasiniDogrula;
+
+
 
   @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
   public WebElement cocugumIcinBESDogrula;

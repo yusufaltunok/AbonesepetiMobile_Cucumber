@@ -204,7 +204,6 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     @Then("Kullanici Anadolu Hayat Emeklilik sayfasinda oldugunu dogrular")
     public void kullaniciAnadoluHayatEmeklilikSayfasindaOldugunuDogrular() {
         hizmetAlPage.anadoluHayatEmeklilik.isDisplayed();
-
     }
 
     @Then("Kullanici Sigorta Urunlerim basligi altında Tam Kapsamli Hayat Sigortasi butonu tikklar")
@@ -216,4 +215,6 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     public void kullaniciHayatSigortasisayfasindaOldugunuDogrular() {
         hizmetAlPage.hayatSigortasiSayfasi.isDisplayed();
     }
+
+
 }
