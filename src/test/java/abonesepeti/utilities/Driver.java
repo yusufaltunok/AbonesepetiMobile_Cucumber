@@ -34,7 +34,7 @@ public class Driver {
         }
         return driver;
     }
-    public static void serverBaslat(String ipAddress, int port){
+//    public static void serverBaslat(String ipAddress, int port){
 //        String ortakYol;
 //        File appiumJSFile;
 //
