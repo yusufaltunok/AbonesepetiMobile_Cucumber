@@ -116,5 +116,32 @@ public class HizmetAl_StepDefs extends ReusableMethods {
 
 
 
+<<<<<<< HEAD
+    @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
+    public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
+        hizmetAlPage.GelecegeYatirimPlaniSekmesi.click();
+    }
+
+    @And("Kullanici Gelecege Yatirim Plani bilgilendirme sayfasini gorur")
+    public void kullaniciGelecegeYatirimPlaniBilgilendirmeSayfasiniGorur() {
+        hizmetAlPage.GelecegeYatirimPlaniSayfasiniDogrula.isDisplayed();
+    }
+
+    @And("Kullanici Gelecege Yatirim sayfasindaki {string} butonu gorur")
+    public void kullaniciGelecegeYatirimSayfasindakiSatinAlButonuGorur() {
+        hizmetAlPage.satinAldogrulama.isDisplayed();
+    }
+
+    @And("Kullanici Hizmet Al butonunu tiklar")
+    public void kullaniciHizmetAlButonunuTiklar() {
+        hizmetAlPage.hizmetAl.click();
+    }
+
+    @And("Kullanici Satin Al butonuna tiklar")
+    public void kullaniciSatinAlButonunaTiklar() {
+        hizmetAlPage.satinAl_egitim.click();
+    }
+=======
+>>>>>>> master
 }
 
