@@ -6,4 +6,3 @@ Feature: US15 Odeme Gecmisi
     And Kullanici Profil butonunu tiklar
     And kullanici Odeme islem gecmisi yazisina tiklar
     Then Kullanici odeme gecmisini dogrular
-    
