@@ -99,11 +99,6 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.satinAldogrulama.click();
     }
 
-    @And("Kullanici Satin Al butonuna tiklar")
-    public void kullaniciSatinAlButonunaTiklar() {
-        hizmetAlPage.satinAl_egitim.click();
-    }
-
 
 //    @When("Kullanici {isim} Abone Sepeti uygulamasina giris yapar")
 //    public void kullaniciIsimAboneSepetiUygulamasinaGirisYapar() {
@@ -116,7 +111,7 @@ public class HizmetAl_StepDefs extends ReusableMethods {
 
 
 
-<<<<<<< HEAD
+
     @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
     public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
         hizmetAlPage.GelecegeYatirimPlaniSekmesi.click();
@@ -141,7 +136,6 @@ public class HizmetAl_StepDefs extends ReusableMethods {
     public void kullaniciSatinAlButonunaTiklar() {
         hizmetAlPage.satinAl_egitim.click();
     }
-=======
->>>>>>> master
+
 }
 
