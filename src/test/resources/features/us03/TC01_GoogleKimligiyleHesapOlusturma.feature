@@ -9,34 +9,12 @@
       And Kullanici eklemek istedigi abonelik paketini secer
       And Kullanici KAYDET'e tiklar
       And Kullanici bildirim izni secer
+      And Kullanici Google ikonuna tiklar
+      And Kullanici acilan sayfada bir Google hesabi secer
       And Kullanici telefon numarasini girer
-      And Kullanici Yeni hesap olustur butonuna tiklar
+      And Kullanici Kodu Gonder butonuna tiklar
       And Kullanici Telefona SMS ile gelen 4 haneli dogrulama kodunu girer
       And Kullanici Dogrula butonuna tiklar
       And Kullanici "<ad_soyad>", "<E_posta>", "<sifre>" bilgilerini girer
       Then Basarili bir sekilde hesap olusturuldugunu dogrular
 
-    And Kullanici Google ikonuna tiklar
-    And Kullanici acilan sayfada bir Google hesabi secer
-    And Kullanici kayitli olmayan bir telefon numarasi girer
-    And Kullanici gecerli bir sifre girer
-    And Kullanici sozlesmesini kabul etmek icin checkbox'i tiklar
-    And Hesap olustur butonuna tiklar
-    And Kullanici Telefona SMS ile gelen 4 haneli dogrulama kodunu girer
-    And Dogrula butonuna tiklar
-    Then Basarili bir sekilde hesap olusturuldugunu dogrular
-
-
-
-
-
-#Google ikonuna tıkla.
-#Sürdür butonuna tıkla
-#Açılan sayfada bir Google hesabı seç
-#Cep telefonu numarası gir (başında sıfır olmadan 10 haneli girilmeli)
-#Şifre gir (en az 6 en fazla 16 karakter,en az 1 harf ve 1 rakam olmalı)
-#Kullanıcı sözleşmesini kabul etmek için checkbox'ı tıkla.
-#Hesap oluştur butonuna tıkla.
-#Telefona SMS ile gelen 4 haneli doğrulama kodunu gir.
-#Doğrula butonuna tıkla.
-#Başarılı bir şekilde hesap oluşturulduğunu doğrula.
