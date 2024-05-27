@@ -112,6 +112,14 @@ public class HizmetAlPage {
   @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
   public WebElement cocugumIcinBESDogrula;
 
+  @AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"com.abonesepeti.app:id/txt_header_button\" and @text=\"Sigorta Teklifi \n" + "Al\"]")
+  public WebElement SigortaTeklifiAl;
+
+  @AndroidFindBy(xpath="//android.widget.ScrollView[@resource-id=\"com.abonesepeti.app:id/scroll_view\"]/android.widget.LinearLayout")
+  public WebElement SigortaKateegorisiSec;
+
+  @AndroidFindBy(xpath="//android.widget.TextView[@text=\"DASK SİGORTASI\"]")
+  public WebElement DaskSigortasiGirisSayfasi;
 
 
 
