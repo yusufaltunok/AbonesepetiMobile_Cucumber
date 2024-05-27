@@ -13,6 +13,6 @@ public class YeniAbonelikPage {
         @AndroidFindBy (id ="")
                 public WebElement yeniAbonelikButtonFth;
 
-        //bu bir yorum satırıdır
+
     }
 
