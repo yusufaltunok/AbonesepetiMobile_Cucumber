@@ -318,7 +318,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @And("Kullanici telefon numarasini girer")
     public void kullaniciTelefonNumarasiniGirer() {
-        registerPage.telefonNumaraniz.sendKeys("5056771611");
+        registerPage.telefonNumaraniz.sendKeys("5336954588");
     }
 
 
