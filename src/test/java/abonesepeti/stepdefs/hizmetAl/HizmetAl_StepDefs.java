@@ -126,9 +126,24 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.hizmetAl.click();
     }
 
-    @And("Kullanici Satin Al butonuna tiklar")
-    public void kullaniciSatinAlButonunaTiklar() {
-        hizmetAlPage.satinAl_egitim.click();
+//    @And("Kullanici Satin Al butonuna tiklar")
+//    public void kullaniciSatinAlButonunaTiklar() {
+//        hizmetAlPage.satinAl_egitim.click();
+//    }
+
+    @And("Kullanici Sigorta kategorisnindeki sigorta tekliflerini gorur")
+    public void kullaniciSigortaKategorisnindekiSigortaTeklifleriniGorur() {
+        hizmetAlPage.hizmetAl.click();
+    }
+
+    @And("Kullanici  sigorta kategorisinde \\(herhangi biri )DASK sigortasina tiklar")
+    public void kullaniciSigortaKategorisindeHerhangiBiriDASKSigortasinaTiklar() {
+        hizmetAlPage.SigortaKateegorisiSec.click();
+    }
+
+    @And("Kullanici  DASK sigortasi teklifi sayfasini gorur")
+    public void kullaniciDASKSigortasiTeklifiSayfasiniGorur() {
+        hizmetAlPage.DaskSigortasiGirisSayfasi.click();
     }
 
 }
