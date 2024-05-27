@@ -110,13 +110,6 @@ public class HizmetAl_StepDefs extends ReusableMethods {
 //
 //    }
 
-
-
-
-
-
-
-<<<<<<< HEAD
     @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
     public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
         hizmetAlPage.GelecegeYatirimPlaniSekmesi.click();
@@ -137,11 +130,6 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.hizmetAl.click();
     }
 
-    @And("Kullanici Satin Al butonuna tiklar")
-    public void kullaniciSatinAlButonunaTiklar() {
-        hizmetAlPage.satinAl_egitim.click();
     }
-=======
->>>>>>> master
-}
+
 

@@ -217,4 +217,8 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     }
 
 
+    @And("Kullanici en altta Satin Al butonunun aktiflestigini dogrular")
+    public void kullaniciEnAlttaSatinAlButonununAktiflestiginiDogrular() {
+        assertEquals("true", profilPageUyelik.satinAl.getAttribute("clickable"));
+    }
 }
