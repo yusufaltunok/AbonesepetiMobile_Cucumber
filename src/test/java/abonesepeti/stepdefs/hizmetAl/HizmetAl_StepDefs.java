@@ -116,7 +116,7 @@ public class HizmetAl_StepDefs extends ReusableMethods {
 
 
 
-<<<<<<< HEAD
+
     @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
     public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
         hizmetAlPage.GelecegeYatirimPlaniSekmesi.click();
@@ -137,11 +137,24 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.hizmetAl.click();
     }
 
-    @And("Kullanici Satin Al butonuna tiklar")
-    public void kullaniciSatinAlButonunaTiklar() {
-        hizmetAlPage.satinAl_egitim.click();
+//    @And("Kullanici Satin Al butonuna tiklar")
+//    public void kullaniciSatinAlButonunaTiklar() {
+//        hizmetAlPage.satinAl_egitim.click();
+//    }
+
+    @And("Kullanici Sigorta kategorisnindeki sigorta tekliflerini gorur")
+    public void kullaniciSigortaKategorisnindekiSigortaTeklifleriniGorur() {
+        hizmetAlPage.hizmetAl.click();
     }
-=======
->>>>>>> master
+
+    @And("Kullanici  sigorta kategorisinde \\(herhangi biri )DASK sigortasina tiklar")
+    public void kullaniciSigortaKategorisindeHerhangiBiriDASKSigortasinaTiklar() {
+        hizmetAlPage.SigortaKateegorisiSec.click();
+    }
+
+    @And("Kullanici  DASK sigortasi teklifi sayfasini gorur")
+    public void kullaniciDASKSigortasiTeklifiSayfasiniGorur() {
+        hizmetAlPage.DaskSigortasiGirisSayfasi.click();
+    }
 }
 

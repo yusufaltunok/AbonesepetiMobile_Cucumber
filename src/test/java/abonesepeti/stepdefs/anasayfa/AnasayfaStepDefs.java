@@ -216,7 +216,7 @@ public class AnasayfaStepDefs extends ReusableMethods {
 
     @And("Kullanici Anasayfada Tum Islemler sekmesine tiklar")
     public void kullaniciAnasayfadaTumIslemlerSekmesineTiklar() {
-        hizmetAlPage.tumIslemler.click();
+        anasayfaPage.tumIslemler.click();
     }
 
     @And("Kullanici Gelecegim sekmesine tiklar")
