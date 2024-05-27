@@ -106,12 +106,6 @@ public class HizmetAl_StepDefs extends ReusableMethods {
 //    }
 
 
-
-
-
-
-
-
     @And("Kullanici Bireysel Emeklilik Urunlerinden>Gelecege Yatirim Plani'na tiklar")
     public void kullaniciBireyselEmeklilikUrunlerindenGelecegeYatirimPlaniNaTiklar() {
         hizmetAlPage.GelecegeYatirimPlaniSekmesi.click();
