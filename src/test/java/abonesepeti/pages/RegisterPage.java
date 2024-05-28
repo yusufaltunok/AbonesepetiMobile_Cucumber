@@ -21,7 +21,7 @@ public class RegisterPage {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"ATLA\")")
     public WebElement atla;
 
-    @AndroidFindBy(id = ("com.abonesepeti.app:id/btn_login_with_google"))
+    @AndroidFindBy(uiAutomator = ("new UiSelector().text(\"Google\")"))
     public WebElement googleIcon;
 
     @AndroidFindBy(xpath = ("(//android.widget.LinearLayout[@resource-id=\"com.google.android.gms:id/container\"])[1]/android.widget.LinearLayout"))

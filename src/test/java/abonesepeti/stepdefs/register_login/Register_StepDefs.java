@@ -49,7 +49,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @When("Giris sayfasina ulasmak icin Atla butonuna tiklar")
     public void girisSayfasinaUlasmakIcinAtlaButonunaTiklar() {
-        bekle(2);
+
         loginPage.atla.click();
     }
 
@@ -136,12 +136,12 @@ public class Register_StepDefs extends ReusableMethods {
 
     @When("Kullanici Abonesepeti uygulamasini acar")
     public void kullaniciAbonesepetiUygulamasiniAcar() {
-        loginPage.atla.click();
-        loginPage.girisYap.click();
-        loginPage.cepTelefonu.sendKeys("5418743098");
-        loginPage.sifre.sendKeys("1234tester");
-        loginPage.girisYapButton.click();
-        loginPage.tamam.click();
+//        loginPage.atla.click();
+//        loginPage.girisYap.click();
+//        loginPage.cepTelefonu.sendKeys("5418743098");
+//        loginPage.sifre.sendKeys("1234tester");
+//        loginPage.girisYapButton.click();
+//        loginPage.tamam.click();
     }
 
     @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
@@ -152,6 +152,7 @@ public class Register_StepDefs extends ReusableMethods {
         loginPage.sifre.sendKeys("1234tester");
         loginPage.girisYapButton.click();
         loginPage.tamam.click();
+
     }
 
 
@@ -318,7 +319,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @And("Kullanici telefon numarasini girer")
     public void kullaniciTelefonNumarasiniGirer() {
-        registerPage.telefonNumaraniz.sendKeys("5056771611");
+        registerPage.telefonNumaraniz.sendKeys("5336954588");
     }
 
 

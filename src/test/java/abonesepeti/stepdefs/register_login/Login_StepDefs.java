@@ -26,7 +26,7 @@ public class Login_StepDefs {
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
 
-        loginPage.girisYapTelefon("5056771625","aaaaaa");
+        loginPage.girisYapTelefon("5356901971","aaaaaa");
      //   loginPage.girisYapTelefon("5353956054","56%4809n");
        
 
@@ -159,7 +159,7 @@ public class Login_StepDefs {
 
     @When("Kullanici AboneSepeti uygulamasina giris yapar")
     public void kullaniciAboneSepetiUygulamasinaGirisYapar() {
-        loginPage.girisYapTelefon("5050199785","111115");
+        loginPage.girisYapTelefon("5416368165","alican");
     }
 
     @When("Kullanici silmek istedigi hesaba giris yapar")

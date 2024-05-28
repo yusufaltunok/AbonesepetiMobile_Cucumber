@@ -27,34 +27,39 @@ public class MevcutAboneliklerStepDefs extends ReusableMethods {
     }
     @Then("kullanici abonelik ismi ve diğer ilgili bilgileri ile birlikte dogrular")
     public void kullaniciAbonelikIsmiVeDigerIlgiliBilgileriIleBirlikteDogrular() {
+Assert.assertTrue(mevcutAbonelikPage.abonelikListeDogrulama.isDisplayed());
     }
 
     @And("kullanici herhangibir abonelik kurumunu tiklar")
     public void kullaniciHerhangibirAbonelikKurumunuTiklar() {
+        mevcutAbonelikPage.abonelikListeDogrulama.click();
         
     }
     @And("Kullanici herhangibir abonelik ismini tiklar")
     public void kullaniciHerhangibirAbonelikIsminiTiklar() {
+        mevcutAbonelikPage.abonelikIsim.click();
     }
 
     @And("Kullanici sil butonuna tiklar")
     public void kullaniciSilButonunaTiklar() {
-        
+        mevcutAbonelikPage.sil.click();
     }
 
     @Then("kullanici Aboneligi sil uyari yazisini dogrular")
     public void kullaniciAboneligiSilUyariYazisiniDogrular() {
-        
+       Assert.assertTrue(mevcutAbonelikPage.abonelikSilDogrula.isDisplayed());
     }
 
     @And("Kullanici devam et uyari yazisina tiklar")
     public void kullaniciDevamEtUyariYazisinaTiklar() {
+     //   mevcutAbonelikPage.devamEt.click();
 
 
     }
 
     @Then("Kullanici uyari onay yazisini dogrular")
     public void kullaniciUyariOnayYazisiniDogrular() {
+        mevcutAbonelikPage.iptal.click();
     }
 
     @And("Kullanici anasayfada bulunan Abonelikler butonunu tiklar")
