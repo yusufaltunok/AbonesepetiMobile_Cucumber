@@ -17,7 +17,10 @@ public class ProfilPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme geçmişi bulunmamaktadır.\")")
     public WebElement odemeGecmisiDogrula;
 
-    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Ödeme - İşlem Geçmişi\")")
+    @AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget." +
+            "FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android." +
+            "widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android." +
+            "widget.LinearLayout/android.widget.LinearLayout[7]/android.view.ViewGroup/android.widget.TextView")
     public WebElement odemeGecmisi;
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/btn_back")

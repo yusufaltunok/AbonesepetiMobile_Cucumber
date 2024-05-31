@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HizmetAlPage {
 
-    public HizmetAlPage(){
+  public HizmetAlPage(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getDriver()), this);
     }
 
@@ -38,6 +38,10 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.LinearLayout\").instance(24)")
     public WebElement cocugumIcinEgitimSigortasi;
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/category_container_view\").instance(6)")
+    public WebElement tamKapsamliHayatSigortasi;
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Tam Kapsamlı Hayat Sigortası\")")
+    public WebElement hayatSigortasiSayfasi;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ScrollView\")")
     public WebElement cocukEgitimiBilgileri;
@@ -47,6 +51,10 @@ public class HizmetAlPage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"ahe-logo\")")
     public WebElement anadoluHayatEmeklilik;
+    @AndroidFindBy(className= "android.webkit.WebView")
+    public WebElement anadoluHayatEmeklilikDogrulama;
+    @AndroidFindBy(id= "com.abonesepeti.app:id/txt_title")
+    public WebElement ferdiKazaSigortasiDogrulama;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğim\")")
     public WebElement gelecegim;
@@ -89,8 +97,29 @@ public class HizmetAlPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
+  public WebElement cocugumIcinBES;
 
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
+  public WebElement GelecegeYatirimPlaniSekmesi;
+
+  @AndroidFindBy(id="com.abonesepeti.app:id/txt_title")
+  public WebElement GelecegeYatirimPlaniSayfasiniDogrula;
+
+
+
+  @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
+  public WebElement cocugumIcinBESDogrula;
+
+  @AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"com.abonesepeti.app:id/txt_header_button\" and @text=\"Sigorta Teklifi \n" + "Al\"]")
+  public WebElement SigortaTeklifiAl;
+
+  @AndroidFindBy(xpath="//android.widget.ScrollView[@resource-id=\"com.abonesepeti.app:id/scroll_view\"]/android.widget.LinearLayout")
+  public WebElement SigortaKateegorisiSec;
+
+  @AndroidFindBy(xpath="//android.widget.TextView[@text=\"DASK SİGORTASI\"]")
+  public WebElement DaskSigortasiGirisSayfasi;
 
 
 

@@ -33,7 +33,6 @@ public class Profil_StepDefs extends ReusableMethods {
 
     @Then("Kullanici Profil butonununa tiklar")
     public void kullaniciProfilButonununaTiklar() {
-        // scrollGesture(driver,profilPage.hesabimiSil_button.);
         anasayfaPage.profil.click();
     }
 
@@ -174,16 +173,6 @@ public class Profil_StepDefs extends ReusableMethods {
         // Assert.assertEquals("12/12/2000",profilPage.kisiselBilgiler.get(5).getText());
 
 
-    }
-
-    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
-    public void kullaniciAbonesepetiMobilUygulamasındaGirer(String arg0) {
-        loginPage.atla.click();
-        loginPage.girisYap.click();
-        loginPage.cepTelefonu.sendKeys("5418743098");
-        loginPage.sifre.sendKeys("1234tester");
-        loginPage.girisYapButton.click();
-        loginPage.tamam.click();
     }
 
     @And("Kullanici Profil butonunu tiklar")

@@ -5,6 +5,7 @@ import abonesepeti.pages.ProfilPage;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.Driver;
 import abonesepeti.utilities.ReusableMethods;
+import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -48,7 +49,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @When("Giris sayfasina ulasmak icin Atla butonuna tiklar")
     public void girisSayfasinaUlasmakIcinAtlaButonunaTiklar() {
-        bekle(2);
+
         loginPage.atla.click();
     }
 
@@ -77,8 +78,8 @@ public class Register_StepDefs extends ReusableMethods {
 
     @And("Kullanici Telefona SMS ile gelen {int} haneli dogrulama kodunu girer")
     public void kullaniciTelefonaSMSIleGelenHaneliDogrulamaKodunuGirer(int arg0) {
+        bekle(2);
         profilPage.dogrulamaKoduGir.sendKeys("8765");
-
 
     }
 
@@ -135,6 +136,23 @@ public class Register_StepDefs extends ReusableMethods {
 
     @When("Kullanici Abonesepeti uygulamasini acar")
     public void kullaniciAbonesepetiUygulamasiniAcar() {
+//        loginPage.atla.click();
+//        loginPage.girisYap.click();
+//        loginPage.cepTelefonu.sendKeys("5418743098");
+//        loginPage.sifre.sendKeys("1234tester");
+//        loginPage.girisYapButton.click();
+//        loginPage.tamam.click();
+    }
+
+    @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
+    public void kullanici_abonesepeti_mobil_uygulamasında_girer(String string) {
+        loginPage.atla.click();
+        loginPage.girisYap.click();
+        loginPage.cepTelefonu.sendKeys("5418743098");
+        loginPage.sifre.sendKeys("1234tester");
+        loginPage.girisYapButton.click();
+        loginPage.tamam.click();
+
     }
 
 
@@ -185,7 +203,8 @@ public class Register_StepDefs extends ReusableMethods {
         }
 
         @Then("Kullanici sil butonunu tiklar")
-        public void kullaniciSilButonunuTiklar () {
+        public void kullaniciSilButonunuTiklar () throws InterruptedException {
+        wait(1);
              driver.hideKeyboard(); // klavyeyi gizle
              profilPage.sil.click();
         }
@@ -213,8 +232,9 @@ public class Register_StepDefs extends ReusableMethods {
         }
 
         @Then("Kullanici mevcut sifre textboxina gecersiz sifre girer")
-        public void kullaniciMevcutSifreTextboxinaGecersizSifreGirer () {
+        public void kullaniciMevcutSifreTextboxinaGecersizSifreGirer () throws InterruptedException {
             profilPage.sifreText.sendKeys("gnnghmfgm");
+         wait(2);
         }
 
         @And("Kullanici girmis oldugunuz bilgilerle eslesen hesap bulunamadi yazisini gorur.")
@@ -299,7 +319,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @And("Kullanici telefon numarasini girer")
     public void kullaniciTelefonNumarasiniGirer() {
-        registerPage.telefonNumaraniz.sendKeys("5056771625");
+        registerPage.telefonNumaraniz.sendKeys("5336954588");
     }
 
 
