@@ -182,7 +182,15 @@ public class HizmetAlPage {
   @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Adres Ekle\")")
   public WebElement dergiAdresEkle;
 
+  @AndroidFindBy(className = "android.widget.EditText")
+  public List <WebElement> dergi444KartNo;
 
 
 
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Mesafeli Satış Sözleşmesi\")")
+  public WebElement dergiMesafeliSatisSozlesme;
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Ödemeye devam et\")")
+  public WebElement dergiOdemeyeDevamEtButton;
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Anasayfaya geri dön\")")
+  public WebElement dergiAnasayfayaDön;
 }
