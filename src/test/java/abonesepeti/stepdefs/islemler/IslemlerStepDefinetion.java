@@ -2,6 +2,8 @@ package abonesepeti.stepdefs.islemler;
 
 import abonesepeti.pages.IslemlerPage;
 import abonesepeti.utilities.ReusableMethods;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
@@ -51,6 +53,21 @@ public class IslemlerStepDefinetion extends ReusableMethods {
         //Assert.assertTrue(islemlerPage.abonelikListesi.get(1).isDisplayed());
         islemlerPage.abonelikListesi.get(0).isDisplayed();
         islemlerPage.abonelikListesi.get(1).isDisplayed();
-
+    }
+    @And("Kullanici Aboneliklerini Sorgula butonuna tiklar")
+    public void kullaniciAbonelikleriniSorgulaButonunaTiklar() {
+        islemlerPage.abonelikleriniSorgula.click();
+    }
+    @Then("Kullanici ilgili sayfada oldugunu dogrular")
+    public void kullaniciIlgiliSayfadaOldugunuDogrular() {
+        Assert.assertTrue(islemlerPage.abonelikleriniSorgulaDogrulama.isDisplayed());
+    }
+    @And("Kullanici E-Devlete Git butonuna tiklar")
+    public void kullaniciEDevleteGitButonunaTiklar() {
+        islemlerPage.edevlet.click();
+    }
+    @Then("Kullanici E-Devlet sayfasinda oldugunu dogrular")
+    public void kullaniciEDevletSayfasindaOldugunuDogrular() {
+        Assert.assertTrue(islemlerPage.edevletDogrula.isDisplayed());
     }
 }

@@ -192,7 +192,8 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     @And("Kullanici Anadolu Hayat Gelecegim sekmesine tiklar")
     public void kullaniciAnadoluHayatGelecegimSekmesineTiklar() {
         hizmetAlPage.anadoluHayatGelecegim.click();
-        scrollGesture(driver, hizmetAlPage.ustaEmeklilikPlani, "down",7.0,1000);
+       // scrollGesture(driver, hizmetAlPage.ustaEmeklilikPlani, "down",7.0,1000);
+        testFling();
     }
     @And("Kullanici Ferdi Kaza Sigortasi sekmesine tiklar")
     public void kullaniciFerdiKazaSigortasiSekmesineTiklar() {
