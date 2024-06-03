@@ -185,6 +185,7 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
 
     @And("Kullanici Hizmet Al butonuna tiklar")
     public void kullaniciHizmetAlButonunaTiklar() {
+        bekle(2);
         hizmetAlPage.hizmetAl.click();
     }
 
