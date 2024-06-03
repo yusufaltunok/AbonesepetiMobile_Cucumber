@@ -185,6 +185,7 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
 
     @And("Kullanici Hizmet Al butonuna tiklar")
     public void kullaniciHizmetAlButonunaTiklar() {
+        bekle(2);
         hizmetAlPage.hizmetAl.click();
     }
 
@@ -218,4 +219,8 @@ public class UyelikYillik_StepDefs extends ReusableMethods {
     }
 
 
+    @And("Kullanici en altta Satin Al butonunun aktiflestigini dogrular")
+    public void kullaniciEnAlttaSatinAlButonununAktiflestiginiDogrular() {
+        assertEquals("true", profilPageUyelik.satinAl.getAttribute("clickable"));
+    }
 }
