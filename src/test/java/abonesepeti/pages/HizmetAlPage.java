@@ -6,6 +6,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class HizmetAlPage {
 
   public HizmetAlPage(){
@@ -124,4 +126,71 @@ public class HizmetAlPage {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Dergi Aboneliğini Başlat\")")
+  public WebElement dergiAboneligiBaslat;
+
+  @AndroidFindBy(className = "android.widget.Button")
+  public List <WebElement> dergiFirstButton; //for cokie
+
+  @AndroidFindBy(className = "android.widget.Image")
+  public List <WebElement> dergiSepet; //dergi sepeti get(2)
+  @AndroidFindBy(className = "android.widget.Image")
+  public List <WebElement> dergiOdemeyeGit; //dergi sepeti get(9)
+
+  @AndroidFindBy(className = "android.widget.EditText")
+  public List <WebElement> dergi444HesabaGiris; //dergi giris mail and pass get(0-1)
+
+  @AndroidFindBy(className = "android.widget.TextView")
+  public List <WebElement> dergiAdresGirisi; //
+
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Adres Ekle\")")
+  public WebElement dergiAdresEkle;
+
+  @AndroidFindBy(className = "android.widget.EditText")
+  public List <WebElement> dergi444KartNo;
+
+
+
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Mesafeli Satış Sözleşmesi\")")
+  public WebElement dergiMesafeliSatisSozlesme;
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Ödemeye devam et\")")
+  public WebElement dergiOdemeyeDevamEtButton;
+  @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Anasayfaya geri dön\")")
+  public WebElement dergiAnasayfayaDön;
 }
