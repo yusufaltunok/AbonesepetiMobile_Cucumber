@@ -241,4 +241,9 @@ public class AnasayfaStepDefs extends ReusableMethods {
     public void kullaniciStandartKritikHastalikSigortasiSayfasindakiButonunuGorur(String arg0) {
         hizmetAlPage.SatinAlStandartKritikHastalikSigortasi.isDisplayed();
     }
+
+    @And("Kullanici Anasayfada bulunan islemler butonuna tiklar")
+    public void kullaniciAnasayfadaBulunanIslemlerButonunaTiklar() {
+        anasayfaPage.islemler.click();
+    }
 }
