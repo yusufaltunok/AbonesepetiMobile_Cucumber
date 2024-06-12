@@ -118,16 +118,22 @@ public class HizmetAlPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
     public WebElement cocugumIcinBES;
 
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
     public WebElement GelecegeYatirimPlaniSekmesi;
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/txt_title")
     public WebElement GelecegeYatirimPlaniSayfasiniDogrula;
 
-
     @AndroidFindBy(id = "com.abonesepeti.app:id/img_header")
     public WebElement cocugumIcinBESDogrula;
+
+    @AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"com.abonesepeti.app:id/txt_header_button\" and @text=\"Sigorta Teklifi \n" + "Al\"]")
+    public WebElement SigortaTeklifiAl;
+
+    @AndroidFindBy(xpath="//android.widget.ScrollView[@resource-id=\"com.abonesepeti.app:id/scroll_view\"]/android.widget.LinearLayout")
+    public WebElement SigortaKateegorisiSec;
+    @AndroidFindBy(xpath="//android.widget.TextView[@text=\"DASK SİGORTASI\"]")
+    public WebElement DaskSigortasiGirisSayfasi;
 
     @AndroidFindBy(xpath = "//*[@text='Araç Kirala']")
     public WebElement aracKiralaButonu;
