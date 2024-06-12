@@ -70,7 +70,9 @@ public class Driver {
                 .withIPAddress(ipAddress)
                 .usingPort(port)
                 .build();
+        service.clearOutPutStreams();
         service.start();
+
     }
 
 //    public static void serverBaslat(String ipAdress, int port){
