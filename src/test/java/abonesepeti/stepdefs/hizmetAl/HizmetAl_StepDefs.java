@@ -319,5 +319,24 @@ public class HizmetAl_StepDefs extends ReusableMethods {
     }
 
 
+    @Then("Kullanıcı Anadolu Hayat Emeklilik butonuna tiklar.")
+    public void kullanıcıAnadoluHayatEmeklilikButonunaTiklar() {
+        hizmetAlPage.anadoluHayatEmeklilik.click();
+    }
+
+    @Then("Kullanici Bireysel emeklilik ürünleri başlıgı altında Cocugum Icın Bes linkine tiklar.")
+    public void kullaniciBireyselEmeklilikÜrünleriBaşlıgıAltındaCocugumIcınBesLinkineTiklar() {
+        hizmetAlPage.cocugumIcinBES.click();
+    }
+
+    @Then("Kullanici gelen sayfada Satın Al butonuna tiklar.")
+    public void kullaniciGelenSayfadaSatınAlButonunaTiklar() {
+        hizmetAlPage.satinAl_BES.click();
+    }
+
+    @And("Kullanici Anadolu Hayat Emeklilik Sayfasına ulasır.")
+    public void kullaniciAnadoluHayatEmeklilikSayfasınaUlasır() {
+        hizmetAlPage.anadoluHayatEmeklilikDogrulama.isDisplayed();
+    }
 }
 

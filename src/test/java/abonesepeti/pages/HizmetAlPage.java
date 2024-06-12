@@ -48,6 +48,8 @@ public class HizmetAlPage extends ReusableMethods {
     public WebElement ustaEmeklilikPlani;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/profile_fragment_container\")")
     public WebElement hizmetAl;
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/btnContinue\")")
+    public WebElement satinAl_BES;
     @AndroidFindBy(id = "com.abonesepeti.app:id/btnContinue")
     public WebElement satinAldogrulama;
 
@@ -224,7 +226,8 @@ public class HizmetAlPage extends ReusableMethods {
     public WebElement aracKiralaTamSayfa;
 
 
-    public WebElement getAlisTarihiSec(String tarih) {
+    public WebElement
+    getAlisTarihiSec(String tarih) {
 
         alisTarihiTextBox.click();
 

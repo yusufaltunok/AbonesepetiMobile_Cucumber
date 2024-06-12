@@ -136,12 +136,7 @@ public class Register_StepDefs extends ReusableMethods {
 
     @When("Kullanici Abonesepeti uygulamasini acar")
     public void kullaniciAbonesepetiUygulamasiniAcar() {
-//        loginPage.atla.click();
-//        loginPage.girisYap.click();
-//        loginPage.cepTelefonu.sendKeys("5418743098");
-//        loginPage.sifre.sendKeys("1234tester");
-//        loginPage.girisYapButton.click();
-//        loginPage.tamam.click();
+
     }
 
     @When("Kullanici Abonesepeti mobil uygulamasında {string} girer")
