@@ -91,7 +91,7 @@ public class ReusableMethods {
         ));
     }
 
-    public void dragGesture(AndroidDriver driver, WebElement element, int endX, int endY) {
+    public void dragGestureElement(AndroidDriver driver, WebElement element, int endX, int endY) {
         driver.executeScript("mobile: dragGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "endX", endX,
