@@ -28,6 +28,39 @@ public class IslemlerPage {
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/user_request_item_container")
     public List<WebElement> abonelikListesi;
+
+    @AndroidFindBy(id = "new UiSelector().text(\"Abonelik başlat\")")
+    public WebElement abonelikBaslat;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/user_request_item_container")
+    public List<WebElement> abonelikTipiListesi;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/user_request_item_container")
+    public WebElement titleTv;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_list_title")
+    public WebElement sizeOzelFirsatlarListTitle;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/star_container_view\").instance(0)")
+    public WebElement sizeOzelFirsatlarStarImage;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/rv_products")
+    public List<WebElement> tvAndYayinList;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_next")
+    public  WebElement tvPremium1AylikSatinAlButton;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_product_owner_name")
+    public  WebElement urunDetayiTV;
+
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_next")
+    public  WebElement urunDetayiTvPlusSatinAlButton;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/txt_fragment_title")
+    public  WebElement yeniAbonelikTitle;
+    @AndroidFindBy(id = "com.abonesepeti.app:id/btn_next")
+    public  WebElement yeniAbonelikDevamEtButton;
+
+
+
+
+
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Aboneliklerini Sorgula\")")
     public WebElement abonelikleriniSorgula;
     @AndroidFindBy(uiAutomator="new UiSelector().text(\"Adıma kayıtlı aboneliklerimi nasıl öğrenirim?\")")
@@ -39,4 +72,5 @@ public class IslemlerPage {
             "widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.webkit.WebView")
     public WebElement edevletDogrula;
+
 }
