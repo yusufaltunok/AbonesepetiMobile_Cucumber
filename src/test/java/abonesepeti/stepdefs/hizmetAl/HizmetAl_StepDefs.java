@@ -4,17 +4,28 @@ import abonesepeti.pages.HizmetAlPage;
 import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPageUyelik;
 import abonesepeti.pages.RegisterPage;
+import abonesepeti.utilities.Driver;
 import abonesepeti.utilities.ReusableMethods;
+import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.interactions.Actions;
+
+import java.io.IOException;
+
+import static abonesepeti.utilities.Driver.driver;
+import static org.junit.Assert.assertEquals;
 
 public class HizmetAl_StepDefs extends ReusableMethods {
     RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
     ProfilPageUyelik profilPageUyelik = new ProfilPageUyelik();
     HizmetAlPage hizmetAlPage = new HizmetAlPage();
+    String aracBedeli;
 
     @And("Kullanici Gelecegim sayfasında oldugunu dogrular")
     public void kullaniciGelecegimSayfasındaOldugunuDogrular() {
@@ -147,44 +158,166 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.DaskSigortasiGirisSayfasi.click();
     }
 
-    @And("Kullanici Ilaclama Hizmeti Al butonuna tiklar")
-    public void kullaniciIlaclamaHizmetiAlButonunaTiklar() {
+    @Then("Kullanici hizmet al sayfasinda Arac kirala  sekmesine tiklar.")
+    public void kullanici_hizmet_al_sayfasinda_arac_kirala_sekmesine_tiklar() {
+        hizmetAlPage.aracKiralaButonu.click();
 
     }
-    @And("Kullanici ilgilii sayfada oldugunu dogrular")
-    public void kullaniciIlgiliiSayfadaOldugunuDogrular() {
+
+    @Then("Kullanici Arac Kirala sayfasinda oldugunu dogrular.")
+    public void kullanici_arac_kirala_sayfasinda_oldugunu_dogrular() {
+        Assert.assertTrue(hizmetAlPage.neredenAlacaksinTextBox.isDisplayed());
+
     }
 
-    @And("Kullanici gerekli bilgileri girer")
-    public void kullaniciGerekliBilgileriGirer() {
-        
-    }
-    @And("Kullanici Devam Et butonunaa tiklar")
-    public void kullaniciDevamEtButonunaaTiklar() {
+    @Then("Arac kirala sayfasinda nereden alacaksiniz? kutucuğuna tiklar")
+    public void arac_kirala_sayfasinda_nereden_alacaksiniz_kutucuğuna_tiklar() {
+        hizmetAlPage.neredenAlacaksinTextBox.click();
+        bekle(2);
     }
 
-    @Then("Kullanici fiyat teklif sayfasini dogrular")
-    public void kullaniciFiyatTeklifSayfasiniDogrular() {
-        
+    @Then("Kullanici Nereden Alacaksiniz? kutucuguna gecerli bir {string} bilgisi girer.")
+    public void kullaniciNeredenAlacaksinizKutucugunaGecerliBirBilgisiGirer(String alisKonum) {
+
+        hizmetAlPage.konumAraTextBox.sendKeys(alisKonum);
+
     }
 
-    @And("Kullanici zorunlu alanlari doldurur")
-    public void kullaniciZorunluAlanlariDoldurur() {
-        
+    @Then("Kullanici Nereden Alacaksiniz? kutucuğuna girdiği konum bilgisine ait sekmeyi altta gorur ve tiklar.")
+    public void kullanici_nereden_alacaksiniz_kutucuguna_girdigi_konum_bilgisine_ait_sekmeyi_altta_gorur_ve_tiklar() {
+
+        hizmetAlPage.aracAlisKonum.click();
+
     }
 
-    @And("Kullanici teklif sayfasinda bulunan Devam Et butonuna tiklar")
-    public void kullaniciTeklifSayfasindaBulunanDevamEtButonunaTiklar() {
-        
+    @Then("Kullanici farkli bir yerde birakmak istiyorum kutucuğunu isaretler.")
+    public void kullanici_farkli_bir_yerde_birakmak_istiyorum_kutucugunu_isaretler() {
+
+        hizmetAlPage.farkliBirYerdeBirakOnayKutusu.click();
     }
 
-    @And("Kullanici sonraki sayfasinda bulunan Devam Et butonuna tiklar")
-    public void kullaniciSonrakiSayfasindaBulunanDevamEtButonunaTiklar() {
-        
+    @Then("Kullanici Nereye birakacaksiniz? kutucugunu gorur ve tiklar.")
+    public void kullanici_nereye_birakacaksiniz_kutucugunu_gorur_ve_tiklar() {
+
+        hizmetAlPage.nereyebirakacaksinizTextBox.click();
+
     }
 
-    @Then("Kullanici kart bilgilerinin girilebildigini dogrular")
-    public void kullaniciKartBilgilerininGirilebildiginiDogrular() {
+    @Then("Kullanici Nereye birakacaksiniz? kutucuguna gecerli bir {string} bilgisi girer.")
+    public void kullaniciNereyeBirakacaksinizKutucugunaGecerliBirBilgisiGirer(String arg0) {
+
+        hizmetAlPage.konumAraTextBox.sendKeys(arg0);
+
     }
+
+    @Then("Kullanici Nereye birakacaksiniz? kutucuğuna girdiği konum bilgisine ait sekmeyi altta gorur ve tiklar.")
+    public void kullanici_nereye_birakacaksiniz_kutucuguna_girdigi_konum_bilgisine_ait_sekmeyi_altta_gorur_ve_tiklar() {
+
+        hizmetAlPage.aracBirakmaKonum.click();
+
+    }
+
+    @Then("Kullanici arac alıs {string} bilgisini girer")
+    public void kullaniciAracAlisBilgisiniGirer(String tarih) {
+        hizmetAlPage.getAlisTarihiSec(tarih).click();
+        hizmetAlPage.takvimSecButon.click();
+        hizmetAlPage.takvimSecButon.click();
+
+
+    }
+
+    @Then("Kullanici birakiş {string} bilgisini girer")
+    public void kullanici_birakis_bilgisini_girer(String arg) {
+        hizmetAlPage.getBirakisTarihiSec(arg).click();
+        hizmetAlPage.takvimSecButon.click();
+        hizmetAlPage.takvimSecButon.click();
+
+    }
+
+    @Then("Kullanici en iyi fiyata bul butonuna tiklar.")
+    public void kullanici_en_iyi_fiyata_bul_butonuna_tiklar() {
+        hizmetAlPage.eniyiFiyatiBulButon.click();
+        bekle(2);
+
+    }
+
+    @Then("Kullanici ayni konumda arac kirala sayfasinda listelenen araclari gorur")
+    public void kullaniciAyniKonumdaAracKiralaSayfasindaListelenenAraclariGorur() {
+
+        try {
+
+            hizmetAlPage.aracBulunamadiTamamButon.click();
+
+            hizmetAlPage.lokasyonSecmeAyniKonum();
+
+            hizmetAlPage.kiralikAracGoruntuleme();
+
+        } catch (Exception e) {
+
+            hizmetAlPage.kiralikAracGoruntuleme();
+
+        }
+
+    }
+
+    @Then("Kullanici farkli konumda arac kirala sayfasinda listelenen araclari gorur")
+    public void kullaniciFarkliKonumdaAracKiralaSayfasindaListelenenAraclariGorur() {
+
+        try {
+
+            hizmetAlPage.aracBulunamadiTamamButon.click();
+
+            hizmetAlPage.lokasyonSecmeFarkliKonum();
+
+            hizmetAlPage.kiralikAracGoruntuleme();
+
+        } catch (Exception e) {
+
+            hizmetAlPage.kiralikAracGoruntuleme();
+        }
+
+    }
+
+
+    @Then("Kullanici sayfada listelenen araclardan istedigini {string} {string} secer ve arac kirala butonuna tiklar")
+    public void kullanici_sayfada_listelenen_araclardan_istedigini_secer_ve_arac_kirala_butonuna_tiklar(String yakit, String vites) {
+
+        hizmetAlPage.aracSecme(yakit, vites);
+
+    }
+
+
+    @Then("Kullanici surucu bilgilerini {string} {string} {string} girer ve devam et butonuna tiklar")
+    public void kullanici_surucu_bilgilerini_girer_ve_devam_et_butonuna_tiklar(String adres, String il, String ilce) {
+
+        aracBedeli = hizmetAlPage.aracKiralamaTutari.getText();
+        scrollGesture(driver, hizmetAlPage.surucuAdTextBox, "down", 7, 1500);
+        hizmetAlPage.surucuAdresiTextBox.sendKeys(adres);
+        hizmetAlPage.surucuIlTextBox.sendKeys(il);
+        hizmetAlPage.surucuIlceTextBox.sendKeys(ilce);
+        hizmetAlPage.urunDevametButon.click();
+
+
+    }
+
+    @Then("Kullanici arac icin belirtilen tutar ile kredi kartindan odeyecegi tutarin ayni oldugunu kontrol eder ve devam et butonuna tiklar")
+    public void kullanici_arac_icin_belirtilen_tutar_ile_kredi_kartindan_odeyecegi_tutarin_ayni_oldugunu_kontrol_eder_ve_devam_et_butonuna_tiklar() {
+
+        Assert.assertEquals(aracBedeli, hizmetAlPage.aracKiralamaTutari.getText());
+    }
+
+
+    @Then("Kullanici odeme bilgileri sayfasinda kart bilgilerini {string} {string} {string} {string} {string} girer ve odeme yap butonuna tiklar.")
+    public void kullanici_odeme_bilgileri_sayfasinda_kart_bilgilerini_girer_ve_odeme_yap_butonuna_tiklar(String isim, String kartNo, String kartKulAy, String kartKulYil, String CVVKod) {
+
+        hizmetAlPage.krediKartiIsim.sendKeys(isim);
+        hizmetAlPage.kartNumarasi.sendKeys(kartNo);
+        hizmetAlPage.kartKullanimAy.sendKeys(kartKulAy);
+        hizmetAlPage.kartKullanimYil.sendKeys(kartKulYil);
+        hizmetAlPage.kartCVVKodu.sendKeys(CVVKod);
+        assertEquals("true", hizmetAlPage.odemeYapButon.getAttribute("clickable"));
+    }
+
+
 }
 

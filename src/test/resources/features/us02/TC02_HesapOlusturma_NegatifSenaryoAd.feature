@@ -13,6 +13,7 @@ Feature: US02 Yeni Hesap Olusturma
     And Kullanici telefon numarasini girer
     And Kullanici Yeni hesap olustur butonuna tiklar
     And Kullanici Telefona SMS ile gelen 4 haneli dogrulama kodunu girer
+    
     And Kullanici Dogrula butonuna tiklar
     And Kullanici "<ad_soyad>", "<E_posta>", "<sifre>" bilgilerini girer
     Then Basarili bir sekilde hesap olusturuldugunu dogrular
