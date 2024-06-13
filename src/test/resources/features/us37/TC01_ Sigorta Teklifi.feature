@@ -1,4 +1,4 @@
-Feature Sigorta Teklifi Al
+Feature:Sigorta Teklifi Al
   Scenario:Bir Kullanici olarak Abonesepeti kullanici hesabim üzerinden Sigorta Teklifi alabilmeliyim.
 
     And Kullanici Abonesepeti uygulamasina giris yapar

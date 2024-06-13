@@ -28,6 +28,7 @@ public class IslemlerPage {
 
     @AndroidFindBy(id = "com.abonesepeti.app:id/user_request_item_container")
     public List<WebElement> abonelikListesi;
+
     @AndroidFindBy(id = "new UiSelector().text(\"Abonelik başlat\")")
     public WebElement abonelikBaslat;
     @AndroidFindBy(id = "com.abonesepeti.app:id/user_request_item_container")
@@ -58,5 +59,18 @@ public class IslemlerPage {
 
 
 
+
+
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Aboneliklerini Sorgula\")")
+    public WebElement abonelikleriniSorgula;
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"Adıma kayıtlı aboneliklerimi nasıl öğrenirim?\")")
+    public WebElement abonelikleriniSorgulaDogrulama;
+    @AndroidFindBy(uiAutomator="new UiSelector().text(\"E-Devlet’e Git\")")
+    public WebElement edevlet;
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget." +
+            "FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android." +
+            "widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget." +
+            "LinearLayout/android.widget.FrameLayout/android.webkit.WebView")
+    public WebElement edevletDogrula;
 
 }

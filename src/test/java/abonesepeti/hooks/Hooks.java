@@ -30,7 +30,7 @@ public class Hooks {
         bekle(10);
     }
 
-    @AfterAll
+   // @AfterAll
     public static void afterAll() {
       //  Driver.uygulamayiKapat();
         Driver.serverKapat();
