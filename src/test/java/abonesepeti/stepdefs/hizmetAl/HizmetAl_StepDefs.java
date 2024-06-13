@@ -6,6 +6,7 @@ import abonesepeti.pages.ProfilPageUyelik;
 import abonesepeti.pages.RegisterPage;
 import abonesepeti.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
@@ -146,5 +147,44 @@ public class HizmetAl_StepDefs extends ReusableMethods {
         hizmetAlPage.DaskSigortasiGirisSayfasi.click();
     }
 
+    @And("Kullanici Ilaclama Hizmeti Al butonuna tiklar")
+    public void kullaniciIlaclamaHizmetiAlButonunaTiklar() {
+
+    }
+    @And("Kullanici ilgilii sayfada oldugunu dogrular")
+    public void kullaniciIlgiliiSayfadaOldugunuDogrular() {
+    }
+
+    @And("Kullanici gerekli bilgileri girer")
+    public void kullaniciGerekliBilgileriGirer() {
+        
+    }
+    @And("Kullanici Devam Et butonunaa tiklar")
+    public void kullaniciDevamEtButonunaaTiklar() {
+    }
+
+    @Then("Kullanici fiyat teklif sayfasini dogrular")
+    public void kullaniciFiyatTeklifSayfasiniDogrular() {
+        
+    }
+
+    @And("Kullanici zorunlu alanlari doldurur")
+    public void kullaniciZorunluAlanlariDoldurur() {
+        
+    }
+
+    @And("Kullanici teklif sayfasinda bulunan Devam Et butonuna tiklar")
+    public void kullaniciTeklifSayfasindaBulunanDevamEtButonunaTiklar() {
+        
+    }
+
+    @And("Kullanici sonraki sayfasinda bulunan Devam Et butonuna tiklar")
+    public void kullaniciSonrakiSayfasindaBulunanDevamEtButonunaTiklar() {
+        
+    }
+
+    @Then("Kullanici kart bilgilerinin girilebildigini dogrular")
+    public void kullaniciKartBilgilerininGirilebildiginiDogrular() {
+    }
 }
 
