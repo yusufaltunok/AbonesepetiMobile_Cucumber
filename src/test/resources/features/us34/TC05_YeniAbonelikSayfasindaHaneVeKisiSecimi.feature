@@ -6,7 +6,3 @@ Feature: US34 Yeni Abonelik Baslat
     And Kullanici islemler sayfasinda "Abonelik İslemleri" basligi altinda yer alan "Abonelik Baslat" sekmesine tiklar.
     And Kullanici "abonelik tipi" secimi yapar.
     And Secilen abonelik tipi icin ozel firsatlar bilgileri goruntuler ve Hemen Basvur butonuna tiklar.
-    And
-
-
-

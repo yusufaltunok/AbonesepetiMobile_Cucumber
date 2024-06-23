@@ -4,6 +4,7 @@ import abonesepeti.pages.LoginPage;
 import abonesepeti.pages.ProfilPage;
 
 
+import abonesepeti.utilities.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -26,7 +27,7 @@ public class Login_StepDefs {
     @When("Kullanici Abonesepeti uygulamasina giris yapar")
     public void kullanici_abonesepeti_uygulamasina_giris_yapar() {
 
-        loginPage.girisYapTelefon("5059343686","123456");
+        loginPage.girisYapTelefon(ConfigReader.getProperty("userTelNumber"),"userTelNoPassword"); //bu stepDefsi kullananlar configuration.properties sayfasında parametredeki gibi ekleyip kullanmalı gitignore içinde kontrol edilmeli (Fatih)
      //   loginPage.girisYapTelefon("5353956054","56%4809n");
        
 

@@ -2,6 +2,7 @@ package abonesepeti.stepdefs.yeniAbonelik;
 
 import abonesepeti.pages.HizmetAlPage;
 import abonesepeti.pages.YeniAbonelikPage;
+import abonesepeti.utilities.ConfigReader;
 import abonesepeti.utilities.Driver;
 import abonesepeti.utilities.ReusableMethods;
 import io.appium.java_client.AppiumBy;
@@ -85,10 +86,10 @@ public class DergiAbonelik_StepDefs extends ReusableMethods {
 
 
            hizmetAlPage.dergi444HesabaGiris.get(0).click();
-           hizmetAlPage.dergi444HesabaGiris.get(0).sendKeys("qatesterfm@icloud.com");
+           hizmetAlPage.dergi444HesabaGiris.get(0).sendKeys(ConfigReader.getProperty("userAdresses"));
            bekle(2);
            hizmetAlPage.dergi444HesabaGiris.get(1).click();
-           hizmetAlPage.dergi444HesabaGiris.get(1).sendKeys("111111");
+           hizmetAlPage.dergi444HesabaGiris.get(1).sendKeys(ConfigReader.getProperty("userAddressPassword"));
            bekle(3);
            hizmetAlPage.dergiFirstButton.get(3).click();
            bekle(1);
