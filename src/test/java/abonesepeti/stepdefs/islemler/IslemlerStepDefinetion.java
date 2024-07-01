@@ -143,5 +143,29 @@ public class IslemlerStepDefinetion extends ReusableMethods {
     public void kullaniciHaneVeKisiSecipDevamEtButonunaTiklar() {
     }
 
+    @Then("Kullanici Abeonelik Baslat sekmesine tiklar")
+    public void kullaniciAbeonelikBaslatSekmesineTiklar() {
+
+    }
+
+    @Then("Kullanici {string} secer")
+    public void kullaniciSecer(String arg0) {
+    }
+
+    @Then("Kullanici sırala sekmesine tiklar")
+    public void kullaniciSıralaSekmesineTiklar() {
+    }
+
+    @And("Kullanici onerilen, artan fiyat, azalan fiyat listelemesi yapar")
+    public void kullaniciOnerilenArtanFiyatAzalanFiyatListelemesiYapar() {
+    }
+
+    @And("Kullanici internet abonelik tipinde başvuru yapabilmeli")
+    public void kullaniciInternetAbonelikTipindeBaşvuruYapabilmeli() {
+    }
+
+    @And("Kullanici internet+TV abonelik tipinde {string} butonunu görebilmeli ve geri tusu ile onceki sayfaya donebilmeli")
+    public void kullaniciInternetTVAbonelikTipindeHemenBaşvurButonunuGörebilmeliVeGeriTusuIleOncekiSayfayaDonebilmeli() {
+    }
 }
 
