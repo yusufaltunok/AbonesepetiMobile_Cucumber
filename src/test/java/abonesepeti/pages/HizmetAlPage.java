@@ -56,6 +56,12 @@ public class HizmetAlPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/my_future\")")
     public WebElement anadoluHayatGelecegim;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/txt_back_to_app\")")
+    public WebElement anadoluHayatGelecegim_cikisButton;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/btn_back\")")
+    public WebElement satinAlSayfasindan_GeriGel;
+
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.LinearLayout\").instance(24)")
     public WebElement cocugumIcinEgitimSigortasi;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.abonesepeti.app:id/category_container_view\").instance(6)")
@@ -117,8 +123,9 @@ public class HizmetAlPage extends ReusableMethods {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\").instance(1)")
     public WebElement EvHanimlariEmeklilikSifre;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Çocuğum için BES\")")
+    @AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id=\"com.abonesepeti.app:id/category_container_view\"])[1]")
     public WebElement cocugumIcinBES;
+
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Geleceğe Yatırım Planı\")")
     public WebElement GelecegeYatirimPlaniSekmesi;
@@ -390,6 +397,19 @@ public class HizmetAlPage extends ReusableMethods {
         eniyiFiyatiBulButon.click();
 
 
+    }
+
+    public void besIcinUrunSec() {
+
+        for (int i = 1; i <= 10; i++) {
+
+            Driver.driver.findElement(By.xpath("(//android.widget.LinearLayout[@resource-id=\"com.abonesepeti.app:id/category_container_view\"])[" + i + "]")).click();
+            satinAl_BES.click();
+            Assert.assertTrue(anadoluHayatEmeklilikDogrulama.isDisplayed());
+            anadoluHayatGelecegim_cikisButton.click();
+            satinAlSayfasindan_GeriGel.click();
+
+        }
     }
 //Us38--------------------------------------------- ☺
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Dergi Aboneliğini Başlat\")")

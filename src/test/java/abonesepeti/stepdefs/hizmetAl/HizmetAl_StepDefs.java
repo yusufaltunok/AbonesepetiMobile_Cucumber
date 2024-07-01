@@ -11,6 +11,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
@@ -319,24 +320,10 @@ public class HizmetAl_StepDefs extends ReusableMethods {
     }
 
 
-    @Then("Kullanıcı Anadolu Hayat Emeklilik butonuna tiklar.")
-    public void kullanıcıAnadoluHayatEmeklilikButonunaTiklar() {
-        hizmetAlPage.anadoluHayatEmeklilik.click();
-    }
 
-    @Then("Kullanici Bireysel emeklilik ürünleri başlıgı altında Cocugum Icın Bes linkine tiklar.")
-    public void kullaniciBireyselEmeklilikÜrünleriBaşlıgıAltındaCocugumIcınBesLinkineTiklar() {
-        hizmetAlPage.cocugumIcinBES.click();
-    }
-
-    @Then("Kullanici gelen sayfada Satın Al butonuna tiklar.")
-    public void kullaniciGelenSayfadaSatınAlButonunaTiklar() {
-        hizmetAlPage.satinAl_BES.click();
-    }
-
-    @And("Kullanici Anadolu Hayat Emeklilik Sayfasına ulasır.")
-    public void kullaniciAnadoluHayatEmeklilikSayfasınaUlasır() {
-        hizmetAlPage.anadoluHayatEmeklilikDogrulama.isDisplayed();
+    @Then("Kullanici bireysel emeklilik urunleri basligi altindaki urunlere tiklar, satin alir.")
+    public void kullaniciBireyselEmeklilikUrunleriBasligiAltindakiUrunlereTiklarSatinAlir() {
+        hizmetAlPage.besIcinUrunSec();
     }
 }
 
